@@ -17,7 +17,7 @@ block main
         input.visually-hidden(type="checkbox", checked, id="section-burger")
         div
           ul
-            //-li
+            li
               a(href="#modals") Модальные окна
             li
               a(href="#buttons") Кнопки
@@ -27,7 +27,7 @@ block main
       //----------------------------------------------
       .container
         a.uikit__header-link(href="sitemap.html")
-          img(src="https://via.placeholder.com/300x150", width="300", alt="Логотип проекта")
+          img(src="./img/sprite/logo.svg", width="300", alt="Логотип проекта")
         h1.uikit__h1 Компоненты, используемые на проекте
 
         section.uikit__section
@@ -41,7 +41,7 @@ block main
                 p Пример кода
 
         //- Модальные окна
-        //-section.uikit__section(id="modals")
+        section.uikit__section(id="modals")
           h2.uikit__h2 Модальные окна
           .uikit__component
             p.uikit__text.uikit__text--class .modal \ .modal--feedback
@@ -72,14 +72,14 @@ block main
               |
               code(class="language-pug").
                 +btn({icon: "arrow", text: "Текст", href: "#"})
-          //-.uikit__component
+          .uikit__component
             p.uikit__text.uikit__text--class .btn \ .btn--red \ link
             +btn({icon: "arrow", text: "Текст", href: "#", isExternal: true}).btn--red(aria-label="Просто ссылка")
             pre
               |
               code(class="language-pug").
                 +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
-          //-.uikit__component
+          .uikit__component
             p.uikit__text.uikit__text--class .btn \ disabled \ button
             +btn({text: "Текст"})(disabled)
             pre

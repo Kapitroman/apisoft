@@ -1,0 +1,27 @@
+.intro {
+  position: relative;
+
+  min-height: size(500px);
+  padding-top: size(90px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: size(-282px);
+    right: size(-42px);
+
+    width: size(428px);
+    height: size(428px);
+    border-radius: 50%;
+
+    background-color: $color-blue;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: size(74px);
+  }
+}
