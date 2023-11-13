@@ -1,6 +1,27 @@
 mixin btn(options = {})
   - const tag = options.href ? "a" : "button";
   - const href = options.href || false;
+  - const type = options.type || tag === "button" ? options.type || "button" : false;
+  - const target = options.isExternal ? "_blank" : false;
+  - const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
+  - const icon = options.icon ? options.icon : false;
+  - const text = options.text ? options.text : false;
+  - const caption = options.caption ? options.caption : false;
+
+
+  #{tag}.btn(href=href, target=target, rel=rel, type=type)&attributes(attributes)
+    if icon
+      span.btn__icon
+        +icon(icon, 12, 10)
+    else
+      span.btn__caption=caption
+    if text
+      span.btn__text=text
+
+
+//-mixin btn(options = {})
+  - const tag = options.href ? "a" : "button";
+  - const href = options.href || false;
   - const text = options.text || "";
   - const type = options.type || tag === "button" ? options.type || "button" : false;
   - const target = options.isExternal ? "_blank" : false;

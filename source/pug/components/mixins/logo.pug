@@ -1,0 +1,9 @@
+mixin logo()
+  if(currentUrl === logo.href)
+    .logo
+      +icon(logo.name, logo.width, logo.height)
+      span.visually-hidden=logo.span
+  else
+    a.logo(href=logo.href, aria-label=logo.label)
+      +icon(logo.name, logo.width, logo.height)
+      span.visually-hidden=logo.span

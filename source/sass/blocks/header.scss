@@ -1,13 +1,222 @@
 .header {
-  padding: 28px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 
-  background-color: $color-neon-blue;
+  width: 100%;
+  padding: size(30px) 0;
+
+  @include vp-767 {
+    padding: size(22px) 0;
+  }
 
   .container {
     display: flex;
+    align-items: center;
   }
 
-  &__logo {
-    color: $color-default-white;
+  .logo {
+    margin-right: size(122px);
+
+    @include vp-767 {
+      margin-right: size(65px);
+    }
+  }
+
+  &__nav {
+    margin-right: size(50px);
+
+    @include vp-767 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 20;
+
+      display: flex;
+      flex-direction: column;
+
+      margin: 0;
+      padding: size(20px);
+
+      visibility: hidden;
+      opacity: 0;
+
+      background-color:$color-blue;
+
+      pointer-events: none;
+      transition: background-color $trans-default;
+    }
+
+    .is-open & {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+
+      .header__item {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .header__button-start.btn {
+        opacity: 1;
+      }
+    }
+
+    .header__button-start.btn {
+      display: none;
+
+      @include vp-767 {
+        display: inline-flex;
+        margin: 0 auto;
+        margin-top: auto;
+
+        opacity: 0;
+
+        transition: opacity $trans-default;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: size(25px);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @include vp-767 {
+      flex-direction: column;
+      align-items: center;
+      gap: size(15px);
+
+      margin: auto 0;
+    }
+  }
+
+  &__item {
+
+    @include vp-767 {
+      margin-bottom: 0;
+
+      opacity: 0;
+      transform: translateY(-25px);
+
+      transition: opacity ease-out 0.3s, transform ease-out 0.3s;
+    }
+  }
+
+  &__link {
+    padding: size(4px) 0;
+
+    font-weight: 500;
+    font-size: size(18px);
+    line-height: size(22px);
+    color: $color-black;
+
+    transition: color $trans-default;
+
+    @include hover-focus {
+      color: $color-blue;
+    }
+
+    @include vp-767 {
+      color: $color-default-white;
+      font-size: size(14px);
+      line-height: size(17px);
+
+      @include hover-focus {
+        color: $color-gray-05;
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    position: relative;
+    z-index: 25;
+
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: size(5px);
+
+    width: size(28px);
+    height: size(28px);
+    border-radius: size(5px);
+    padding: 0;
+    border: none;
+
+    background-color: $color-default-white;
+
+    cursor: pointer;
+
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+
+    span {
+      width: size(28px);
+      height: size(2px);
+      background-color: $color-blue;
+
+      transition: transform $trans-600, opacity $trans-default;
+    }
+
+    span:nth-child(1) {
+      .is-open & {
+        transform: translateY(size(7px)) rotate(225deg);
+      }
+    }
+
+    span:nth-child(3) {
+      .is-open & {
+        transform: translateY(size(-7px)) rotate(-225deg);
+      }
+    }
+
+    span:nth-child(2) {
+      width: size(20px);
+
+      .is-open & {
+        opacity: 0;
+      }
+    }
+
+    @include vp-767 {
+      display: flex;
+    }
+  }
+
+  &__button-start.btn {
+    margin-left: auto;
+
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.7;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  .toggle-language {
+    margin-right: size(30px);
+
+    @include hover-focus {
+      .btn__caption {
+        background-color: $color-blue;
+
+        color: $color-default-white;
+      }
+    }
   }
 }

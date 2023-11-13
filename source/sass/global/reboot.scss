@@ -131,3 +131,14 @@ button,
 [type="submit"] {
   appearance: none;
 }
+
+[type="button"]:focus-visible,
+[type="reset"]:focus-visible,
+[type="submit"]:focus-visible,
+button:focus-visible,
+a {
+  &:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 1px $color-black;
+  }
+}

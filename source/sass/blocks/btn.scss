@@ -1,17 +1,75 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  align-items: center;
 
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
+  padding: 0;
   border: none;
+
+  color: $color-blue;
+
+  background-color: $color-transparent;
+
   cursor: pointer;
 
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: size(50px);
+    min-height: size(30px);
+    border-radius: size(100px);
+
+    background-color: $color-blue;
+    color: $color-default-white;
+
+    svg {
+      width: size(14px);
+      height: size(12px);
+    }
+  }
+
+  &__caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: size(50px);
+    min-height: size(30px);
+    border-radius: size(100px);
+    border: size(1px) solid $color-blue;
+
+    background-color: $color-default-white;
+
+    color: $color-blue;
+    font-weight: 500;
+    font-size: size(14px);
+    line-height: size(17px);
+
+    transition: background-color $trans-default, color $trans-default;
+  }
+
+  &__text {
+    margin-left: size(10px);
+
+    font-weight: 500;
+    font-size: size(18px);
+    line-height: size(22px);
+    color: $color-black;
+  }
+
+  &--white {
+    .btn__icon {
+      color: $color-blue;
+
+      background-color: $color-default-white;
+    }
+
+    .btn__text {
+      color: $color-default-white;
+    }
   }
 
   &:disabled {
@@ -19,8 +77,9 @@
 
     pointer-events: none;
   }
-
+  /*
   @include hover-focus {
     opacity: 0.8;
   }
+  */
 }

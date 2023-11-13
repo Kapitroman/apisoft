@@ -17,7 +17,7 @@ block main
         input.visually-hidden(type="checkbox", checked, id="section-burger")
         div
           ul
-            li
+            //-li
               a(href="#modals") Модальные окна
             li
               a(href="#buttons") Кнопки
@@ -41,7 +41,7 @@ block main
                 p Пример кода
 
         //- Модальные окна
-        section.uikit__section(id="modals")
+        //-section.uikit__section(id="modals")
           h2.uikit__h2 Модальные окна
           .uikit__component
             p.uikit__text.uikit__text--class .modal \ .modal--feedback
@@ -63,19 +63,23 @@ block main
           h2.uikit__h2 Кнопки
           .uikit__component
             p.uikit__text.uikit__text--class .btn \ default \ button
-            +btn({text: "Кнопка"})
+            +btn({
+              href: "#",
+              icon: "arrow",
+              text: "Кнопка"
+            })
             pre
               |
               code(class="language-pug").
-                +btn({text: "Текст", href: "#"})
-          .uikit__component
+                +btn({icon: "arrow", text: "Текст", href: "#"})
+          //-.uikit__component
             p.uikit__text.uikit__text--class .btn \ .btn--red \ link
-            +btn({text: "Текст", href: "#", isExternal: true}).btn--red(aria-label="Просто ссылка")
+            +btn({icon: "arrow", text: "Текст", href: "#", isExternal: true}).btn--red(aria-label="Просто ссылка")
             pre
               |
               code(class="language-pug").
                 +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
-          .uikit__component
+          //-.uikit__component
             p.uikit__text.uikit__text--class .btn \ disabled \ button
             +btn({text: "Текст"})(disabled)
             pre
