@@ -934,8 +934,8 @@ a:focus-visible {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.875rem;
-  width: 45.625rem;
+  width: 45.6875rem;
+  width: 37.5rem;
 }
 @media (max-width: 767px) {
   .footer__navigation-wrapper {
@@ -954,15 +954,17 @@ a:focus-visible {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 1.25rem;
-  width: 16.875rem;
+  width: 18.75rem;
   margin: 0;
   padding-left: 0;
+  padding-right: 1.875rem;
   list-style: none;
 }
 @media (max-width: 767px) {
   .footer__navigation-wrapper ul {
     width: 10.25rem;
     row-gap: 1.5rem;
+    padding-right: 0;
   }
 }
 .footer__navigation-wrapper ul:nth-child(2) {
@@ -1008,10 +1010,12 @@ a:focus-visible {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: auto;
+  margin-left: auto;
 }
 @media (max-width: 767px) {
   .footer__action {
     margin-bottom: 3.75rem;
+    margin-left: 0;
   }
 }
 @media (hover: hover) {

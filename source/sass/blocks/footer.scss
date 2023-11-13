@@ -75,9 +75,9 @@
 
   &__navigation-wrapper {
     display: flex;
-    gap: size(30px);
-
-    width: size(730px);
+    //gap: size(30px);
+    width: size(731px);
+    width: size(600px);
 
     @include vp-767 {
       width: 100%;
@@ -89,15 +89,17 @@
       flex-direction: column;
       row-gap: size(20px);
 
-      width: size(270px);
+      width: size(300px);
       margin: 0;
       padding-left: 0;
+      padding-right: size(30px);
 
       list-style: none;
 
       @include vp-767 {
         width: size(164px);
         row-gap: size(24px);
+        padding-right: 0;
       }
     }
 
@@ -137,9 +139,11 @@
     align-items: center;
 
     margin-bottom: auto;
+    margin-left: auto;
 
     @include vp-767 {
       margin-bottom: size(60px);
+      margin-left: 0;
     }
 
     @include hover-focus {
