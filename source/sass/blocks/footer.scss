@@ -75,8 +75,7 @@
 
   &__navigation-wrapper {
     display: flex;
-    //gap: size(30px);
-    width: size(731px);
+
     width: size(600px);
 
     @include vp-767 {
