@@ -44,7 +44,7 @@ const initIntroSlider = () => {
   };
 
   const fillColorItems = () => {
-    const items = getNewArray(Array.from(slides), 7);
+    const items = getNewArray(Array.from(slides), 12);
     items.forEach((item) => item.classList.add('fill-color'));
     setTimeout( () => items.forEach((item) => item.classList.remove('fill-color')), 1450 );
   }
