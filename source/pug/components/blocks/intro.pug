@@ -2,51 +2,22 @@ mixin intro()
   .intro
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
-    //-.container
-      h1 Автоматизируем интернет-бизнес
+    .container
+      h1=introTitle
 
-    //-.intro__slider.swiper
+    .intro__slider.swiper
       .swiper-wrapper
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
-        .swiper-slide.intro__item
-          span Логистика
-          +icon("arrow", 20, 16)
+        each item in introItems
+          +intro-item(item)
 
+    .container
+      .intro__info
+        p=introText
+        +btn({
+          href: "#",
+          icon: "arrow",
+          text: introButtonText,
+        })
+
+    .intro__image
+      +picture("content", "notebook", "png", 1116, 828, "Mac Book Pro", false)

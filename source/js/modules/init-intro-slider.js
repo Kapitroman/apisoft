@@ -2,37 +2,17 @@ const sliderSwiper = document.querySelector('.intro__slider');
 let swiper;
 
 const initSwiper = (slider) => {
-  //let swiperWidth = parseInt(getComputedStyle(slider).width, 10) / 48;
-  //const parent = slider.closest('section');
+
   // eslint-disable-next-line no-undef
+
   swiper = new Swiper(slider, {
     slidesPerView: "auto",
-    spaceBetween: 5,
-
     autoplay: {
       delay: 200,
       speed: 50,
       disableOnInteraction: false,
     },
     loop: true,
-
-    /*
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: swiperWidth,
-      },
-    },
-    */
-    /*
-    navigation: {
-      nextEl: parent.querySelector('.reviews__button-next'),
-      prevEl: parent.querySelector('.reviews__button-prev'),
-    }
-    */
   });
 };
 
@@ -41,6 +21,35 @@ const initIntroSlider = () => {
     return;
   }
 
+  const slides = sliderSwiper.querySelectorAll('.swiper-slide');
+
+  const getRandomInt = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
+  const shuffle = (someArray) => {
+    const newSomeArray = someArray.slice();
+    for (let i = newSomeArray.length - 1; i > 0; i--) {
+      const randomPosition = Math.floor(Math.random() * i);
+      [newSomeArray[i], newSomeArray[randomPosition]] = [newSomeArray[randomPosition], newSomeArray[i]];
+    }
+
+    return newSomeArray;
+  };
+
+  const getNewArray = (array, numberLength) => {
+    return shuffle(array).slice(0, getRandomInt(1, numberLength));
+  };
+
+  const fillColorItems = () => {
+    const items = getNewArray(Array.from(slides), 7);
+    items.forEach((item) => item.classList.add('fill-color'));
+    setTimeout( () => items.forEach((item) => item.classList.remove('fill-color')), 1450 );
+  }
+
+  setInterval(fillColorItems, 1500);
   initSwiper(sliderSwiper);
 };
 

@@ -1,8 +1,9 @@
 .intro {
   position: relative;
 
-  min-height: size(500px);
-  padding-top: size(250px);
+  min-height: size(1024px);
+  padding-top: size(235px);
+  padding-bottom: size(312px);
 
   &::before {
     content: "";
@@ -21,19 +22,39 @@
     }
   }
 
+  &::after {
+    position: absolute;
+    top: size(456px);
+    right: size(-30px);
+
+    content: "";
+    width: size(588px);
+    height: size(588px);
+    border-radius: 50%;
+
+    background-color: $color-blue;
+  }
+
   @include vp-767 {
     padding-top: size(74px);
   }
 
   h1 {
     width: size(604px);
-    margin-bottom: size(60px);
+    margin-bottom: size(55px);
   }
 
   .intro__slider {
-    width: 100%;
+    //width: 100%;
+    width: calc(size(218px) + 100% + size(168px));
+    margin-left: size(-218px);
+    margin-bottom: size(63px);
   }
 
+  .swiper-wrapper {
+    gap: size(5px);
+  }
+  /*
   &__item {
     display: inline-flex;
     align-items: center;
@@ -42,12 +63,66 @@
     border-radius: size(100px);
     border: size(1px) solid $color-blue;
 
+    color: $color-blue;
+
+    transition: background-color ease 0.4s, color ease 0.4s;
+
     svg {
       width: size(20px);
       height: size(16px);
       margin-left: size(12px);
     }
+
+    span {
+      font-weight: 500;
+      font-size: size(24px);
+      line-height: size(17px);
+    }
+  }
+  */
+  &__info {
+    width: size(500px);
+
+    p {
+      margin: 0;
+      margin-bottom: size(53px);
+
+      font-size: size(24px);
+      line-height: size(31px);
+    }
+
+    .btn {
+      @include hover-focus {
+        transition: color $trans-default;
+
+        .btn__text {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: size(138px);
+    right: size(-162px);
+    z-index: 2;
+
+    width: size(1116px);
+    aspect-ratio: 1116 / 828;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
   }
 }
 
+.fill-color {
+  color: $color-default-white;
+
+  background-color: $color-blue;
+}
 

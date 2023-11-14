@@ -1,0 +1,51 @@
+.intro-item {
+  display: inline-flex;
+  align-items: center;
+
+  width: auto;
+  padding: size(18px) size(19px) size(19px) size(19px);
+  border-radius: size(100px);
+  border: size(1px) solid $color-blue;
+
+  color: $color-blue;
+
+  font-weight: 500;
+  font-size: size(24px);
+  line-height: size(17px);
+
+  transition: background-color ease 0.4s, color ease 0.4s;
+
+  svg {
+    width: size(20px);
+    height: size(16px);
+    margin-left: size(12px);
+  }
+  /*
+  span {
+    font-weight: 500;
+    font-size: size(24px);
+    line-height: size(17px);
+  }
+  */
+}
+
+.intro-item--icon {
+  width: size(55px);
+  height: size(55px);
+  padding: 0;
+  border-radius: 50%;
+
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  svg {
+    width: size(53px);
+    height: size(53px);
+    margin-left: 0;
+  }
+}
