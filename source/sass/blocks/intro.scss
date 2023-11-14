@@ -1,9 +1,17 @@
 .intro {
   position: relative;
 
-  min-height: size(1024px);
+  display: flex;
+  flex-direction: column;
+
+  // min-height: size(1024px);
   padding-top: size(235px);
   padding-bottom: size(312px);
+
+  @include vp-767 {
+    padding-top: size(91px);
+    padding-bottom: size(60px);
+  }
 
   &::before {
     content: "";
@@ -33,53 +41,44 @@
     border-radius: 50%;
 
     background-color: $color-blue;
-  }
 
-  @include vp-767 {
-    padding-top: size(74px);
+    @include vp-767 {
+      top: size(374px);
+      right: size(7px);
+
+      width: size(243px);
+      height: size(243px);
+    }
   }
 
   h1 {
     width: size(604px);
     margin-bottom: size(55px);
+
+    @include vp-767 {
+      width: 100%;
+      margin-bottom: size(25px);
+    }
   }
 
   .intro__slider {
-    //width: 100%;
     width: calc(size(218px) + 100% + size(168px));
     margin-left: size(-218px);
     margin-bottom: size(63px);
+
+    @include vp-767 {
+      order: 2;
+    }
   }
 
   .swiper-wrapper {
     gap: size(5px);
-  }
-  /*
-  &__item {
-    display: inline-flex;
-    align-items: center;
-    width: auto;
-    padding: size(18px) size(19px) size(19px) size(19px);
-    border-radius: size(100px);
-    border: size(1px) solid $color-blue;
 
-    color: $color-blue;
-
-    transition: background-color ease 0.4s, color ease 0.4s;
-
-    svg {
-      width: size(20px);
-      height: size(16px);
-      margin-left: size(12px);
-    }
-
-    span {
-      font-weight: 500;
-      font-size: size(24px);
-      line-height: size(17px);
+    @include vp-767 {
+      gap: size(4px);
     }
   }
-  */
+
   &__info {
     width: size(500px);
 
@@ -89,6 +88,13 @@
 
       font-size: size(24px);
       line-height: size(31px);
+
+      @include vp-767 {
+        margin-bottom: size(25px);
+
+        font-size: size(16px);
+        line-height: size(21px);
+      }
     }
 
     .btn {
@@ -100,6 +106,11 @@
         }
       }
     }
+
+    @include vp-767 {
+      width: 260px;
+      margin-bottom: size(323px)
+    }
   }
 
   &__image {
@@ -110,6 +121,14 @@
 
     width: size(1116px);
     aspect-ratio: 1116 / 828;
+
+    @include vp-767 {
+      top: size(347px);
+      right: size(-68px);
+
+      width: size(347px);
+      aspect-ratio: 347 / 257;
+    }
 
     img {
       width: 100%;

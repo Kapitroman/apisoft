@@ -15,18 +15,25 @@
 
   transition: background-color ease 0.4s, color ease 0.4s;
 
+  @include vp-767 {
+    padding: size(9px) size(15px) size(11px) size(15px);
+
+    font-size: size(16px);
+    line-height: size(11px);
+
+  }
+
   svg {
     width: size(20px);
     height: size(16px);
     margin-left: size(12px);
+
+    @include vp-767 {
+      width: size(12px);
+      height: size(9px);
+      margin-left: size(8px);
+    }
   }
-  /*
-  span {
-    font-weight: 500;
-    font-size: size(24px);
-    line-height: size(17px);
-  }
-  */
 }
 
 .intro-item--icon {
@@ -34,6 +41,11 @@
   height: size(55px);
   padding: 0;
   border-radius: 50%;
+
+  @include vp-767 {
+    width: size(33px);
+    height: size(33px);
+  }
 
 
   img {
@@ -44,8 +56,8 @@
   }
 
   svg {
-    width: size(53px);
-    height: size(53px);
+    width: size(31px);
+    height: size(31px);
     margin-left: 0;
   }
 }

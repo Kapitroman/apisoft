@@ -4,4 +4,15 @@ h1 {
   font-weight: 500;
   font-size: size(72px);
   line-height: size(79px);
+
+  @include vp-767 {
+    font-size: size(32px);
+    line-height:size(42px);
+  }
+}
+
+h2 {
+  font-weight: 500;
+  font-size: size(54px);
+  line-height: size(65px);
 }
