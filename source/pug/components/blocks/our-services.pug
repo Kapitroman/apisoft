@@ -1,0 +1,7 @@
+mixin our-services()
+  section.our-services
+    .container
+      h2=ourServicesTitle
+      .our-services__wrapper
+        each item in ourServicesItems
+          +services-item(item)

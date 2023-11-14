@@ -1,0 +1,10 @@
+mixin services-item(item)
+  - const addClass = item.special ? "services-item services-item--special" : "services-item";
+    div(class=addClass)
+      h3=item.title
+      p=item.text
+      +btn({
+        icon: "arrow",
+        href: item.href,
+        text: item.buttonText,
+      })

@@ -23,3 +23,16 @@ h2 {
     line-height: size(26px);
   }
 }
+
+h3 {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: size(32px);
+  line-height: size(35px);
+
+  @include vp-767 {
+    font-size: size(20px);
+    line-height: size(22px);
+  }
+}

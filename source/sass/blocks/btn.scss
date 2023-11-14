@@ -65,6 +65,12 @@
     }
   }
 
+  &--only-icon {
+    .btn__text {
+      display: none;
+    }
+  }
+
   &--white {
     .btn__icon {
       color: $color-blue;

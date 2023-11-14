@@ -1,0 +1,29 @@
+.our-services {
+  margin-bottom: size(120px);
+
+  @include vp-767 {
+    margin-bottom: size(60px);
+  }
+
+  h2 {
+    margin-bottom: size(37px);
+
+    @include vp-767 {
+      margin-bottom: size(24px);
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-auto-flow: row dense;
+    gap: size(8px);
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      grid-auto-rows: initial;
+      gap: size(5px);
+    }
+  }
+}
