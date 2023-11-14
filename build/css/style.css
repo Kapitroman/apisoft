@@ -3236,7 +3236,7 @@ h2 {
 }
 @media (max-width: 767px) {
   .intro__info {
-    width: 260px;
+    width: 16.25rem;
     margin-bottom: 20.1875rem;
   }
 }
