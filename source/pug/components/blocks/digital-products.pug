@@ -3,13 +3,13 @@ mixin digital-products()
     .container
       .digital-products__image
         +picture("content", "digital-products", "png", 450, 550, alt="abstract picture with theme digital product", true)
-        .digital-products__image-text=digitalProductsImageText
-      .digital-product__content-info
+        .digital-products__image-text!=digitalProductsImageText
+      .digital-products__content-info
         h2=digitalProductsTitle
         ul.digital-products__achievements
           each item in digitalProductsAchievements
             li.digital-products__achievements-item
               p
-                span=item.amount
-                span=item.item
-              p=item.text
+                span!=item.amount
+                span!=item.item
+              p!=item.text

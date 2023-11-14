@@ -4,13 +4,12 @@
   display: flex;
   flex-direction: column;
 
-  // min-height: size(1024px);
   padding-top: size(235px);
   padding-bottom: size(312px);
 
   @include vp-767 {
     padding-top: size(91px);
-    padding-bottom: size(60px);
+    padding-bottom: size(54px);
   }
 
   &::before {
@@ -68,6 +67,10 @@
 
     @include vp-767 {
       order: 2;
+
+      width: calc(size(1353px));
+      margin-left: size(-317px);
+      margin-bottom: 0;
     }
   }
 
