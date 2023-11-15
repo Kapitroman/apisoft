@@ -1,0 +1,7 @@
+mixin our-partners()
+  section.our-partners
+    .container
+      h2=ourPartnersTitle
+      .our-partners__wrapper
+        each item in ourPartnersItems
+          +partners-item(item)

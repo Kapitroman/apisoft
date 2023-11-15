@@ -1,0 +1,13 @@
+mixin partners-item(item)
+  - const addClass = item.status ? `partners-item ${item.status}` : "partners-item";
+
+  a(href=item.href, class=addClass)&attributes(attributes)
+    if item.name
+      .partners-item__name
+        span=item.name
+    if item.logo
+      .partners-item__icon-logo
+        +icon(item.logo[0], item.logo[1], item.logo[2])(aria-label=item.name)
+    if item.arrow
+      .partners-item__icon-arrow
+        +icon("arrow-rotate", 50, 30)
