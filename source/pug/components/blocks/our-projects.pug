@@ -1,0 +1,15 @@
+mixin our-projects()
+  section.our-projects
+    .container
+      .our-projects__title-group
+        h2=ourProjectsTitle
+        p=ourProjectsSubtitle
+      .our-projects__wrapper
+        .our-projects__container
+          each item in ourProjectsView
+            +projects-item(item)
+        +btn({
+          icon: "arrow",
+          href: ourProjectsButton.href,
+          text: ourProjectsButton.text,
+        })

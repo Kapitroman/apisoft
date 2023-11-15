@@ -1,0 +1,152 @@
+.projects-item {
+  display: grid;
+
+  width: calc((100% - #{size(20px)}) / 2);
+  //width: size(690px);
+  aspect-ratio: 690 / 450;
+
+  @include vp-767 {
+    width: 100%;
+    aspect-ratio: 290 / 359;
+  }
+
+  & > * {
+    grid-area: 1 / -1;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: size(32px);
+
+      object-fit: cover;
+
+      @include vp-767 {
+        border-radius: size(10px);
+      }
+    }
+  }
+
+  &__over-layer {
+    border-radius: size(32px);
+
+    transition: background-color $trans-default;
+
+    @include vp-767 {
+      border-radius: size(10px);
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: size(180px);
+    height: size(180px);
+    border-radius: 50%;
+    margin: size(10px) size(10px) auto auto;
+
+    background-color: $color-blue;
+
+    @include vp-767 {
+      width: size(100px);
+      height: size(100px);
+    }
+  }
+
+  &__text {
+    margin: size(30px);
+    margin-top: auto;
+    padding: size(15px) size(20px) size(18px) size(20px);
+    border-radius: size(14px);
+
+    font-size: size(16px);
+    font-weight: 500;
+    line-height: size(22px);
+    color: $color-default-white;
+
+    background-color: rgba($color-black, 0.4);
+    backdrop-filter: blur(size(50px));
+
+    transition: color $trans-default, background-color $trans-default;
+
+    @include vp-767 {
+      margin: size(10px);
+      margin-top: auto;
+      padding: size(14px) size(16px) size(16px) size(16px);
+      border-radius: size(10px);
+
+      font-size: size(14px);
+      line-height: size(20px);
+    }
+  }
+
+  @include hover-focus {
+    .projects-item__over-layer {
+      background-color: rgba($color-default-black, 0.5);
+    }
+
+    .projects-item__text {
+      color: $color-black;
+      background-color: $color-default-white;
+    }
+  }
+}
+
+.projects-item--insale {
+  .projects-item__logo {
+    img {
+      width: size(144px);
+      height: size(41px);
+
+      @include vp-767 {
+        width: size(80px);
+        height: size(23px);
+      }
+    }
+  }
+}
+
+.projects-item--airmap {
+  .projects-item__logo {
+    img {
+      width: size(140px);
+      height: size(95px);
+
+      @include vp-767 {
+        width: size(78px);
+        height: size(53px);
+      }
+    }
+  }
+}
+
+.projects-item--lg {
+  .projects-item__logo {
+    img {
+      width: size(127px);
+      height: size(60px);
+
+      @include vp-767 {
+        width: size(71px);
+        height: size(34px);
+      }
+    }
+  }
+}
+
+.projects-item--alpha {
+  .projects-item__logo {
+    img {
+      width: size(80px);
+      height: size(108px);
+
+      @include vp-767 {
+        width: size(44px);
+        height: size(60px);
+      }
+    }
+  }
+}
