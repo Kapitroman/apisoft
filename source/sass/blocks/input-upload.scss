@@ -1,8 +1,42 @@
 .input-upload {
-  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
-  position: relative;
+
+  position: absolute;
+  bottom: size(16px);
+  left: size(20px);
+
+  @include vp-767 {
+    left: size(10px);
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+
+    font-size: size(14px);
+    font-weight: 600;
+    line-height: size(17px);
+
+    opacity: 0.7;
+
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 1;
+    }
+
+    @include vp-767 {
+      font-size: size(12px);
+      font-weight: 400;
+      line-height: size(18px);
+    }
+
+    svg {
+      width: size(32px);
+      height: size(32px);
+    }
+  }
 }
 
 .input-upload input {

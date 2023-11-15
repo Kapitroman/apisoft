@@ -1,0 +1,52 @@
+.send-message {
+  position: relative;
+  padding: size(109px) 0 size(100px) 0;
+
+  @include vp-767 {
+    padding: size(60px) 0 size(60px) 0;
+  }
+
+  color: $color-default-white;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+
+    content: "";
+
+    width: size(1360px);
+    height: size(1360px);
+    border-radius: 50%;
+
+    transform: translateX(-50%);
+
+    background-color: $color-blue;
+
+    @include vp-767 {
+      width: size(700px);
+      height: size(700px);
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 size(500px);
+
+    @include vp-767 {
+      padding: 0 size(15px);
+    }
+  }
+
+  h2 {
+    margin: 0 auto;
+    margin-bottom: size(47px);
+
+    @include vp-767 {
+      margin-bottom: size(35px);
+    }
+  }
+}

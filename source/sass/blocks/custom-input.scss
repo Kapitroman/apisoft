@@ -3,11 +3,9 @@
   position: relative;
 
   display: flex;
-  width: 530px;
-  padding: 14px 0 28px 0;
+  width: 100%;
 
   @media screen and (max-width: 767px) {
-    padding: 4px 0 48px 0;
     width: 100%;
   }
 
@@ -24,29 +22,49 @@
     input,
     textarea {
       flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
 
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
+      width: 100%;
+      min-height: size(57px);
+      padding: size(17px) size(23px) size(19px) size(23px);
+      border: size(1px) solid rgba($color-default-white, 0.7);
+      border-radius: size(15px);
+
+      font-size: size(16px);
+      font-weight: 600;
+      line-height: size(19px);
+      color: $color-default-white;
+
+      background-color: $color-blue;
       outline: none;
-
-      transition: border 0.3s ease;
+      transition: border $trans-default, background-color $trans-default, color $trans-default;
 
       @media screen and (max-width: 767px) {
         max-width: unset;
         width: 100%;
+        min-height: size(50px);
+        padding: size(13px) size(15px) size(15px) size(15px);
+        border-radius: size(10px);
+
+        font-size: size(14px);
+        font-weight: 400;
+        line-height: size(20px);
       }
 
       &:hover {
-        border: 2px solid rgba(#000000, 0.5);
+        border: 1px solid rgba($color-default-white, 0.1);
+
+        background-color: rgba($color-default-white, 0.1);
+
+        color: rgba($color-default-white, 0.8);
       }
 
       &:focus {
-        border: 2px solid rgba(#000000, 0.8);
+        border: 1px solid $color-default-white;
       }
+    }
+
+    textarea {
+      min-height: size(200px);
     }
   }
 
@@ -75,23 +93,29 @@
   &.is-invalid {
     input,
     textarea {
-      border: 2px solid #ff1553;
+      border: 1px solid $color-default-white;
 
+      background-color: $color-default-white;
+
+      color: $color-black;
+      /*
       &:focus,
       &:hover {
         border: 2px solid rgba(#ff1553, 0.5);
       }
+      */
     }
   }
 
   &.is-valid {
     input {
-      border: 2px solid #22b259;
-
+      border: 1px solid $color-default-white;
+      /*
       &:focus,
       &:hover {
         border: 2px solid rgba(#22b259, 0.5);
       }
+      */
     }
   }
 
