@@ -1,0 +1,48 @@
+.panel-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  min-height: size(110px);
+  padding: size(39px);
+  border-radius: size(24px);
+  border: size(1px) solid $color-blue;
+
+  background-color: $color-default-white;
+
+  @include vp-767 {
+    min-height: initial;
+    border-radius: size(20px);
+    padding: size(20px);
+  }
+
+  h3 {
+    margin: 0;
+    margin-right: size(30px);
+
+    font-size: size(32px);
+    line-height: size(22px);
+
+    @include vp-767 {
+      margin-right: size(20px);
+
+      font-size: size(16px);
+    }
+  }
+
+  .icon {
+    flex-shrink: 0;
+  }
+
+  @include hover-focus {
+    background-color: $color-blue;
+    color: $color-default-white;
+
+    .icon {
+      color: $color-blue;
+
+      background-color: $color-default-white;
+    }
+  }
+}

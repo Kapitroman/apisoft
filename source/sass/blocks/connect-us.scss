@@ -3,13 +3,22 @@
 
   display: flex;
 
-  min-height: size(277px);
+  min-height: size(227px);
   padding: size(40px);
   border-radius: size(40px);
 
   color: $color-default-white;
 
   background-color: $color-blue;
+
+  @include vp-767 {
+    flex-direction: column;
+
+    min-height: initial;
+    padding: size(20px);
+    padding-top: size(60px);
+    border-radius: size(20px);
+  }
 
   &__main {
     p {
@@ -19,12 +28,20 @@
       font-weight: 500;
       font-size: size(20px);
       line-height: size(26px);
+
+      @include vp-767 {
+        margin-bottom: size(30px);
+
+        font-size: size(14px);
+        line-height: size(18px);
+      }
     }
 
     button {
       display: inline-flex;
 
       padding: size(12px) size(24px) size(14px) size(24px);
+      border-radius: size(15px);
       border: none;
       margin-top: auto;
 
@@ -50,6 +67,10 @@
 .connect-us--mail {
   .connect-us__main {
     width: size(435px);
+
+    @include vp-767 {
+      width: 100%;
+    }
   }
 
   svg {
@@ -58,12 +79,25 @@
 
     width: size(42px);
     height: size(30px);
+
+    @include vp-767 {
+      top: size(20px);
+      right: auto;
+      left: size(20px);
+
+      width: size(28px);
+      height: size(20px);
+    }
   }
 }
 
 .connect-us--fill {
   .connect-us__main {
     width: size(450px);
+
+    @include vp-767 {
+      width: 100%;
+    }
   }
 
   svg {
@@ -72,6 +106,15 @@
 
     width: size(40px);
     height: size(40px);
+
+    @include vp-767 {
+      top: size(20px);
+      right: auto;
+      left: size(20px);
+
+      width: size(27px);
+      height: size(27px);
+    }
   }
 }
 

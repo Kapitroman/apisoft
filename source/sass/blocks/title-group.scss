@@ -5,6 +5,9 @@
   margin-bottom: size(80px);
 
   @include vp-767 {
+    flex-direction: column;
+    align-items: initial;
+
     margin-bottom: size(30px);
   }
 
@@ -12,7 +15,8 @@
     margin-right: auto;
 
     h2 {
-      margin-bottom: size(38px);
+      line-height: size(40px);
+      margin-bottom: size(52px);
 
       @include vp-767 {
         margin-bottom: size(9px);
@@ -38,16 +42,29 @@
   }
 
   &__image {
-    width: size(530px);
-    aspect-ratio: 530 / 320;
+    width: size(500px);
+    aspect-ratio: 500 / 320;
 
-    margin-left: 50px;
+    margin-left: size(50px);
+
+    @include vp-767 {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: size(30px);
+
+      order: -1;
+    }
 
     img {
       width: 100%;
       height: 100%;
+      border-radius: size(31px);
 
       object-fit: cover;
+
+      @include vp-767 {
+        border-radius: size(20px);
+      }
     }
   }
 }

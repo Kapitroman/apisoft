@@ -12,11 +12,11 @@ block variables
 
 block main
   main
-    section.our-partners-page
+    section.career
       .container
-        h2=ourPartnersPageTitle
-        .our-partners-page__wrapper
-          each item in ourPartnersPageItems
-            +partners-page-item(item)
+        +title-group(careerTitleGroup)
+        +vacancy-list(careerVacancyList)
+        +connect-us(careerConnect).connect-us--mail
+
 
 block modals

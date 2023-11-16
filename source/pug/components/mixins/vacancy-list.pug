@@ -1,0 +1,7 @@
+mixin vacancy-list(list)
+  if list.length === 0
+    p.career__vacancy-list-empty=careerVacancyEmptyText
+  else
+    ul.career__vacancy-list
+      each item in list
+        +panel-link(item)
