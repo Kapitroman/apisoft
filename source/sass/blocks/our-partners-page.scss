@@ -1,0 +1,29 @@
+.our-partners-page {
+  padding-top: size(37px);
+  padding-bottom: size(100px);
+
+  @include vp-767 {
+    padding-bottom: size(50px);
+  }
+
+  h2 {
+    margin-bottom: size(67px);
+
+    @include vp-767 {
+      margin-bottom: size(26px);
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    //grid-auto-rows: 1fr;
+    grid-auto-flow: row dense;
+    gap: size(20px);
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      gap: size(10px);
+    }
+  }
+}

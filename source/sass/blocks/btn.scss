@@ -83,6 +83,14 @@
     }
   }
 
+  &--rotation {
+    .btn__icon {
+      svg {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
   &:disabled {
     opacity: 0.5;
 

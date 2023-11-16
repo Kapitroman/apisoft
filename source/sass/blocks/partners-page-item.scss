@@ -1,0 +1,99 @@
+.partners-page-item {
+  display: flex;
+  border-radius: size(32px);
+  padding: size(30px) size(40px) size(30px) size(30px);
+  border: size(1px) solid $color-blue;
+
+  @include vp-767 {
+    flex-direction: column;
+
+    border-radius: size(20px);
+    padding: size(20px);
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    width: size(120px);
+    height: size(120px);
+    border-radius: 50%;
+    margin-bottom: auto;
+    margin-right: size(40px);
+
+    background-color: $color-blue;
+
+    @include vp-767 {
+      width: size(80px);
+      height: size(80px);
+
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: size(25px);
+    }
+
+    svg {
+      width: size(60px);
+      height: size(60px);
+
+      @include vp-767 {
+        width: size(45px);
+        height: size(45px);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: size(20px);
+
+    font-weight: 500;
+    font-size: size(20px);
+    line-height: size(26px);
+
+    @include vp-767 {
+      margin-bottom: size(10px);
+
+      @include vp-767 {
+        font-size: size(16px);
+        line-height: size(22px);
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: size(30px);
+
+    font-size: size(16px);
+    line-height: size(26px);
+
+    @include vp-767 {
+      margin-bottom: size(25px);
+
+      font-size: size(14px);
+      line-height: size(18px);
+    }
+  }
+
+  .btn {
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include hover-focus {
+      transition: color $trans-default;
+
+      .btn__text {
+        color: $color-blue;
+      }
+    }
+  }
+}

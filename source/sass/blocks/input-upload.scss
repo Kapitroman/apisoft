@@ -3,8 +3,17 @@
   flex-direction: column;
 
   position: absolute;
+  //bottom: size(1px);
+  //left: size(2px);
   bottom: size(16px);
   left: size(20px);
+  z-index: 3;
+
+  // width: calc(100% - #{size(4px)});
+  // border-radius: 0  0 size(14px) size(14px);
+
+  //background-color: $color-blue;
+  background-color: $color-transparent;
 
   @include vp-767 {
     left: size(10px);

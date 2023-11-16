@@ -1,0 +1,12 @@
+mixin partners-page-item(item)
+  .partners-page-item
+    .partners-page-item__logo
+      +icon(item.logo[0], item.logo[1], item.logo[2])
+    .partners-page-item__content
+      h3=item.title
+      p=item.text
+      +btn({
+        href: item.href,
+        icon: "arrow",
+        text: item.textButton
+      }).btn--rotation
