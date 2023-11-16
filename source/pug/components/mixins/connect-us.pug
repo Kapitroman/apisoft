@@ -1,0 +1,11 @@
+mixin connect-us(options)
+  .connect-us&attributes(attributes)
+    .connect-us__main
+      p=options.text
+      button(type="button")=options.textButton
+      if options.icon
+        +icon(options.icon[0], options.icon[1], options.icon[2])
+    if options.add
+      .connect-us__add
+        each block in options.add
+          +add-block(block)

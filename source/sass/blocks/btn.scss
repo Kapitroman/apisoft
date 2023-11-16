@@ -12,7 +12,7 @@
   cursor: pointer;
 
   transition: opacity $trans-default;
-
+  /*
   &__icon {
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@
       height: size(12px);
     }
   }
-
+  */
   &__caption {
     display: flex;
     justify-content: center;
@@ -72,7 +72,8 @@
   }
 
   &--white {
-    .btn__icon {
+    //-.btn__icon {
+    .icon {
       color: $color-blue;
 
       background-color: $color-default-white;
@@ -84,7 +85,8 @@
   }
 
   &--rotation {
-    .btn__icon {
+    //.btn__icon {
+    .icon {
       svg {
         transform: rotate(-45deg);
       }

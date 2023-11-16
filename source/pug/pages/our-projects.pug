@@ -65,9 +65,7 @@ block main
   main
     section.our-projects-page
       .container
-        .our-projects-page__title-group
-          h2=ourProjectsPageTitle
-          p=ourProjectsPageSubtitle
+        +title-group(titleGroupOurProjects)
 
         .our-projects-page__container
           each item in ourProjectsPageView

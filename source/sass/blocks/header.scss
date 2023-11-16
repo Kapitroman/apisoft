@@ -243,7 +243,8 @@
 
   @media (min-width: 768px) {
     .header__button-start {
-      .btn__icon {
+      //-.btn__icon {
+      .icon {
         color: $color-blue;
 
         background-color: $color-default-white;

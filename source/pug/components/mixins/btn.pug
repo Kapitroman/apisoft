@@ -11,7 +11,8 @@ mixin btn(options = {})
 
   #{tag}.btn(href=href, target=target, rel=rel, type=type)&attributes(attributes)
     if icon
-      span.btn__icon
+      //-span.btn__icon
+      span.icon
         +icon(icon, 12, 10)
     else
       span.btn__caption=caption

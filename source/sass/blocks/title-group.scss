@@ -1,0 +1,53 @@
+.title-group {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: size(80px);
+
+  @include vp-767 {
+    margin-bottom: size(30px);
+  }
+
+  &__text {
+    margin-right: auto;
+
+    h2 {
+      margin-bottom: size(38px);
+
+      @include vp-767 {
+        margin-bottom: size(9px);
+      }
+    }
+
+    p {
+      margin: 0;
+
+      font-weight: 500;
+      font-size: size(20px);
+      line-height: size(24px);
+      color: $color-blue;
+
+      @include vp-767 {
+        width: size(200px);
+        margin-left: 0;
+
+        font-size: size(14px);
+        line-height: size(20px);
+      }
+    }
+  }
+
+  &__image {
+    width: size(530px);
+    aspect-ratio: 530 / 320;
+
+    margin-left: 50px;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+}

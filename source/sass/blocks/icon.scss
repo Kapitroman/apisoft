@@ -1,0 +1,17 @@
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: size(50px);
+  min-height: size(30px);
+  border-radius: size(100px);
+
+  background-color: $color-blue;
+  color: $color-default-white;
+
+  svg {
+    width: size(14px);
+    height: size(12px);
+  }
+}
