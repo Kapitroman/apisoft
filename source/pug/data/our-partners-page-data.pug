@@ -1,17 +1,6 @@
-extends ../components/base/layout
+- const ourPartnersPageTitle = "Наши партнеры";
 
-block variables
-  - const title = "Наши партнеры. APISOFT — CRM, интернет-эквайринг, логистика, модули для интернет-магазинов под ключ" //- на страницах кроме главной используйте О нас — ProjectName
-  - const wrapperMods = ""
-  - const hasHeader = true
-  - const headerMods = ""
-  - const hasFooter = true
-  - const footerMods = ""
-  - const currentUrl = "our-partners.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
-
-  //- const ourPartnersPageTitle = "Наши партнеры";
-
-  //-
+-
     const ourPartnersPageItems = [
       {
         title: "Битрикс24",
@@ -56,15 +45,3 @@ block variables
         textButton: "Перейти на сайт",
       },
     ];
-
-
-block main
-  main
-    section.our-partners-page
-      .container
-        h2=ourPartnersPageTitle
-        .our-partners-page__wrapper
-          each item in ourPartnersPageItems
-            +partners-page-item(item)
-
-block modals
