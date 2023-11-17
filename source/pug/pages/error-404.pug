@@ -1,0 +1,27 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Error-404. APISOFT — CRM, интернет-эквайринг, логистика, модули для интернет-магазинов под ключ" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "error-404.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+block main
+  main
+    section.error
+      .error__container
+        p.error__status=error.status
+        p.error__message=error.message
+        +btn({
+          href: error.mainRef,
+          text: error.textButton,
+          icon: "arrow",
+        })
+
+
+
+block modals

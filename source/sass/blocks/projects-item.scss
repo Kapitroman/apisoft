@@ -50,6 +50,16 @@
 
     background-color: $color-blue;
 
+    svg {
+      width: size(140px);
+      height: size(140px);
+
+      @include vp-767 {
+        width: size(75px);
+        height: size(75px);
+      }
+    }
+
     @include vp-767 {
       width: size(100px);
       height: size(100px);

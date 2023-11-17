@@ -1,7 +1,7 @@
-mixin our-partners()
-  section.our-partners
+mixin our-partners(title, list)
+  section.our-partners&attributes(attributes)
     .container
-      h2=ourPartnersTitle
+      h2=title
       .our-partners__wrapper
-        each item in ourPartnersItems
+        each item in list
           +partners-item(item)

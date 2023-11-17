@@ -2,7 +2,7 @@
   margin-bottom: size(78px);
 
   @include vp-767 {
-    margin-bottom: size(40px);
+    margin-bottom: size(60px);
   }
 
   h2 {
@@ -24,5 +24,13 @@
       grid-template-columns: 1fr 1fr;
       gap: size(6px);
     }
+  }
+}
+
+.our-partners--services {
+  margin-bottom: size(100px);
+
+  @include vp-767 {
+    margin-bottom: size(60px);
   }
 }

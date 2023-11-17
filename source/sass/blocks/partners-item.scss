@@ -6,10 +6,16 @@
   border-radius: size(20px);
   border: size(1px) solid $color-blue;
 
-  transition: opacity $trans-default;
+  overflow: hidden;
 
   @include hover-focus {
-    opacity: 0.7;
+    .partners-item__icon-logo {
+      opacity: 1;
+    }
+
+    .partners-item__icon-arrow {
+      opacity: 1;
+    }
   }
 
   @include vp-767 {
@@ -22,6 +28,13 @@
 
   &__name {
     display: flex;
+
+    padding: size(30px);
+    //-border: size(1px) solid $color-blue;
+
+    @include vp-767 {
+      padding: size(20px);
+    }
 
     span {
       margin: auto;
@@ -39,24 +52,41 @@
   &__icon-logo {
     display: flex;
 
-    border-radius: size(20px);
+    //-border-radius: size(20px);
 
     background-color: $color-blue;
 
+    opacity: 0;
+
+    transition: opacity $trans-default;
+
     @include vp-767 {
-      display: none;
+      //-border-radius: size(10px);
     }
 
     svg {
+      width: size(120px);
+      height: size(120px);
       margin: auto;
+
+      @include vp-767 {
+        width: size(60px);
+        height: size(60px);
+      }
     }
   }
 
   &__icon-arrow {
     display: flex;
 
+    //-border-radius: size(20px);
+
+    opacity: 0;
+
+    transition: opacity $trans-default;
+
     @include vp-767 {
-      display: none;
+      //-border-radius: size(10px);
     }
 
     svg {
@@ -64,6 +94,10 @@
       height: size(30px);
       margin: auto;
       margin-bottom: size(30px);
+
+      @include vp-767 {
+        margin-bottom: size(20px);
+      }
     }
   }
 }
@@ -83,6 +117,25 @@
       width: size(156px);
       height: size(45px);
       margin-bottom: size(120px);
+
+      @include vp-767 {
+        width: size(78px);
+        height: size(22px);
+        margin-bottom: size(90px);
+      }
     }
   }
 }
+
+.partners-item--arrow {
+  .partners-item__icon-logo {
+    svg {
+      margin-bottom: size(90px);
+
+      @include vp-767 {
+        margin-bottom: size(60px);
+      }
+    }
+  }
+}
+
