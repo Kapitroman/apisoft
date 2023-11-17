@@ -1,0 +1,22 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Вакансия. APISOFT — CRM, интернет-эквайринг, логистика, модули для интернет-магазинов под ключ" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "vacancy.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+block main
+  main
+    .page-wrapper
+      section.vacancy
+        .container
+          +vacancy-item(vacancyData)
+          +connect-us(mailConnect).connect-us--mail
+
+
+block modals

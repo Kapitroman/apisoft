@@ -1,0 +1,18 @@
+mixin vacancy-item(options)
+  .vacancy-item
+    .vacancy-item__name
+      a.vacancy-item__back-href(href=options.backHref)
+        +icon("small-arrow", 12, 10)
+        span=options.textBackHref
+      h1=options.title
+      p=options.description
+      ul.vacancy-item__features
+        each item in options.features
+          li=item
+    .vacancy-item__details
+      each item in options.details
+        .vacancy-item__details-section
+          p=item.detailsTitle
+          ul
+            each subitem in item.detailsItems
+              li=subitem

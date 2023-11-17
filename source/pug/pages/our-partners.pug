@@ -60,11 +60,12 @@ block variables
 
 block main
   main
-    section.our-partners-page
-      .container
-        h2=ourPartnersPageTitle
-        .our-partners-page__wrapper
-          each item in ourPartnersPageItems
-            +partners-page-item(item)
+    .page-wrapper
+      section.our-partners-page
+        .container
+          h1.title-2=ourPartnersPageTitle
+          .our-partners-page__wrapper
+            each item in ourPartnersPageItems
+              +partners-page-item(item)
 
 block modals

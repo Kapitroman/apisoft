@@ -12,13 +12,14 @@ block variables
 
 block main
   main
-    section.services-tech
-      .container
-        +title-group(servicesTechTitleGroup)
-        .services-tech__wrapper
-          each item in servicesTechFeaturesList
-            +services-page-item(item)
-    +our-partners(ourServicesPartnersTitle, ourServicesPartnersItems).our-partners--services
+    .page-wrapper
+      section.services-tech
+        .container
+          +title-group(servicesTechTitleGroup)
+          .services-tech__wrapper
+            each item in servicesTechFeaturesList
+              +services-page-item(item)
+      +our-partners(ourServicesPartnersTitle, ourServicesPartnersItems)
 
 
 

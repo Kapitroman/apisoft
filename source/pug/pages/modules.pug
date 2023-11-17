@@ -12,13 +12,14 @@ block variables
 
 block main
   main
-    section.modules
-      .container
-        +title-group(modulesTitleGroup)
-        .modules__wrapper
-          each section in modulesData
-            +modules-section(section)
-        +connect-us(fillConnect).connect-us--fill
+    .page-wrapper
+      section.modules
+        .container
+          +title-group(modulesTitleGroup)
+          .modules__wrapper
+            each section in modulesData
+              +modules-section(section)
+          +connect-us(fillConnect).connect-us--fill
 
 
 block modals

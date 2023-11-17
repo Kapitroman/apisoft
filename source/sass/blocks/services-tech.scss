@@ -1,10 +1,17 @@
 .services-tech {
+  /*
   padding-top: size(70px);
   padding-bottom: size(100px);
 
   @include vp-767 {
     padding-top: size(40px);
     padding-bottom: size(60px);
+  }
+  */
+  margin-bottom: size(100px);
+
+  @include vp-767 {
+    margin-bottom: size(60px);
   }
 
   .services-page-item + .services-page-item {

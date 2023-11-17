@@ -11,7 +11,8 @@ h1 {
   }
 }
 
-h2 {
+h2,
+h1.title-2 {
   margin: 0;
 
   font-weight: 500;
@@ -19,7 +20,7 @@ h2 {
   line-height: size(65px);
 
   @include vp-767 {
-    font-size: size(22px);
+    font-size: size(26px);
     line-height: size(26px);
   }
 }

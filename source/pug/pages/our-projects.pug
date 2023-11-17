@@ -63,13 +63,14 @@ block variables
 
 block main
   main
-    section.our-projects-page
-      .container
-        +title-group(titleGroupOurProjects)
+    .page-wrapper.page-wrapper--bottom
+      section.our-projects-page
+        .container
+          +title-group(titleGroupOurProjects)
 
-        .our-projects-page__container
-          each item in ourProjectsPageView
-            +projects-item(item)
+          .our-projects-page__container
+            each item in ourProjectsPageView
+              +projects-item(item)
 
     +send-message()
 
