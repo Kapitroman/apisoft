@@ -1,0 +1,24 @@
+.modules {
+  padding-top: size(70px);
+  padding-bottom: size(116px);
+
+  @include vp-767 {
+    padding-top: size(40px);
+    padding-bottom: size(60px);
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: size(80px);
+
+    width: 100%;
+    margin-bottom: size(80px);
+
+    @include vp-767 {
+      gap: size(40px);
+
+      margin-bottom: size(60px);
+    }
+  }
+}

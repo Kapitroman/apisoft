@@ -4237,8 +4237,8 @@ h3 {
 .error__message {
   margin: 0;
   margin-bottom: 2.8125rem;
-  font-size: 32px;
-  line-height: 38px;
+  font-size: 2rem;
+  line-height: 2.375rem;
   text-align: center;
 }
 @media (max-width: 767px) {
@@ -4266,6 +4266,86 @@ h3 {
 }
 .error .btn.focus-visible:focus .btn__text {
   color: #2D69C3;
+}
+
+.modules-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 1.5rem;
+  padding: 2.4375rem 1.8125rem;
+  border: 0.0625rem solid #2D69C3;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+@media (max-width: 767px) {
+  .modules-item {
+    border-radius: 1rem;
+    padding: 0.9375rem;
+  }
+}
+.modules-item h4 {
+  margin: 0;
+  margin-bottom: 1.875rem;
+  font-size: 2rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .modules-item h4 {
+    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
+  }
+}
+.modules-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+@media (max-width: 767px) {
+  .modules-item p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media (hover: hover) {
+  .modules-item:hover:not(.focus-visible) {
+    background-color: #2D69C3;
+    color: #ffffff;
+  }
+}
+.modules-item.focus-visible:focus {
+  background-color: #2D69C3;
+  color: #ffffff;
+}
+
+.modules-section h3 {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 1.875rem;
+  font-size: 2rem;
+  line-height: 1.375rem;
+  color: #2D69C3;
+}
+@media (max-width: 767px) {
+  .modules-section h3 {
+    font-size: 1.125rem;
+  }
+}
+.modules-section__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: row dense;
+  gap: 0.625rem;
+}
+@media (max-width: 767px) {
+  .modules-section__list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .intro {
@@ -4987,7 +5067,34 @@ h3 {
   margin-top: 0.625rem;
 }
 
-/* @mixin hover-focus {
+.modules {
+  padding-top: 4.375rem;
+  padding-bottom: 7.25rem;
+}
+@media (max-width: 767px) {
+  .modules {
+    padding-top: 2.5rem;
+    padding-bottom: 3.75rem;
+  }
+}
+.modules__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+@media (max-width: 767px) {
+  .modules__wrapper {
+    gap: 2.5rem;
+    margin-bottom: 3.75rem;
+  }
+} /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
         @content;

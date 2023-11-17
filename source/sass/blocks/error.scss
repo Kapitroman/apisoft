@@ -50,8 +50,8 @@
     margin: 0;
     margin-bottom: size(45px);
 
-    font-size: 32px;
-    line-height: 38px;
+    font-size: size(32px);
+    line-height: size(38px);
     text-align: center;
 
     @include vp-767 {

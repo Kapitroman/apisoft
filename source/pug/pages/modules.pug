@@ -1,0 +1,24 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Модули. APISOFT — CRM, интернет-эквайринг, логистика, модули для интернет-магазинов под ключ" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "modules.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+block main
+  main
+    section.modules
+      .container
+        +title-group(modulesTitleGroup)
+        .modules__wrapper
+          each section in modulesData
+            +modules-section(section)
+        +connect-us(fillConnect).connect-us--fill
+
+
+block modals

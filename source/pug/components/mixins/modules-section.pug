@@ -1,0 +1,6 @@
+mixin modules-section(options)
+  .modules-section
+    h3=options.company
+    .modules-section__list
+      each item in options.modules
+        +modules-item(item)
