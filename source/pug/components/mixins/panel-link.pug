@@ -1,5 +1,18 @@
 mixin panel-link(options)
-  a(href=options.href).panel-link&attributes(attributes)
-    h3=options.text
-    span.icon
-      +icon("arrow", 12, 10)
+  if options.download
+    a(href=options.href, download).panel-link.panel-link--download&attributes(attributes)
+      h3=options.text
+        span=options.download
+      span.icon
+        +icon("arrow", 12, 10)
+  else
+    if options.document
+      a(href=options.href).panel-link.panel-link--document&attributes(attributes)
+        h3=options.text
+        span.icon
+          +icon("arrow", 12, 10)
+    else
+      a(href=options.href).panel-link&attributes(attributes)
+        h3=options.text
+        span.icon
+          +icon("arrow", 12, 10)

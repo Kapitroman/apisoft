@@ -13,11 +13,14 @@
 
   @include vp-767 {
     min-height: initial;
-    border-radius: size(20px);
+    border-radius: size(16px);
     padding: size(20px);
   }
 
   h3 {
+    display: inline-flex;
+    flex-wrap: wrap;
+
     margin: 0;
     margin-right: size(30px);
 
@@ -25,9 +28,29 @@
     line-height: size(22px);
 
     @include vp-767 {
-      margin-right: size(20px);
+      width: size(215px);
+      margin-right: size(16px);
 
       font-size: size(16px);
+    }
+
+    span {
+      margin-left: size(15px);
+      margin-bottom: auto;
+
+      font-size: size(18px);
+      line-height: size(18px);// 31
+      color: #9B9BB4;
+
+      @include vp-767 {
+        order: -1;
+        margin-left: 0;
+        margin-bottom: size(10px);
+
+        font-size: size(14px);
+        line-height: size(14px)
+      }
+
     }
   }
 
@@ -43,6 +66,22 @@
       color: $color-blue;
 
       background-color: $color-default-white;
+    }
+  }
+}
+
+.panel-link--document {
+  .icon {
+    svg {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.panel-link--download {
+  .icon {
+    svg {
+      transform: rotate(90deg);
     }
   }
 }
