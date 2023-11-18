@@ -1,0 +1,36 @@
+mixin introduction-crm()
+  section.introduction-crm
+    .container
+      .introduction-crm__intro
+        .introduction-crm__intro-info
+          h1.title-2=introductionCRMData.introTitle
+          p=introductionCRMData.introText
+          +btn({
+            icon: "arrow",
+            href: introductionCRMData.href,
+            text: introductionCRMData.textButton,
+          })
+        .introduction-crm__intro-feature
+          each item in introductionCRMData.features
+            +features-item(item)
+      .introduction-crm__explanation
+        .introduction-crm__text
+          h2=introductionCRMData.explanationTitle
+          p=introductionCRMData.explanationText
+        .introduction-crm__image
+          +picture(
+            introductionCRMData.picture[0],
+            introductionCRMData.picture[1],
+            introductionCRMData.picture[2],
+            500,
+            240,
+            introductionCRMData.picture[3],
+            false
+          )
+      .introduction-crm__cases
+          p=introductionCRMData.casesText
+          ul
+            each item in introductionCRMData.cases
+              li=item
+
+      +connect-us(introductionConnect).connect-us--add

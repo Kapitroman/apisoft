@@ -131,8 +131,59 @@
     }
   }
 }
-/*
-.connect-us--add {
 
+.connect-us--add {
+  padding: size(50px);
+  min-height: size(211px);
+
+  @include vp-767 {
+    padding: size(20px);
+  }
+
+  .connect-us__main {
+    width: size(500px);
+    margin-right: size(50px);
+
+    @include vp-767 {
+      display: contents;
+
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: size(25px);
+    }
+
+    p {
+      margin-bottom: size(45px);
+      font-size: size(32px);
+      line-height: size(22px);
+
+      @include vp-767 {
+        width: size(200px);
+        margin-bottom: size(30px);
+
+        font-size: size(20px);
+        line-height: size(26px);
+      }
+    }
+
+    button {
+      @include vp-767 {
+        order: 2;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .connect-us__add {
+    display: flex;
+    gap: size(10px);
+    margin-left: auto;
+
+    @include vp-767 {
+      flex-direction: column;
+      margin-left: 0;
+      margin-bottom: size(30px);
+    }
+  }
 }
-*/
+

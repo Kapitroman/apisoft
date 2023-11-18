@@ -5,7 +5,7 @@ mixin connect-us(options)
       button(type="button")=options.textButton
       if options.icon
         +icon(options.icon[0], options.icon[1], options.icon[2])
-    //-if options.add
+    if options.add
       .connect-us__add
         each block in options.add
           +add-block(block)
