@@ -5,8 +5,11 @@ mixin intro()
     .container
       h1=introTitle
 
-    .intro__slider.swiper
-      .swiper-wrapper
+    .intro__ticker
+      .intro__ticker-wrapper
+        each item in introItems
+          +intro-item(item)
+      .intro__ticker-wrapper
         each item in introItems
           +intro-item(item)
 

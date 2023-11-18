@@ -13,8 +13,6 @@
   font-size: size(24px);
   line-height: size(17px);
 
-  transition: background-color ease 0.4s, color ease 0.4s;
-
   @include vp-767 {
     padding: size(9px) size(15px) size(11px) size(15px);
 
@@ -60,4 +58,14 @@
     height: size(31px);
     margin-left: 0;
   }
+}
+
+.intro-item:not(.intro-item--icon) {
+  transition: background-color ease 0.4s, color ease 0.4s;
+}
+
+.fill-color {
+  color: $color-default-white;
+
+  background-color: $color-blue;
 }

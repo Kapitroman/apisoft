@@ -61,9 +61,12 @@
     }
   }
 
-  .intro__slider {
+  &__ticker {
+    display: flex;
+    gap: size(5px);
+
     width: calc(size(218px) + 100% + size(168px));
-    margin-left: size(-218px);
+    //margin-left: size(-218px);
     margin-bottom: size(63px);
 
     @include vp-767 {
@@ -75,8 +78,15 @@
     }
   }
 
-  .swiper-wrapper {
+  &__ticker-wrapper {
+    display: flex;
     gap: size(5px);
+
+    animation-name: marquee-moving;
+    animation-duration: 22s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
 
     @include vp-767 {
       gap: size(4px);
@@ -143,9 +153,13 @@
   }
 }
 
-.fill-color {
-  color: $color-default-white;
+@keyframes marquee-moving {
+  0% {
+    transform: translateZ(0) translateX(0);
+  }
 
-  background-color: $color-blue;
+  100% {
+    transform: translateZ(0) translateX(-100%);
+  }
 }
 

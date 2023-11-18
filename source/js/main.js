@@ -5,7 +5,7 @@ import {CustomSelect} from './modules/select/custom-select';
 // import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 
 import {Burger} from './modules/burger';
-import {initIntroSlider} from './modules/init-intro-slider.js';
+import {blink} from './modules/blink';
 
 // ---------------------------------
 
@@ -34,7 +34,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const burger = new Burger();
     burger.init();
 
-    initIntroSlider();
+    blink();
+
   });
 });
 
