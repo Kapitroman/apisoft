@@ -17,7 +17,8 @@ mixin footer(footerMods)
             each link in footerAddNavigation
               li
                 a(href=link.href)=link.text
-        a(href=footerAction.href).footer__action
+        +contacts-action(footerAction)
+        //-a(href=footerAction.href).footer__action
           span.footer__action-text=footerAction.text
           span.footer__action-icon
             +icon(footerAction.icon, 47, 47)

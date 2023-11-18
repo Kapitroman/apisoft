@@ -1,0 +1,6 @@
+mixin contacts-action(options)
+  .contacts-action&attributes(attributes)
+    a(href=options.hrefMail).contacts-action__mail=options.textMail
+    a(href=options.hrefTelegram).contacts-action__telegram
+      +icon(options.iconTelegram, 47, 47)
+      span.visually-hidden telegram

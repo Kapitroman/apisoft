@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Карьера. APISOFT — CRM, интернет-эквайринг, логистика, модули для интернет-магазинов под ключ</title>
+    <title>Контакты. APISOFT — CRM, интернет-эквайринг, логистика, модули для интернет-магазинов под ключ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -42,46 +42,64 @@
         </div>
       </header>
       <main>
-        <div class="page-wrapper">
-          <section class="career">
+        <div class="page-wrapper page-wrapper--bottom">
+          <section class="contacts">
             <div class="container">
-              <div class="title-group">
-                <div class="title-group__text">
-                  <h1 class="title-2">Карьера</h1>
-                  <p>Мы гордимся своей командой</p>
-                </div>
-                <div class="title-group__image">
-                  <picture>
-                    <source type="image/webp" srcset="img/content/content-image-04.webp, img/content/content-image-04@2x.webp 2x"><img src="img/content/content-image-04.jpg" srcset="img/content/content-image-04@2x.jpg 2x" width="500" height="320" alt="abstract content image" loading="auto">
-                  </picture>
-                </div>
+              <div class="contacts__info">
+                <h1 class="title-2">Контакты</h1><a class="contacts__tel" href="+74994551508">+7 (499) 455-15-08</a>
+                <div class="contacts-action contacts-action--blue"><a class="contacts-action__mail" href="mailto:info@api-soft.com.ru">info@api-soft.com.ru</a><a class="contacts-action__telegram" href="#">
+                    <svg width="47" height="47" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#telegram"></use>
+                    </svg><span class="visually-hidden">telegram</span></a></div>
+                <p class="contacts-address">Москва, ул. Профсоюзная, д. 57</p>
               </div>
-              <ul class="career__vacancy-list"><a class="panel-link" href="#">
-                  <h3>PHP-разработчик</h3><span class="icon">
-                    <svg width="12" height="10" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#arrow"></use>
-                    </svg></span></a><a class="panel-link" href="#">
-                  <h3>QA-инженер</h3><span class="icon">
-                    <svg width="12" height="10" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#arrow"></use>
-                    </svg></span></a><a class="panel-link" href="#">
-                  <h3>Frontend-разработчик</h3><span class="icon">
-                    <svg width="12" height="10" aria-hidden="true">
-                      <use xlink:href="img/sprite.svg#arrow"></use>
-                    </svg></span></a>
-              </ul>
-              <div class="connect-us connect-us--mail">
-                <div class="connect-us__main">
-                  <p>Если вы не нашли подходящей вакансии, но хотите у нас работать,пишите на почту</p>
-                  <button type="button">hr@api-soft.com</button>
-                  <svg width="42" height="30" aria-hidden="true">
-                    <use xlink:href="img/sprite.svg#mail"></use>
-                  </svg>
-                </div>
-              </div>
+              <div class="contacts__map" id="map"></div>
             </div>
           </section>
         </div>
+        <section class="send-message">
+          <div class="container">
+            <h2>Оставьте заявку</h2>
+            <div class="form">
+              <form action="#" method="post" enctype="multipart/form-data">
+                <div class="form__fields">
+                  <div class="custom-input">
+                    <label>
+                      <input type="text" id="name" name="name" placeholder="Имя">
+                    </label>
+                  </div>
+                  <div class="custom-input">
+                    <label>
+                      <input type="text" id="contact" name="contact" placeholder="E-mail или телефон">
+                    </label>
+                  </div>
+                  <div class="custom-textarea">
+                    <label>
+                      <textarea id="message" name="message" placeholder="Краткое описание задачи"></textarea>
+                    </label>
+                  </div>
+                  <div class="input-upload input-upload--file" data-upload="file">
+                    <label>
+                      <input type="file" name="upload-file">
+                      <svg width="32" height="32" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#link"></use>
+                      </svg><span>Техническое задание или файлы</span>
+                    </label>
+                  </div>
+                </div>
+                <p>
+                  Оставляя заявку, вы соглашаетесь с
+                  <a href="#">Политикой конфидециальности</a>
+                </p>
+                <button class="btn btn--white" type="submit"><span class="icon">
+                    <svg width="12" height="10" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg></span><span class="btn__text">Отправить</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="container">
@@ -122,5 +140,6 @@
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=59ac30c3-d233-4b61-910a-a8bbc49eb6cd&amp;lang=ru_RU"></script>
   </body>
 </html>

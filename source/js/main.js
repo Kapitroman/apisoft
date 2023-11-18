@@ -6,6 +6,7 @@ import {CustomSelect} from './modules/select/custom-select';
 
 import {Burger} from './modules/burger';
 import {blink} from './modules/blink';
+import {initYM} from './modules/init-map.js';
 
 // ---------------------------------
 
@@ -35,7 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
     burger.init();
 
     blink();
-
+    initYM();
   });
 });
 

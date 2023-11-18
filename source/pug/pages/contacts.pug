@@ -1,0 +1,31 @@
+extends ../components/base/layout
+
+//-include ../data/our-projects-page-data
+
+block variables
+  - const title = "Контакты. APISOFT — CRM, интернет-эквайринг, логистика, модули для интернет-магазинов под ключ" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "contacts.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+  - const map = true
+
+block main
+  main
+    .page-wrapper.page-wrapper--bottom
+      section.contacts
+        .container
+          .contacts__info
+            h1.title-2 Контакты
+            a(href=tel.number).contacts__tel=tel.text
+            +contacts-action(contactsAction).contacts-action--blue
+            p.contacts-address=address
+
+          #map.contacts__map
+
+
+    +send-message()
+
+block modals

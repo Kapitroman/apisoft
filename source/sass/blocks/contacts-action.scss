@@ -1,0 +1,68 @@
+.contacts-action {
+  display: flex;
+  align-items: center;
+
+  &__mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: size(16px);
+    padding: size(12px) size(24px) size(14px) size(24px);
+    border-radius: size(15px);
+
+    font-weight: 600;
+    font-size: size(16px);
+    line-height: size(19px);
+
+    color: $color-default-white;
+
+    background-color: $color-gray-01;
+
+    transition: background-color $trans-default;
+
+    @include hover-focus {
+      background-color: $color-gray-02;
+    }
+
+    @include vp-767 {
+      flex-grow: 1;
+    }
+  }
+
+  &__telegram {
+    display: flex;
+
+    border-radius: 50%;
+
+    transition: background-color $trans-default;
+
+    @include hover-focus {
+      background-color: $color-gray-02;
+    }
+
+    svg {
+      width: size(45px);
+      height: size(45px);
+      border-radius: 50%;
+    }
+  }
+}
+
+.contacts-action--blue {
+  .contacts-action__mail {
+    background-color: $color-blue;
+
+    @include hover-focus {
+      background-color: rgba($color-blue, 0.8);
+    }
+  }
+
+  .contacts-action__telegram {
+    background-color: $color-blue;
+
+    @include hover-focus {
+      background-color: rgba($color-blue, 0.8);
+    }
+  }
+}
