@@ -16,13 +16,16 @@ block main
         .container
           h1.title-2=propertiesTitle
 
-          .properties__card
-            .properties__card-info
-              h2
-              .properties__card-section
-            .properties__card-contacts
-              h2
-              .properties__card-section
+          .properties__wrapper
+            each block in propertiesData
+              .properties__block
+                h3.properties__title=block.title
+                each group in block.propertiesSection
+                  .properties__group
+                    each item in group
+                      .properties__item
+                        p.properties__name=item.propertiesName
+                        p.properties__value=item.propertiesValue
 
           .properties__list
             each item in propertiesLinks
