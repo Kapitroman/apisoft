@@ -1,21 +1,15 @@
 const blink = () => {
+  const breakpoint = window.matchMedia(`(min-width: 768px)`);
   const blinkContainer = document.querySelector('.intro__ticker');
 
   if(!blinkContainer) {
     return;
   }
 
-  const widthWindow = document.documentElement.clientWidth;
-  const leftBorder = widthWindow / 4;
-  let rightBorder;
-
-  if (widthWindow > 767) {
-    rightBorder = leftBorder + leftBorder * 0.15;
-  } else {
-    rightBorder = leftBorder + leftBorder * 0.4;
-  }
-
   const blinkItems = Array.from(blinkContainer.querySelectorAll('.intro-item:not(.intro-item--icon)'));
+
+  let leftBorder;
+  let rightBorder;
 
   const fillColorItems = () => {
 
@@ -29,6 +23,19 @@ const blink = () => {
       }
     }
   }
+
+  const breakpointChecker = () => {
+    if (breakpoint.matches) {
+      leftBorder = document.documentElement.clientWidth / 4;
+      rightBorder = leftBorder + leftBorder * 0.15;
+    } else {
+      leftBorder = document.documentElement.clientWidth / 4;
+      rightBorder = leftBorder + leftBorder * 0.4;
+    }
+  };
+
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
 
   setInterval(fillColorItems, 500);
 };

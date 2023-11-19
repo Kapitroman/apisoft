@@ -575,6 +575,11 @@ a:focus-visible {
   padding: 1.875rem 0;
   background-color: #ffffff;
 }
+@media (max-width: 767px) {
+  .header {
+    padding: 1.375rem 0;
+  }
+}
 .header .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -780,23 +785,38 @@ a:focus-visible {
 }
 .header__button-start.btn {
   margin-left: auto;
-  /*
-  transition: opacity $trans-default;
-
-  @include hover-focus {
+}
+@media (max-width: 767px) {
+  .header__button-start.btn {
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+}
+@media (max-width: 767px) and (hover: hover) {
+  .header__button-start.btn:hover:not(.focus-visible) {
     opacity: 0.7;
   }
-  */
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
 }
-@media (hover: hover) {
+@media (max-width: 767px) {
+  .header__button-start.btn.focus-visible:focus {
+    opacity: 0.7;
+  }
+}
+@media (min-width: 768px) {
+  .header__button-start.btn {
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+}
+@media (min-width: 768px) and (hover: hover) {
   .header__button-start.btn:hover:not(.focus-visible) .btn__text {
     color: #2D69C3;
   }
 }
-.header__button-start.btn.focus-visible:focus .btn__text {
-  color: #2D69C3;
+@media (min-width: 768px) {
+  .header__button-start.btn.focus-visible:focus .btn__text {
+    color: #2D69C3;
+  }
 }
 @media (max-width: 767px) {
   .header__button-start.btn {
@@ -821,6 +841,18 @@ a:focus-visible {
   background-color: rgba(255, 255, 255, 0);
   -webkit-box-shadow: none;
           box-shadow: none;
+  /*
+  .header__button-start.btn {
+
+    @include hover-focus {
+      opacity: 0.7;
+
+      .btn__text {
+        color: $color-default-white;
+      }
+    }
+  }
+  */
 }
 .header--special::before {
   content: "";
@@ -839,6 +871,10 @@ a:focus-visible {
   }
 }
 @media (min-width: 768px) {
+  .header--special .header__button-start {
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
   .header--special .header__button-start .icon {
     color: #2D69C3;
     background-color: #ffffff;
@@ -847,23 +883,21 @@ a:focus-visible {
     color: #ffffff;
   }
 }
-.header--special .header__button-start.btn {
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-@media (hover: hover) {
-  .header--special .header__button-start.btn:hover:not(.focus-visible) {
+@media (min-width: 768px) and (hover: hover) {
+  .header--special .header__button-start:hover:not(.focus-visible) {
     opacity: 0.7;
   }
-  .header--special .header__button-start.btn:hover:not(.focus-visible) .btn__text {
+  .header--special .header__button-start:hover:not(.focus-visible) .btn__text {
     color: #ffffff;
   }
 }
-.header--special .header__button-start.btn.focus-visible:focus {
-  opacity: 0.7;
-}
-.header--special .header__button-start.btn.focus-visible:focus .btn__text {
-  color: #ffffff;
+@media (min-width: 768px) {
+  .header--special .header__button-start.focus-visible:focus {
+    opacity: 0.7;
+  }
+  .header--special .header__button-start.focus-visible:focus .btn__text {
+    color: #ffffff;
+  }
 }
 
 .header--shadow {
@@ -872,9 +906,58 @@ a:focus-visible {
 }
 @media (max-width: 767px) {
   .header--shadow {
-    padding: 1.375rem 0;
     -webkit-box-shadow: 0.0625rem 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1), 0 0 0 0.25rem rgba(255, 255, 255, 0.7);
             box-shadow: 0.0625rem 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.1), 0 0 0 0.25rem rgba(255, 255, 255, 0.7);
+  }
+}
+
+.header--special.header--black {
+  background-color: #2C2D32;
+}
+.header--special.header--black::before {
+  display: none;
+}
+.header--special.header--black .logo {
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .header--special.header--black .header__link {
+    color: #ffffff;
+  }
+}
+@media (min-width: 768px) and (hover: hover) {
+  .header--special.header--black .header__link:hover:not(.focus-visible) {
+    color: #2D69C3;
+  }
+}
+@media (min-width: 768px) {
+  .header--special.header--black .header__link.focus-visible:focus {
+    color: #2D69C3;
+  }
+}
+@media (min-width: 768px) {
+  .header--special.header--black .header__button-start .icon {
+    color: #ffffff;
+    background-color: #2D69C3;
+  }
+  .header--special.header--black .header__button-start .btn__text {
+    color: #ffffff;
+  }
+}
+@media (min-width: 768px) and (hover: hover) {
+  .header--special.header--black .header__button-start:hover:not(.focus-visible) {
+    opacity: 1;
+  }
+  .header--special.header--black .header__button-start:hover:not(.focus-visible) .btn__text {
+    color: #2D69C3;
+  }
+}
+@media (min-width: 768px) {
+  .header--special.header--black .header__button-start.focus-visible:focus {
+    opacity: 1;
+  }
+  .header--special.header--black .header__button-start.focus-visible:focus .btn__text {
+    color: #2D69C3;
   }
 }
 
@@ -1344,7 +1427,6 @@ a:focus-visible {
   min-height: 1.875rem;
   border-radius: 6.25rem;
   border: 0.0625rem solid #2D69C3;
-  background-color: #ffffff;
   color: #2D69C3;
   font-weight: 500;
   font-size: 0.875rem;
@@ -5047,6 +5129,65 @@ h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.625rem;
+}
+
+.apisoft {
+  padding-top: 11.5rem;
+  padding-bottom: 4.625rem;
+  background-color: #2C2D32;
+  color: #ffffff;
+}
+.apisoft__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 4.375rem;
+  padding-top: 7.5rem;
+  border-radius: 3.75rem;
+  border: 0.0625rem solid #ffffff;
+  color: #ffffff;
+  text-align: center;
+}
+.apisoft__wrapper svg {
+  display: block;
+  width: 53.1875rem;
+  height: 6.5625rem;
+  margin-bottom: 3.125rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.apisoft__about {
+  width: 53.5625rem;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.375rem;
+}
+.apisoft__achievement {
+  position: absolute;
+  top: -4.0625rem;
+  left: 1.9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15.625rem;
+  height: 15.625rem;
+  border-radius: 50%;
+  background-color: #2D69C3;
+  font-size: 2rem;
+  line-height: 2.1875rem;
 }
 
 /* @mixin hover-focus {

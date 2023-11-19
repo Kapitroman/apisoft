@@ -1,12 +1,5 @@
 extends ../components/base/layout
 
-//-include ../data/our-projects-data
-//-include ../data/intro-data
-//-include ../data/digital-products-data
-//-include ../data/our-services-data
-//-include ../data/our-projects-data
-//-include ../data/our-partners-data
-
 block variables
   - const title = "APISOFT — CRM, интернет-эквайринг, логистика, модули для интернет-магазинов под ключ" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
@@ -15,44 +8,6 @@ block variables
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "index.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
-
-  //- const ourProjectsTitle = "Наши проекты";
-
-  //- const ourProjectsSubtitle = "Проекты, которыми мы действительно гордимся";
-
-  //-
-    const ourProjectsView = [
-     {
-      href: "#",
-      class: "insale",
-      picture: ["content", "our-projects-01", "jpg", "abstract image about project"],
-      logo: ["./img/svg/logo-insales.svg", 144, 41, "логотип InSale"],
-      text: "Разработка IT-инфраструктуры для e-commerce, модулей для финансов, логистики и бухгалтерии для InSales",
-     },
-     {
-      href: "#",
-      class: "airmap",
-      picture: ["content", "our-projects-02", "jpg", "abstract image about project"],
-      logo: ["./img/svg/logo-airmap.svg", 140, 95, "логотип АэроМар"],
-      text: "Разработка ПО АэроМар для продаж на борту самолета",
-     },
-     {
-      href: "#",
-      class: "lg",
-      picture: ["content", "our-projects-03", "jpg", "abstract image about project"],
-      logo: ["./img/svg/logo-lg.svg", 127, 60, "логотип LG"],
-      text: "Разработка IT-инфраструктуры для e-commerce LG",
-     },
-     {
-      href: "#",
-      class: "alpha",
-      picture: ["content", "our-projects-04", "jpg", "abstract image about project"],
-      logo: ["./img/svg/logo-alpha.svg", 80, 180, "логотип Альфа"],
-      text: "Разработка модулей для эквайринга Альфа Банка",
-     },
-    ];
-
-  //- const ourProjectsButton = { href: "#", text: "Все проекты" };
 
 block main
   main

@@ -1,0 +1,61 @@
+.apisoft {
+  padding-top: size(184px);
+  padding-bottom: size(74px);
+  background-color: $color-black-2;
+
+  color: $color-default-white;
+
+  &__wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding: size(70px);
+    padding-top: size(120px);
+    border-radius: size(60px);
+    border: size(1px) solid $color-default-white;
+
+    color: $color-default-white;
+    text-align: center;
+
+    svg {
+      display: block;
+
+      width: size(851px);
+      height: size(105px);
+      margin-bottom: size(50px);
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__about {
+    width: size(857px);
+    margin: 0 auto;
+
+    font-weight: 500;
+    font-size: size(24px);
+    line-height: size(38px);
+  }
+
+  &__achievement {
+    position: absolute;
+    top: size(-65px);
+    left: size(31px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: size(250px);
+    height: size(250px);
+    border-radius: 50%;
+
+    background-color: $color-blue;
+
+    font-size: size(32px);
+    line-height: size(35px);
+  }
+}
