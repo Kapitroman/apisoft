@@ -1,6 +1,6 @@
 .apisoft {
   padding-top: size(184px);
-  padding-bottom: size(74px);
+  // padding-bottom: size(74px);
   background-color: $color-black-2;
 
   color: $color-default-white;
@@ -13,7 +13,7 @@
 
     width: 100%;
     padding: size(70px);
-    padding-top: size(120px);
+    padding-top: size(118px);
     border-radius: size(60px);
     border: size(1px) solid $color-default-white;
 
@@ -25,7 +25,7 @@
 
       width: size(851px);
       height: size(105px);
-      margin-bottom: size(50px);
+      margin-bottom: size(48px);
       margin-left: auto;
       margin-right: auto;
     }
@@ -42,7 +42,7 @@
 
   &__achievement {
     position: absolute;
-    top: size(-65px);
+    top: size(-100px);
     left: size(31px);
 
     display: flex;

@@ -1,0 +1,7 @@
+mixin about-numbers()
+  section.about-numbers.margin-bottom-80
+    h2=aboutNumbersTitle
+    +digital-achievements.digital-achievements--about
+    each picture, index in aboutNumbersPictures
+      div(class=`about-numbers__picture about-numbers__picture--${index}`)
+        +picture(picture[0], picture[1], picture[2], picture[3], picture[4], picture[5], true)

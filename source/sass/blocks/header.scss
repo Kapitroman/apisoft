@@ -218,9 +218,6 @@
       }
     }
 
-
-
-
     @include vp-767 {
       display: none;
     }
@@ -350,7 +347,13 @@
     }
   }
 
+  .header__burger {
+    background-color: $color-black-2;
+  }
 
-
-
+  &.is-open {
+    .header__burger {
+      background-color: $color-default-white;
+    }
+  }
 }

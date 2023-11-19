@@ -1,0 +1,83 @@
+.digital-achievements {
+  display: flex;
+  gap: size(80px);
+
+  margin: 0;
+  padding-left: 0;
+
+  list-style: none;
+
+  color: $color-blue;
+
+  @include vp-767 {
+    flex-direction: column;
+    gap: size(14px);
+
+    margin-bottom: size(18px);
+  }
+
+  li {
+    flex-grow: 1;
+
+    @include vp-767 {
+      display: flex;
+
+      width: 100%;
+    }
+  }
+
+  p:first-child {
+    margin: 0;
+    margin-bottom: size(24px);
+
+    @include vp-767 {
+      width: size(133px);
+      margin-right: size(10px);
+    }
+
+    span:first-child {
+      display: block;
+
+      font-size: size(64px);
+      line-height: size(64px);
+
+      @include vp-767 {
+        font-size: size(36px);
+        line-height: size(36px);
+      }
+    }
+
+    span:last-child {
+      display: block;
+
+      font-size: size(24px);
+      line-height: size(24px);
+
+      @include vp-767 {
+        font-size: size(16px);
+        line-height: size(21px);
+      }
+    }
+  }
+
+  p:last-child {
+    margin: 0;
+
+    font-size: size(16px);
+    line-height: size(24px);
+
+    @include vp-767 {
+      width: size(148px);
+      font-size: size(14px);
+      line-height: size(22px);
+    }
+  }
+}
+
+.digital-achievements--about {
+  gap: size(58px);
+
+  width: size(750px);
+
+  color: $color-default-white;
+}

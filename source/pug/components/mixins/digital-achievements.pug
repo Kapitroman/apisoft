@@ -1,0 +1,8 @@
+mixin digital-achievements
+  ul.digital-achievements&attributes(attributes)
+    each item in digitalProductsAchievements
+      li.digital-achievements__item
+        p
+          span!=item.amount
+          span!=item.item
+        p!=item.text

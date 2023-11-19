@@ -1,0 +1,15 @@
+.margin-botton-120 {
+  margin-bottom: size(105px);
+
+  @include vp-767 {
+    margin-bottom: size(54px);
+  }
+}
+
+.margin-botton-80 {
+  margin-bottom: size(80px);
+
+  @include vp-767 {
+    margin-bottom: size(50px);
+  }
+}

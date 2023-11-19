@@ -1,0 +1,80 @@
+.about-numbers {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  padding-top: size(300px);
+  padding-bottom: size(114px);
+
+  background-color: $color-black-2;
+
+  overflow: hidden;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: size(-781px);
+
+    transform: translateX(-50%);
+
+    width: size(1350px);
+    height: size(1350px);
+    border-radius: 50%;
+
+    background-color: $color-blue;
+  }
+
+  h2 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: size(84px);
+    margin-left: auto;
+    margin-right: auto;
+
+    color: $color-default-white;
+  }
+
+  .digital-achievements {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+  }
+
+  &__picture {
+    position: absolute;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: size(32px);
+
+      object-fit: cover;
+    }
+  }
+
+  &__picture--0 {
+    top: size(194px);
+    left: size(-97px);
+
+    width: size(471px);
+    height: size(233px);
+  }
+
+  &__picture--1 {
+    top:size(74px);
+    right: size(87px);
+
+    width: size(430px);
+    height: size(225px);
+  }
+
+  &__picture--2 {
+    bottom: size(102px);
+    right: size(-40px);
+
+    width: size(281px);
+    height: size(172px);
+  }
+}
