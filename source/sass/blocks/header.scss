@@ -1,15 +1,13 @@
 .header {
-  //position: absolute;
-  //top: 0;
-  //left: 0;
-  //z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
 
   width: 100%;
   padding: size(30px) 0;
 
-  @include vp-767 {
-    padding: size(22px) 0;
-  }
+  background-color: $color-default-white;
 
   .container {
     display: flex;
@@ -197,16 +195,25 @@
 
   &__button-start.btn {
     margin-left: auto;
-
+    /*
     transition: opacity $trans-default;
 
     @include hover-focus {
       opacity: 0.7;
     }
+    */
+    transition: color $trans-default;
+
+    @include hover-focus {
+      .btn__text {
+        color: $color-blue;
+      }
+    }
 
     @include vp-767 {
       display: none;
     }
+
   }
 
   .toggle-language {
@@ -222,7 +229,11 @@
   }
 }
 
-.header--home {
+.header--special {
+  background-color: $color-transparent;
+
+  box-shadow: none;
+
   &::before {
     content: "";
     position: absolute;
@@ -254,5 +265,28 @@
         color: $color-default-white;
       }
     }
+  }
+
+  .header__button-start.btn {
+
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.7;
+
+      .btn__text {
+        color: $color-default-white;
+      }
+    }
+  }
+}
+
+.header--shadow {
+  box-shadow: size(2px) size(4px) size(8px) 0 rgba($color-default-black, 0.1), 0 0 0 size(8px) rgba($color-default-white, 0.7);
+
+  @include vp-767 {
+    padding: size(22px) 0;
+
+    box-shadow: size(1px) size(2px) size(4px) 0 rgba($color-default-black, 0.1), 0 0 0 size(4px) rgba($color-default-white, 0.7);
   }
 }

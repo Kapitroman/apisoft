@@ -4,12 +4,13 @@
   display: flex;
   flex-direction: column;
 
-  //padding-top: size(235px);
-  padding-top: size(145px);
+  padding-top: size(235px);
+  //padding-top: size(145px);
   padding-bottom: size(312px);
 
   @include vp-767 {
-    padding-top: size(17px);
+    padding-top: size(91px);
+    //padding-top: size(17px);
     padding-bottom: size(54px);
   }
   /*
@@ -32,7 +33,8 @@
   */
   &::after {
     position: absolute;
-    top: size(366px);
+    //top: size(366px);
+    top: size(456px);
     right: size(-30px);
 
     content: "";
@@ -43,7 +45,8 @@
     background-color: $color-blue;
 
     @include vp-767 {
-      top: size(300px);
+      top: size(374px);
+      //top: size(300px);
       right: size(7px);
 
       width: size(243px);
@@ -112,9 +115,9 @@
     }
 
     .btn {
-      @include hover-focus {
-        transition: color $trans-default;
+      transition: color $trans-default;
 
+      @include hover-focus {
         .btn__text {
           color: $color-blue;
         }
@@ -129,7 +132,8 @@
 
   &__image {
     position: absolute;
-    top: size(45px);//90
+    top: size(135px);
+    //top: size(45px);//90
     right: size(-165px);
     z-index: 2;
 
@@ -137,7 +141,8 @@
     aspect-ratio: 1116 / 828;
 
     @include vp-767 {
-      top: size(273px);//74
+      top: size(350px);
+      //top: size(273px);//74
       right: size(-68px);
 
       width: size(347px);

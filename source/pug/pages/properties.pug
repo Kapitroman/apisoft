@@ -1,0 +1,31 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Реквизиты. APISOFT — CRM, интернет-эквайринг, логистика, модули для интернет-магазинов под ключ" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "properties.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+block main
+  main
+    .page-wrapper
+      section.properties
+        .container
+          h1.title-2=propertiesTitle
+
+          .properties__card
+            .properties__card-info
+              h2
+              .properties__card-section
+            .properties__card-contacts
+              h2
+              .properties__card-section
+
+          .properties__list
+            each item in propertiesLinks
+              +panel-link(item)
+
+block modals
