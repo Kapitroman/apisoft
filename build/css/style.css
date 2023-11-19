@@ -2494,6 +2494,44 @@ h3 {
   padding: 2.0625rem 1.875rem 1.8125rem 1.875rem;
   border-radius: 2rem;
   border: 0.0625rem solid #2D69C3;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+@media (hover: hover) {
+  .services-item:hover:not(.focus-visible) {
+    background-color: #2D69C3;
+  }
+  .services-item:hover:not(.focus-visible) h3 {
+    color: #ffffff;
+  }
+  .services-item:hover:not(.focus-visible) p {
+    color: #ffffff;
+  }
+  .services-item:hover:not(.focus-visible) .btn .icon {
+    color: #2D69C3;
+    background-color: #ffffff;
+  }
+  .services-item:hover:not(.focus-visible) .btn .btn__text {
+    opacity: 1;
+    color: #ffffff;
+  }
+}
+.services-item.focus-visible:focus {
+  background-color: #2D69C3;
+}
+.services-item.focus-visible:focus h3 {
+  color: #ffffff;
+}
+.services-item.focus-visible:focus p {
+  color: #ffffff;
+}
+.services-item.focus-visible:focus .btn .icon {
+  color: #2D69C3;
+  background-color: #ffffff;
+}
+.services-item.focus-visible:focus .btn .btn__text {
+  opacity: 1;
+  color: #ffffff;
 }
 @media (max-width: 767px) {
   .services-item {
@@ -2503,6 +2541,8 @@ h3 {
   }
 }
 .services-item h3 {
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
   margin-bottom: 1.5625rem;
 }
 @media (max-width: 767px) {
@@ -2517,6 +2557,8 @@ h3 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 @media (max-width: 767px) {
   .services-item p {
@@ -2527,45 +2569,29 @@ h3 {
 }
 .services-item .btn {
   margin-top: auto;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+}
+.services-item .btn .icon {
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 .services-item .btn .btn__text {
-  display: none;
+  opacity: 0;
+  color: #1E1E1E;
+  -webkit-transition: opacity 0.3s ease, color 0.3s ease;
+  transition: opacity 0.3s ease, color 0.3s ease;
 }
 @media (max-width: 767px) {
   .services-item .btn .btn__text {
-    display: block;
+    opacity: 1;
   }
-}
-@media (hover: hover) {
-  .services-item .btn:hover:not(.focus-visible) {
-    opacity: 0.7;
-  }
-}
-.services-item .btn.focus-visible:focus {
-  opacity: 0.7;
 }
 
 @media (min-width: 768px) {
   .services-item--special {
     grid-column: span 2;
-    background-color: #2D69C3;
-  }
-  .services-item--special h3 {
-    color: #ffffff;
   }
   .services-item--special p {
     display: block;
-    color: #ffffff;
-  }
-  .services-item--special .btn .icon {
-    color: #2D69C3;
-    background-color: #ffffff;
-  }
-  .services-item--special .btn .btn__text {
-    display: block;
-    color: #ffffff;
   }
 }
 
@@ -2756,6 +2782,12 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1.875rem;
 }
 @media (max-width: 767px) {
@@ -2764,7 +2796,6 @@ h3 {
   }
 }
 .partners-item__name span {
-  margin: auto;
   font-size: 1.125rem;
   line-height: 1.8125rem;
 }
@@ -3622,8 +3653,8 @@ h3 {
 @media (max-width: 767px) {
   .error__message {
     margin-bottom: 1.4375rem;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1rem;
+    line-height: 1.1875rem;
   }
 }
 .error .btn {
@@ -3681,13 +3712,13 @@ h3 {
 }
 .modules-item p {
   margin: 0;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 @media (max-width: 767px) {
   .modules-item p {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
   }
 }
 @media (hover: hover) {

@@ -28,6 +28,8 @@
 
   &__name {
     display: flex;
+    justify-content: center;
+    align-items: center;
 
     padding: size(30px);
     //-border: size(1px) solid $color-blue;
@@ -37,7 +39,7 @@
     }
 
     span {
-      margin: auto;
+      //margin: auto;
 
       font-size: size(18px);
       line-height: size(29px);
