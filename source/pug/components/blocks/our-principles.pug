@@ -1,0 +1,9 @@
+mixin our-principles()
+  section.our-principles&attributes(attributes)
+    .container
+      .our-principles__title-group
+        h2=ourPrinciplesTitle
+        p=ourPrinciplesSubTitle
+      .our-principles__wrapper
+        each item in ourPrinciplesItems
+          +principles-item(item)

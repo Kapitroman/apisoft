@@ -1,0 +1,7 @@
+mixin core-competencies()
+  section.core-competencies&attributes(attributes)
+    .container
+      h2=coreCompetenciesIitle
+      .core-competencies__wrapper
+        each item in coreCompetenciesItems
+          +services-item(item)

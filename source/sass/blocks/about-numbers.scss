@@ -11,6 +11,11 @@
 
   overflow: hidden;
 
+  @include vp-767 {
+    padding-top: size(250px);
+    padding-bottom: size(40px);
+  }
+
   &::before {
     content: "";
 
@@ -25,6 +30,12 @@
     border-radius: 50%;
 
     background-color: $color-blue;
+
+    @include vp-767 {
+      bottom: size(-200px);
+      width: size(650px);
+      height: size(650px);
+    }
   }
 
   h2 {
@@ -35,6 +46,10 @@
     margin-right: auto;
 
     color: $color-default-white;
+
+    @include vp-767 {
+      margin-bottom: size(40px);
+    }
   }
 
   .digital-achievements {
@@ -51,6 +66,14 @@
       border-radius: size(32px);
 
       object-fit: cover;
+
+      @include vp-767 {
+        border-radius: size(15px);
+      }
+    }
+
+    @include vp-767 {
+      //display: none;
     }
   }
 
@@ -60,14 +83,31 @@
 
     width: size(471px);
     height: size(233px);
+
+    @include vp-767 {
+      top: size(100px);
+      left: size(-60px);
+
+      width: size(235px);
+      height: size(116px);
+    }
   }
 
   &__picture--1 {
     top:size(74px);
     right: size(87px);
+    z-index: 3;
 
     width: size(430px);
     height: size(225px);
+
+    @include vp-767 {
+      top:size(40px);
+      right: size(-40px);
+
+      width: size(215px);
+      height: size(112px);
+    }
   }
 
   &__picture--2 {
@@ -76,5 +116,9 @@
 
     width: size(281px);
     height: size(172px);
+
+    @include vp-767 {
+      display: none;
+    }
   }
 }

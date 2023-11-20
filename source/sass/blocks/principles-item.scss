@@ -1,0 +1,65 @@
+.principles-item {
+  display: flex;
+  flex-direction: column;
+
+  min-height: size(360px);
+  padding: size(29px);
+  border-radius: size(24px);
+  border: size(1px) solid $color-blue;
+
+  @include vp-767 {
+    min-height: auto;
+    padding: size(20px);
+    border-radius: size(15px);
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: size(60px);
+    height: size(60px);
+    margin-bottom: size(40px);
+    padding: size(14px);
+    border-radius: size(10px);
+
+    background-color: $color-blue;
+
+    svg {
+      width: size(32px);
+      height: size(32px);
+    }
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: size(12px);
+
+    font-size: size(20px);
+    font-weight: 500;
+    line-height: size(26px);
+
+    @include vp-767 {
+      margin-bottom: size(10px);
+    }
+  }
+
+  p {
+    margin: 0;
+
+    font-size: size(16px);
+    line-height: size(26px);
+
+    @include vp-767 {
+      font-size: size(14px);
+      line-height: size(21px);
+    }
+  }
+}
+
+.principles-item--special {
+  @media (min-width: 768px) {
+    grid-column: span 2;
+  }
+}

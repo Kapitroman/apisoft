@@ -1,0 +1,8 @@
+mixin principles-item(item)
+  - const addClass = item.special ? "principles-item principles-item--special" : "principles-item";
+    div(class=addClass)
+      .principles-item__icon
+        +icon(item.icon[0], item.icon[1], item.icon[2])
+      .principles-item__text
+        h3!=item.title
+        p!=item.text

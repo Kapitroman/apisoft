@@ -1,4 +1,4 @@
-.margin-botton-120 {
+.margin-bottom-120 {
   margin-bottom: size(105px);
 
   @include vp-767 {
@@ -6,7 +6,15 @@
   }
 }
 
-.margin-botton-80 {
+.margin-bottom-100 {
+  margin-bottom: size(100px);
+
+  @include vp-767 {
+    margin-bottom: size(50px);
+  }
+}
+
+.margin-bottom-80 {
   margin-bottom: size(80px);
 
   @include vp-767 {
