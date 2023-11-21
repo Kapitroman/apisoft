@@ -216,7 +216,6 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
               <ul>
                 <li><a href="#modals">Модальные окна</a></li>
                 <li><a href="#buttons">Кнопки</a></li>
-                <li><a href="#forms">Элементы форм</a></li>
               </ul>
             </div>
           </div>
@@ -234,16 +233,31 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
             <section class="uikit__section" id="modals">
               <h2 class="uikit__h2">Модальные окна</h2>
               <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">.modal \ .modal--feedback</p>
-                <button class="btn" type="button" data-open-modal="feedback"><span class="btn__caption">false</span><span class="btn__text">modal-feedback</span>
+                <p class="uikit__text uikit__text--class">.modal \ .modal--message</p>
+                <button class="btn" type="button" data-open-modal="message"><span class="icon">
+                    <svg width="12" height="10" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg></span><span class="btn__text">modal-message</span>
                 </button>
-                <pre><code class="language-pug">+btn({text: "modal-feedback"})(data-open-modal="feedback")</code></pre>
+                <pre><code class="language-pug">+btn({icon: "arrow", text: "modal-message"})(data-open-modal="message")</code></pre>
               </div>
               <div class="uikit__component">
                 <p class="uikit__text uikit__text--class">.modal \ .modal--success</p>
-                <button class="btn" type="button" data-open-modal="success"><span class="btn__caption">false</span><span class="btn__text">modal-success</span>
+                <button class="btn" type="button" data-open-modal="success"><span class="icon">
+                    <svg width="12" height="10" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg></span><span class="btn__text">modal-success</span>
                 </button>
-                <pre><code class="language-pug">+btn({text: "modal-success"})(data-open-modal="success")
+                <pre><code class="language-pug">+btn({icon: "arror", text: "modal-success"})(data-open-modal="success")</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.modal \ .modal--error</p>
+                <button class="btn" type="button" data-open-modal="error"><span class="icon">
+                    <svg width="12" height="10" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg></span><span class="btn__text">modal-error</span>
+                </button>
+                <pre><code class="language-pug">+btn({icon: "arror", text: "modal-success"})(data-open-modal="success")
 </code></pre>
               </div>
             </section>
@@ -251,118 +265,30 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
               <h2 class="uikit__h2">Кнопки</h2>
               <div class="uikit__component">
                 <p class="uikit__text uikit__text--class">.btn \ default \ button</p>
-                <a class="btn" href="#"><span class="icon">
+                <button class="btn" type="button"><span class="icon">
                     <svg width="12" height="10" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#arrow"></use>
                     </svg></span><span class="btn__text">Кнопка</span>
-                </a>
-                <pre><code class="language-pug">+btn({icon: "arrow", text: "Текст", href: "#"})</code></pre>
+                </button>
+                <pre><code class="language-pug">+btn({icon: "arrow", text: "Текст"})</code></pre>
               </div>
               <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">.btn \ .btn--red \ link</p>
-                <a class="btn btn--red" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="Просто ссылка"><span class="icon">
+                <p class="uikit__text uikit__text--class">.btn  \ link</p>
+                <a class="btn" href="#" target="_blank" rel="nofollow noopener noreferrer" aria-label="Просто ссылка"><span class="icon">
                     <svg width="12" height="10" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#arrow"></use>
                     </svg></span><span class="btn__text">Текст</span>
                 </a>
-                <pre><code class="language-pug">+btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red</code></pre>
+                <pre><code class="language-pug">+btn({icon: "arrow", text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка")</code></pre>
               </div>
               <div class="uikit__component">
                 <p class="uikit__text uikit__text--class">.btn \ disabled \ button</p>
-                <button class="btn" type="button" disabled><span class="btn__caption">false</span><span class="btn__text">Текст</span>
+                <button class="btn" type="button" disabled><span class="icon">
+                    <svg width="12" height="10" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#arrow"></use>
+                    </svg></span><span class="btn__text">Текст</span>
                 </button>
-                <pre><code class="language-pug">+btn({text: "Текст"})(disabled)
-</code></pre>
-              </div>
-            </section>
-            <section class="uikit__section" id="forms">
-              <h2 class="uikit__h2">Элементы форм</h2>
-              <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">.custom-input \ type="text"</p>
-                <div class="custom-input">
-                  <label><span class="custom-input__label">Введите ваше имя</span>
-                    <input type="text" name="user-name-1">
-                  </label>
-                </div>
-                <pre><code class="language-pug">+custom-input({
-  inputLabel: "Введите ваше имя",
-  inputName: "user-name-1",
-})</code></pre>
-              </div>
-              <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">.custom-input \ type="tel"</p>
-                <div class="custom-input">
-                  <label><span class="custom-input__label">Введите номер телефона</span>
-                    <input type="tel" name="user-phone">
-                  </label>
-                </div>
-                <pre><code class="language-pug">+custom-input({
-  inputType: "tel",
-  inputLabel: "Введите номер телефона",
-  inputName: "user-phone",
-})</code></pre>
-              </div>
-              <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">.custom-input \ type="email"</p>
-                <div class="custom-input">
-                  <label><span class="custom-input__label">Введите вашу почту</span>
-                    <input type="email" name="user-mail">
-                  </label>
-                </div>
-                <pre><code class="language-pug">+custom-input({
-  inputType: "email",
-  inputLabel: "Введите вашу почту",
-  inputName: "user-mail",
-})</code></pre>
-              </div>
-              <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">+custom-textarea \ default</p>
-                <div class="custom-textarea">
-                  <label><span class="custom-textarea__label">Расскажите о себе</span>
-                    <textarea name="user-info"></textarea>
-                  </label>
-                </div>
-                <pre><code class="language-pug">+custom-textarea({
-  inputLabel: "Расскажите о себе",
-  inputName: "user-info"
-})</code></pre>
-              </div>
-              <div class="uikit__component">
-                <p class="uikit__text uikit__text--class">+custom-toggle \ default</p>
-                <div class="custom-toggle custom-toggle--checkbox">
-                  <label>
-                    <input type="checkbox" value="user-agreement-1" name="user-agreement"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Чекбокс</span>
-                  </label>
-                </div>
-                <pre><code class="language-pug">+custom-toggle({
-  inputLabel: "Чекбокс",
-  inputName: "user-agreement",
-  inputValue: "user-agreement-1",
-  inputChecked: false
-}).custom-toggle--checkbox
-
-</code></pre>
-              </div>
-              <div class="uikit__component">
-                <p class="uikit__text">Базовый селект c placeholder</p>
-                <p class="uikit__text uikit__text--class">+custom-select \ default</p>
-                <div class="custom-select" data-select data-validate-type="select" data-name="some-name" data-id="id-example-1"><span class="custom-select__placeholder">Выберите одну из опций</span>
-                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
-                  <ul class="custom-select__list" role="listbox">
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Тема 1</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Тема 2</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Тема 3</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Тема 4</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Тема 5</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Тема 6</li>
-                  </ul>
-                </div>
-                <pre><code class="language-pug">+custom-select({
-  placeholder: "Выберите одну из опций",
-  error: "Выберите тему обращения",
-  optionsList: [{text: "Тема 1", value: "id-1"}, {text: "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5", value: "id-5"}, {text: "Тема 6", value: "id-6"}]
-})(data-select, data-validate-type="select", data-name="some-name", data-id="id-example-1").custom-select
-
+                <pre><code class="language-pug">+btn({icon: "arrow", text: "Текст"})(disabled)
 </code></pre>
               </div>
             </section>
@@ -380,11 +306,50 @@ Prism.languages.javascript=Prism.languages.extend("clike",{"class-name":[Prism.l
 
       </script>
     </div>
-    <div class="modal modal--preload modal--feedback" data-modal="feedback">
+    <div class="modal modal--preload modal--message" data-modal="message">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
+          <h2 class="modal__title">Оставьте заявку</h2>
+          <p class="modal__subtitle">Опишите вашу потребность или задайте вопрос</p>
+          <div class="form form--modal" data-form-validate data-callback="base">
+            <form action="#" method="post" enctype="multipart/form-data">
+              <div class="form__fields">
+                <div class="custom-input" data-required data-validate-type="text">
+                  <label>
+                    <input type="text" id="name" name="name" placeholder="Имя">
+                  </label>
+                </div>
+                <div class="custom-input" data-required data-validate-type="text">
+                  <label>
+                    <input type="text" id="contact" name="contact" placeholder="E-mail или телефон">
+                  </label>
+                </div>
+                <div class="custom-textarea" data-required data-validate-type="text">
+                  <label>
+                    <textarea id="message" name="message" placeholder="Краткое описание задачи"></textarea>
+                  </label>
+                </div>
+                <div class="input-upload input-upload--file" data-upload="file">
+                  <label>
+                    <input type="file" name="upload-file">
+                    <svg width="32" height="32" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#link"></use>
+                    </svg><span>Техническое задание или файлы</span>
+                  </label>
+                </div>
+              </div>
+              <p>
+                Оставляя заявку, вы соглашаетесь с
+                <a href="#">Политикой конфидециальности</a>
+              </p>
+              <button class="btn btn--white" type="submit"><span class="icon">
+                  <svg width="12" height="10" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg></span><span class="btn__text">Отправить</span>
+              </button>
+            </form>
+          </div>
           <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="15" height="15" aria-hidden="true">
               <use xlink:href="img/sprite.svg#icon-close"></use>
@@ -393,11 +358,26 @@ Prism.languages.javascript=Prism.languages.extend("clike",{"class-name":[Prism.l
         </div>
       </div>
     </div>
-    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="success">
+    <div class="modal modal--preload modal--success" data-modal="success">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br>отключена анимация-скейл</p>
+          <h2 class="modal__title">Заявка успешно отправлена</h2>
+          <p class="modal__subtitle">Спасибо за заявку! В течение часа с вами свяжется менеджер</p>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--error" data-modal="error">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <h2 class="modal__title">Ошибка</h2>
+          <p class="modal__subtitle">Сейчас заявка не может быть отправлена, повторите попытку позже</p>
           <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="15" height="15" aria-hidden="true">
               <use xlink:href="img/sprite.svg#icon-close"></use>

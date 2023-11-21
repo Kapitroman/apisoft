@@ -21,7 +21,7 @@ block main
               a(href="#modals") Модальные окна
             li
               a(href="#buttons") Кнопки
-            li
+            //-li
               a(href="#forms") Элементы форм
 
       //----------------------------------------------
@@ -44,19 +44,26 @@ block main
         section.uikit__section(id="modals")
           h2.uikit__h2 Модальные окна
           .uikit__component
-            p.uikit__text.uikit__text--class .modal \ .modal--feedback
-            +btn({text: "modal-feedback"})(data-open-modal="feedback")
+            p.uikit__text.uikit__text--class .modal \ .modal--message
+            +btn({icon: "arrow", text: "modal-message"})(data-open-modal="message")
             pre
               |
               code(class="language-pug").
-                +btn({text: "modal-feedback"})(data-open-modal="feedback")
+                +btn({icon: "arrow", text: "modal-message"})(data-open-modal="message")
           .uikit__component
             p.uikit__text.uikit__text--class .modal \ .modal--success
-            +btn({text: "modal-success"})(data-open-modal="success")
+            +btn({icon: "arrow", text: "modal-success"})(data-open-modal="success")
             pre
               |
               code(class="language-pug").
-                +btn({text: "modal-success"})(data-open-modal="success")
+                +btn({icon: "arror", text: "modal-success"})(data-open-modal="success")
+          .uikit__component
+            p.uikit__text.uikit__text--class .modal \ .modal--error
+            +btn({icon: "arrow", text: "modal-error"})(data-open-modal="error")
+            pre
+              |
+              code(class="language-pug").
+                +btn({icon: "arror", text: "modal-success"})(data-open-modal="success")
 
         //- Кнопки
         section.uikit__section(id="buttons")
@@ -64,31 +71,30 @@ block main
           .uikit__component
             p.uikit__text.uikit__text--class .btn \ default \ button
             +btn({
-              href: "#",
               icon: "arrow",
               text: "Кнопка"
             })
             pre
               |
               code(class="language-pug").
-                +btn({icon: "arrow", text: "Текст", href: "#"})
+                +btn({icon: "arrow", text: "Текст"})
           .uikit__component
-            p.uikit__text.uikit__text--class .btn \ .btn--red \ link
-            +btn({icon: "arrow", text: "Текст", href: "#", isExternal: true}).btn--red(aria-label="Просто ссылка")
+            p.uikit__text.uikit__text--class .btn  \ link
+            +btn({icon: "arrow", text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка")
             pre
               |
               code(class="language-pug").
-                +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
+                +btn({icon: "arrow", text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка")
           .uikit__component
             p.uikit__text.uikit__text--class .btn \ disabled \ button
-            +btn({text: "Текст"})(disabled)
+            +btn({icon: "arrow", text: "Текст"})(disabled)
             pre
               |
               code(class="language-pug").
-                +btn({text: "Текст"})(disabled)
+                +btn({icon: "arrow", text: "Текст"})(disabled)
 
         //- Элементы форм
-        section.uikit__section(id="forms")
+        //-section.uikit__section(id="forms")
           h2.uikit__h2 Элементы форм
           .uikit__component
             p.uikit__text.uikit__text--class .custom-input \ type="text"
@@ -187,7 +193,9 @@ block main
     include ../../js/inline/ui-kit.js
 
 block modals
-  +modal("modal--feedback")(data-modal="feedback")
-    +modal-feedback()
-  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
+  +modal("modal--message")(data-modal="message")
+    +modal-message()
+  +modal("modal--success")(data-modal="success")
     +modal-success()
+  +modal("modal--error")(data-modal="error")
+    +modal-error()

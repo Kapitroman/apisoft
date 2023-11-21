@@ -36,7 +36,7 @@
     align-items: center;
     width: 100%;
     min-height: 100%;
-    padding: 60px 40px;
+    padding: size(60px) size(40px);
 
     @include vp-767 {
       padding: 60px 16px;
@@ -57,10 +57,14 @@
   &__content {
     position: relative;
 
-    width: 600px;
-    padding: 40px;
+    width: size(800px);
+    padding: size(50px);
+    padding-top: size(80px);
+    border-radius: size(31px);
 
-    background-color: $color-default-white;
+    background-color: $color-blue;
+
+    color: $color-default-white;
 
     @include vp-767 {
       width: 100%;
@@ -70,12 +74,12 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: size(80px);
+    right: size(50px);
     z-index: 1;
 
-    width: 40px;
-    height: 40px;
+    width: size(40px);
+    height: size(40px);
     padding: 0;
 
     background: $color-transparent;
@@ -83,6 +87,11 @@
     cursor: pointer;
 
     transition: opacity $trans-default;
+
+    svg {
+      width: size(40px);
+      height: size(40px);
+    }
 
     @include hover-focus {
       opacity: 0.5;
@@ -119,5 +128,42 @@
     opacity: 1;
 
     pointer-events: auto;
+  }
+}
+
+.modal--message {
+  .modal__title {
+    margin: 0;
+    margin-bottom: size(26px);
+
+    font-size: size(54px);
+    line-height: size(38px);
+  }
+
+  .modal__subtitle {
+    margin: 0;
+    margin-bottom: size(61px);
+  }
+}
+
+.modal--success,
+.modal--error {
+  .modal__content {
+    padding: size(60px) size(50px) size(70px) size(50px);
+  }
+
+  .modal__title {
+    margin: 0;
+    margin-bottom: size(26px);
+
+    font-size: size(32px);
+    line-height: size(35px);
+  }
+
+  .modal__subtitle {
+    margin: 0;
+
+    font-size: size(16px);
+    line-height: size(22px);
   }
 }

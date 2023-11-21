@@ -1,5 +1,5 @@
 mixin form()
-  .form
+  .form(data-form-validate, data-callback="base")&attributes(attributes)
     form(action=form.sendMessageAction, method="post", enctype="multipart/form-data")
       .form__fields
         +custom-input({
@@ -7,18 +7,18 @@ mixin form()
           inputName: "name",
           inputId: "name",
           inputType: "text",
-        })
+        })(data-required, data-validate-type="text")
         +custom-input({
           inputPlaceholder: "E-mail или телефон",
           inputName: "contact",
           inputId: "contact",
           inputType: "text",
-        })
+        })(data-required, data-validate-type="text")
         +custom-textarea({
           inputPlaceholder: "Краткое описание задачи",
           inputName: "message",
           inputId: "message",
-        })
+        })(data-required, data-validate-type="text")
         .input-upload.input-upload--file(data-upload="file")
           label
             input(type="file", name="upload-file")

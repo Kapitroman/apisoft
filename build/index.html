@@ -153,7 +153,7 @@
           <div class="container">
             <div class="intro__info">
               <p>CRM, интернет-эквайринг, логистика, модули для интернет-магазинов под ключ</p>
-              <a class="btn" href="#"><span class="icon">
+              <a class="btn" href="#" data-open-modal="message"><span class="icon">
                   <svg width="12" height="10" aria-hidden="true">
                     <use xlink:href="img/sprite.svg#arrow"></use>
                   </svg></span><span class="btn__text">Оставить заявку</span>
@@ -389,20 +389,20 @@
         <section class="send-message">
           <div class="container">
             <h2>Оставьте заявку</h2>
-            <div class="form">
+            <div class="form" data-form-validate data-callback="base">
               <form action="#" method="post" enctype="multipart/form-data">
                 <div class="form__fields">
-                  <div class="custom-input">
+                  <div class="custom-input" data-required data-validate-type="text">
                     <label>
                       <input type="text" id="name" name="name" placeholder="Имя">
                     </label>
                   </div>
-                  <div class="custom-input">
+                  <div class="custom-input" data-required data-validate-type="text">
                     <label>
                       <input type="text" id="contact" name="contact" placeholder="E-mail или телефон">
                     </label>
                   </div>
-                  <div class="custom-textarea">
+                  <div class="custom-textarea" data-required data-validate-type="text">
                     <label>
                       <textarea id="message" name="message" placeholder="Краткое описание задачи"></textarea>
                     </label>
@@ -468,6 +468,86 @@
               </svg><span class="visually-hidden">Дизайн-RUSO</span></a><a class="footer__offer" href="#">Публичная оферта</a><a class="footer__agreement" href="#">Согласие на обработку данных</a></div>
         </div>
       </footer>
+    </div>
+    <div class="modal modal--preload modal--message modal--no-scale" data-modal="message">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <h2 class="modal__title">Оставьте заявку</h2>
+          <p class="modal__subtitle">Опишите вашу потребность или задайте вопрос</p>
+          <div class="form form--modal" data-form-validate data-callback="base">
+            <form action="#" method="post" enctype="multipart/form-data">
+              <div class="form__fields">
+                <div class="custom-input" data-required data-validate-type="text">
+                  <label>
+                    <input type="text" id="name" name="name" placeholder="Имя">
+                  </label>
+                </div>
+                <div class="custom-input" data-required data-validate-type="text">
+                  <label>
+                    <input type="text" id="contact" name="contact" placeholder="E-mail или телефон">
+                  </label>
+                </div>
+                <div class="custom-textarea" data-required data-validate-type="text">
+                  <label>
+                    <textarea id="message" name="message" placeholder="Краткое описание задачи"></textarea>
+                  </label>
+                </div>
+                <div class="input-upload input-upload--file" data-upload="file">
+                  <label>
+                    <input type="file" name="upload-file">
+                    <svg width="32" height="32" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#link"></use>
+                    </svg><span>Техническое задание или файлы</span>
+                  </label>
+                </div>
+              </div>
+              <p>
+                Оставляя заявку, вы соглашаетесь с
+                <a href="#">Политикой конфидециальности</a>
+              </p>
+              <button class="btn btn--white" type="submit"><span class="icon">
+                  <svg width="12" height="10" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                  </svg></span><span class="btn__text">Отправить</span>
+              </button>
+            </form>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--success modal--no-scale" data-modal="success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <h2 class="modal__title">Заявка успешно отправлена</h2>
+          <p class="modal__subtitle">Спасибо за заявку! В течение часа с вами свяжется менеджер</p>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--error modal--no-scale" data-modal="error">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <h2 class="modal__title">Ошибка</h2>
+          <p class="modal__subtitle">Сейчас заявка не может быть отправлена, повторите попытку позже</p>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>

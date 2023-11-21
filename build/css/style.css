@@ -1309,7 +1309,7 @@ a:focus-visible {
           align-items: center;
   width: 100%;
   min-height: 100%;
-  padding: 60px 40px;
+  padding: 3.75rem 2.5rem;
 }
 @media (max-width: 767px) {
   .modal__wrapper {
@@ -1326,9 +1326,12 @@ a:focus-visible {
 }
 .modal__content {
   position: relative;
-  width: 600px;
-  padding: 40px;
-  background-color: #ffffff;
+  width: 50rem;
+  padding: 3.125rem;
+  padding-top: 5rem;
+  border-radius: 1.9375rem;
+  background-color: #2D69C3;
+  color: #ffffff;
 }
 @media (max-width: 767px) {
   .modal__content {
@@ -1338,17 +1341,21 @@ a:focus-visible {
 }
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 5rem;
+  right: 3.125rem;
   z-index: 1;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   padding: 0;
   background: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+}
+.modal__close-btn svg {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 @media (hover: hover) {
   .modal__close-btn:hover:not(.focus-visible) {
@@ -1383,6 +1390,35 @@ a:focus-visible {
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+}
+
+.modal--message .modal__title {
+  margin: 0;
+  margin-bottom: 1.625rem;
+  font-size: 3.375rem;
+  line-height: 2.375rem;
+}
+.modal--message .modal__subtitle {
+  margin: 0;
+  margin-bottom: 3.8125rem;
+}
+
+.modal--success .modal__content,
+.modal--error .modal__content {
+  padding: 3.75rem 3.125rem 4.375rem 3.125rem;
+}
+.modal--success .modal__title,
+.modal--error .modal__title {
+  margin: 0;
+  margin-bottom: 1.625rem;
+  font-size: 2rem;
+  line-height: 2.1875rem;
+}
+.modal--success .modal__subtitle,
+.modal--error .modal__subtitle {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.375rem;
 }
 
 .btn {
