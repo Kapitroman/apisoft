@@ -5,7 +5,7 @@
   height: size(432px);  //////
 
   background-color: $color-default-white;
-  box-shadow: 0px 20px 40px 0px #3E60900D;
+  box-shadow: 0px size(20px) size(40px) 0px #3E60900D;
 
   color: $color-black;
 
@@ -123,6 +123,7 @@
 .stages-item--add {
   opacity: 0.3;
   border: none;
+  height: auto;
 
   @include vp-767 {
     display: none;
