@@ -1,0 +1,16 @@
+mixin stages-item(options)
+  .stages-item&attributes(attributes)
+    .stages-item__header
+      p.stages-item__number=options.number
+      .stages-item__icon
+        +icon(options.icon[0], options.icon[1], options.icon[2])
+    .stages-item__main
+      h3=options.title
+      p=options.text
+    .stages-item__add
+      if options.textAdd
+        p=options.textAdd
+      if options.listAdd
+        ul
+          each item, index in options.listAdd
+            li=`${index + 1}. ${item}`

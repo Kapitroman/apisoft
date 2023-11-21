@@ -1,0 +1,111 @@
+.project-stages {
+  padding-top: size(120px);
+  padding-bottom: size(120px);
+
+  background-color: $color-black-2;
+
+  @include vp-767 {
+    padding-top: size(60px);
+    padding-bottom: size(40px);
+  }
+
+  h2 {
+    margin-bottom: size(50px);
+
+    color: $color-default-white;
+
+    @include vp-767 {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__main {
+    display: flex;
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    gap: size(12px);
+
+    width: size(450px);
+    margin-right: size(100px);
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: size(20px);
+    padding-top: size(18px);
+    border-radius: size(16px);
+    border: none;
+
+    background-color: rgba($color-default-white, 0.05);
+
+    color: $color-default-white;
+    cursor: pointer;
+
+    font-size: size(19px);
+    line-height: size(26px);
+
+    span {
+      width: size(36px);
+      height: size(42px);
+      margin-right: size(19px);
+
+      font-size: size(32px);
+      line-height: size(42px);
+
+      color: #0F69F5;
+    }
+  }
+
+  &__control.is-active {
+    pointer-events: none;
+    background-color: $color-blue;
+
+    span {
+      color: $color-black-2;
+    }
+  }
+
+  &__content {
+    width: size(845px);
+    min-height: size(664px);
+
+    transition: height $trans-default;
+
+    @include vp-767 {
+      width: 100%;
+      min-height: auto;
+
+      display: flex;
+      flex-direction: column;
+      gap: size(6px);
+    }
+  }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    gap: size(14px);
+  }
+  /*
+  &__element-content {
+    width: 100%;
+    height: size(432px);
+    padding: size(40px) size(30px);
+
+  }
+
+  &__element-content--add {
+    height: auto;
+  }
+  */
+}

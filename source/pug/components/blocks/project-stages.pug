@@ -1,0 +1,32 @@
+mixin project-stages()
+  section.project-stages&attributes(attributes)
+    .container
+      h2=projectStagesTitle
+      .project-stages__main.tabs.no-transition-global(data-tabs='parent', data-delay='300' data-height='max' )
+        .project-stages__controls.tabs__controls(data-tabs='controls')
+          each position, index in projectStagesContent
+            button.project-stages__control.tabs__control(type='button', data-tabs='control')
+              span=`0${index + 1}`
+              | #{position.title}
+
+        .project-stages__content.tabs__content(data-tabs='content')
+          each item, index in projectStagesContent
+            - const nnn = projectStagesContent.length;
+            if index === 0
+              .project-stages__element.tabs__element(data-tabs='element')
+                +stages-item(projectStagesContent[0])
+                +stages-item(projectStagesContent[1]).stages-item--add
+                +stages-item(projectStagesContent[2]).stages-item--add
+            else
+              if index === nnn - 1
+                .project-stages__element.tabs__element(data-tabs='element')
+
+                  +stages-item(projectStagesContent[index - 2]).stages-item--add
+                  +stages-item(projectStagesContent[index - 1]).stages-item--add
+                  +stages-item(projectStagesContent[index])
+              else
+                .project-stages__element.tabs__element(data-tabs='element')
+                  +stages-item(projectStagesContent[index - 1]).stages-item--add
+                  +stages-item(projectStagesContent[index])
+                  +stages-item(projectStagesContent[index + 1]).stages-item--add
+

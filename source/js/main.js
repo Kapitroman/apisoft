@@ -8,6 +8,7 @@ import {Burger} from './modules/burger';
 import {checkThemeHeader} from './modules/check-theme-header';
 import {blink} from './modules/blink';
 import {initYM} from './modules/init-map';
+import {initTabs} from './modules/init-tabs';
 
 // ---------------------------------
 
@@ -38,7 +39,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     checkThemeHeader();
     blink();
+    initTabs();
     initYM();
+
   });
 });
 
