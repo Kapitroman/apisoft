@@ -2,8 +2,8 @@ import {mobileVhFix} from './utils/mobile-vh-fix.js';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
-// import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
-
+// import {uploadFile, uploadImageDrop, uploadFileDrop} from './modules/input-file/init-upload';
+import {uploadFileDrop} from './modules/input-file/init-upload';
 import {Burger} from './modules/burger';
 import {checkThemeHeader} from './modules/check-theme-header';
 import {blink} from './modules/blink';
@@ -28,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     // uploadFile();
     // uploadImageDrop();
+    uploadFileDrop();
     const select = new CustomSelect();
     select.init();
     const form = new Form();

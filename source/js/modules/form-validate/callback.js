@@ -8,7 +8,7 @@ const baseSuccessCallback = (event) => {
 const baseErrorCallback = (event) => {
   event.preventDefault();
   // Данный коллбек используется при необходимости выполнить какое-либо действие помимо показа ошибок при попытке отправить неккорректные данные, он не связан с запросами на сервер
-  modal.open('error');
+  //modal.open('error');
 };
 
 export const callbacks = {
