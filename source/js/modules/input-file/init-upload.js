@@ -62,5 +62,5 @@ export const uploadFileDrop = () => new Upload(uploadFileDropBlock, {
     fileSize: true,
   },
   // emptyMessage: 'Добавление файла обязательно',
-  errorMessage: 'Выделенные файлы превышают максимальный размер',
+  errorMessage: 'Выделенные файлы превышают максимальный размер в 10 Мегабайт',
 });

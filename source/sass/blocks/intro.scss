@@ -5,58 +5,36 @@
   flex-direction: column;
 
   padding-top: size(235px);
-  //padding-top: size(145px);
   padding-bottom: size(312px);
+
+  @include vp-1279 {
+    padding-top: size(155px);
+    padding-bottom: size(100px);
+  }
+
+  @include vp-959 {
+    padding-top: size(144px);
+    padding-bottom: size(34px);
+  }
 
   @include vp-767 {
     padding-top: size(91px);
-    //padding-top: size(17px);
-    padding-bottom: size(54px);
+    padding-bottom: size(55px);
   }
-  /*
-  &::before {
-    content: "";
-    position: absolute;
-    top: size(-282px);
-    right: size(-42px);
 
-    width: size(428px);
-    height: size(428px);
-    border-radius: 50%;
-
-    background-color: $color-blue;
-
-    @include vp-767 {
-      display: none;
-    }
-  }
-  */
-  &::after {
-    position: absolute;
-    //top: size(366px);
-    top: size(456px);
-    right: size(-30px);
-
-    content: "";
-    width: size(588px);
-    height: size(588px);
-    border-radius: 50%;
-
-    background-color: $color-blue;
-
-    @include vp-767 {
-      top: size(374px);
-      //top: size(300px);
-      right: size(7px);
-
-      width: size(243px);
-      height: size(243px);
-    }
+  .container {
+    position: relative;
   }
 
   h1 {
     width: size(604px);
     margin-bottom: size(55px);
+
+    @include vp-1279 {
+      width: size(420px);
+      margin-bottom: size(45px);
+      letter-spacing: -0.03em;
+    }
 
     @include vp-767 {
       width: 100%;
@@ -69,15 +47,23 @@
     gap: size(5px);
 
     width: calc(size(218px) + 100% + size(168px));
-    //margin-left: size(-218px);
     margin-bottom: size(63px);
 
-    @include vp-767 {
+    @include vp-1279 {
       order: 2;
 
-      width: calc(size(1353px));
-      margin-left: size(-317px);
+      width: size(1653px);
       margin-bottom: 0;
+    }
+
+    @include vp-959 {
+      width: size(1296px);
+      gap: size(4px);
+    }
+
+    @include vp-767 {
+      width: calc(size(1296px));//1353
+      //margin-left: size(-317px);
     }
   }
 
@@ -91,7 +77,7 @@
     animation-fill-mode: both;
     animation-iteration-count: infinite;
 
-    @include vp-767 {
+    @include vp-959 {
       gap: size(4px);
     }
   }
@@ -99,12 +85,41 @@
   &__info {
     width: size(500px);
 
+    @include vp-1279 {
+      width: size(430px);
+      margin-bottom: size(169px)
+    }
+
+    @include vp-959 {
+      width: size(340px);
+      margin-bottom: size(147px)
+    }
+
+    @include vp-767 {
+      width: size(260px);
+      margin-bottom: size(323px)
+    }
+
     p {
       margin: 0;
       margin-bottom: size(53px);
 
       font-size: size(24px);
       line-height: size(31px);
+
+      @include vp-1279 {
+        margin-bottom: size(25px);
+
+        font-size: size(20px);
+        line-height: size(26px);
+      }
+
+      @include vp-959 {
+        margin-bottom: size(25px);
+
+        font-size: size(16px);
+        line-height: size(21px);
+      }
 
       @include vp-767 {
         margin-bottom: size(25px);
@@ -123,26 +138,33 @@
         }
       }
     }
-
-    @include vp-767 {
-      width: size(260px);
-      margin-bottom: size(323px)
-    }
   }
 
   &__image {
     position: absolute;
-    top: size(135px);
-    //top: size(45px);//90
+    top: size(-440px);
     right: size(-165px);
     z-index: 2;
 
     width: size(1116px);
     aspect-ratio: 1116 / 828;
 
+    @include vp-1279 {
+      top: size(-210px);
+      right: size(-138px);
+
+      width: size(606px);
+    }
+
+    @include vp-959 {
+      top: size(-180px);
+      right: size(-100px);
+
+      width: size(508px);
+    }
+
     @include vp-767 {
-      top: size(350px);
-      //top: size(273px);//74
+      top: size(150px);
       right: size(-68px);
 
       width: size(347px);
@@ -154,6 +176,44 @@
       height: 100%;
 
       object-fit: cover;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: size(-84px);
+      left: size(391px);
+      z-index: -1;
+
+      content: "";
+      width: size(588px);
+      height: size(588px);
+      border-radius: 50%;
+
+      background-color: $color-blue;
+
+      @include vp-1279 {
+        top: size(144px);
+        left: size(34px);
+
+        width: size(300px);
+        height: size(300px);
+      }
+
+      @include vp-959 {
+        top: size(75px);
+        left: size(68px);
+
+        width: size(300px);
+        height: size(300px);
+      }
+
+      @include vp-767 {
+        top: size(27px);
+        left: size(29px);
+
+        width: size(243px);
+        height: size(243px);
+      }
     }
   }
 }

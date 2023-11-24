@@ -1,20 +1,9 @@
 mixin intro-item(item)
   if item.icon
-    .intro-item.intro-item--icon.swiper-slide
+    .intro-item.intro-item--icon
       img(src=`./img/sprite/${item.icon}.svg`, width="55", height="55", alt=`${item.text}`)
-      //-+icon(item.icon, 55, 55)
       span.visually-hidden=item.text
   else
-    .intro-item.intro-item.swiper-slide
-      span=item.text
-      +icon("arrow", 20, 16)
-
-//-mixin intro-item(item)
-  if item.icon
-    .intro-item.intro-item--icon.swiper-slide
-      +icon(item.icon, 55, 55)
-      span.visually-hidden=item.text
-  else
-    .intro-item.intro-item.swiper-slide
+    .intro-item.intro-item
       span=item.text
       +icon("arrow", 20, 16)

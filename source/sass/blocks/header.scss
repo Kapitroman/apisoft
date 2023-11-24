@@ -9,6 +9,10 @@
 
   background-color: $color-default-white;
 
+  @include vp-1279 {
+    padding: size(26px) 0;
+  }
+
   @include vp-767 {
     padding: size(22px) 0;
   }
@@ -21,64 +25,154 @@
   .logo {
     margin-right: size(122px);
 
+    transition: color $trans-default;
+
+    @include vp-1279 {
+      margin-right: size(30px);
+
+      svg {
+        width: size(150px);
+        height: size(17px);
+      }
+    }
+
+    @include vp-959 {
+      svg {
+        width: size(117px);
+        height: size(14px);
+      }
+    }
+  }
+
+  &__wrapper {
+    margin-right: size(50px);
+
+    @include vp-1279 {
+      position: fixed;
+      top: size(82px);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 5;
+
+      margin-right: 0;
+
+      background-color: rgba($color-default-black, 0.4);
+      backdrop-filter: blur(size(3px));
+
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+
+      overflow: auto;
+
+      .is-open & {
+        opacity: 1;
+        pointer-events: all;
+        visibility: visible;
+      }
+    }
+
     @include vp-767 {
-      margin-right: size(65px);
+      top: size(74px);
     }
   }
 
   &__nav {
-    margin-right: size(50px);
+    display: flex;
 
-    @include vp-767 {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 20;
+    .header__add-nav {
+      display: none;
 
-      display: flex;
-      flex-direction: column;
-
-      margin: 0;
-      padding: size(20px);
-
-      visibility: hidden;
       opacity: 0;
+      transform: translateY(size(-25px));
 
-      background-color:$color-blue;
+      transition: opacity $trans-default, transform $trans-default;
 
-      pointer-events: none;
-      transition: background-color $trans-default;
-    }
+      @include vp-1279 {
+        display: flex;
+        flex-direction: column;
 
-    .is-open & {
-      opacity: 1;
-      pointer-events: all;
-      visibility: visible;
-
-      .header__item {
-        opacity: 1;
-        transform: translateY(0);
+        width: size(223px);
       }
 
-      .header__button-start.btn {
-        opacity: 1;
+      @include vp-767 {
+         margin-left: auto;
+         margin-right: auto;
+         min-height: size(196px);
       }
+
     }
 
     .header__button-start.btn {
       display: none;
 
-      @include vp-767 {
+      @include vp-1279 {
         display: inline-flex;
-        margin: 0 auto;
+
+        margin-left: 0;
         margin-top: auto;
 
         opacity: 0;
+        transform: translateY(size(-25px));
 
-        transition: opacity $trans-default;
+        transition: opacity $trans-default, transform $trans-default;
       }
+
+      @include vp-767 {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: size(90px);
+
+        order: -1;
+      }
+    }
+
+    @include vp-1279 {
+      background-color:$color-blue;
+
+      transition: background-color $trans-default;
+
+      .is-open & {
+
+        .header__item {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .header__button-start.btn {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .header__add-nav {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  &__nav-wrapper {
+    @include vp-1279 {
+      display: flex;
+      justify-content: space-between;
+
+      margin: 0 auto;
+      margin-top: size(24px);
+      margin-bottom: size(52px);
+
+      width: size(574px);
+    }
+
+    @include vp-959 {
+      margin-top: size(10px);
+    }
+
+    @include vp-767 {
+      margin-top: size(20px);
+      flex-direction: column;
     }
   }
 
@@ -91,18 +185,29 @@
 
     list-style: none;
 
-    @include vp-767 {
+    @include vp-1279 {
       flex-direction: column;
-      align-items: center;
-      gap: size(15px);
+      gap: size(22px);
 
-      margin: auto 0;
+      width: size(201px);
+      margin-right: size(150px);
+    }
+
+    @include vp-959 {
+      gap: size(27px);
+      margin-right: size(51px);
+    }
+
+    @include vp-767 {
+
+      margin-bottom: size(53px);
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
   &__item {
-
-    @include vp-767 {
+    @include vp-1279 {
       margin-bottom: 0;
 
       opacity: 0;
@@ -126,10 +231,10 @@
       color: $color-blue;
     }
 
-    @include vp-767 {
+    @include vp-1279 {
       color: $color-default-white;
-      font-size: size(14px);
-      line-height: size(17px);
+      font-size: size(16px);
+      line-height: size(18px);
 
       @include hover-focus {
         color: $color-gray-05;
@@ -154,7 +259,7 @@
     padding: 0;
     border: none;
 
-    background-color: $color-default-white;
+    background-color: $color-transparent;
 
     cursor: pointer;
 
@@ -169,30 +274,14 @@
       height: size(2px);
       background-color: $color-blue;
 
-      transition: transform $trans-600, opacity $trans-default;
-    }
-
-    span:nth-child(1) {
-      .is-open & {
-        transform: translateY(size(7px)) rotate(225deg);
-      }
-    }
-
-    span:nth-child(3) {
-      .is-open & {
-        transform: translateY(size(-7px)) rotate(-225deg);
-      }
+      transition: background-color $trans-default;
     }
 
     span:nth-child(2) {
       width: size(20px);
-
-      .is-open & {
-        opacity: 0;
-      }
     }
 
-    @include vp-767 {
+    @include vp-1279 {
       display: flex;
     }
   }
@@ -200,7 +289,7 @@
   &__button-start.btn {
     margin-left: auto;
 
-    @include vp-767 {
+    @include vp-1279 {
       transition: opacity $trans-default;
 
       @include hover-focus {
@@ -208,7 +297,7 @@
       }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1280px) {
       transition: color $trans-default;
 
       @include hover-focus {
@@ -218,20 +307,89 @@
       }
     }
 
-    @include vp-767 {
+    @include vp-1279 {
       display: none;
     }
-
   }
 
   .toggle-language {
     margin-right: size(30px);
+
+    @include vp-1279 {
+      margin-left: auto;
+      margin-right: size(52px);
+    }
+
+    @include vp-959 {
+      margin-right: size(42px);
+    }
+
+    @include vp-767 {
+      margin-right: size(30px);
+    }
 
     @include hover-focus {
       .btn__caption {
         background-color: $color-blue;
 
         color: $color-default-white;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    row-gap: size(14px);
+
+    a, p {
+      margin: 0;
+      color: $color-default-white;
+
+      @include vp-1279 {
+        font-weight: 400;
+        font-size: size(14px);
+        line-height: size(16px);
+      }
+    }
+
+    a {
+      transition: opacity $trans-default;
+
+      @include hover-focus {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.is-open.header {
+  @include vp-1279 {
+    background-color: $color-blue;
+    .logo {
+      color: $color-default-white;
+    }
+
+    .header__burger {
+      span {
+        background-color: $color-default-white;
+      }
+    }
+
+  }
+
+  .toggle-language {
+
+    .btn__caption {
+      color: $color-default-white;
+      border-color: $color-default-white;
+    }
+
+    @include hover-focus {
+      .btn__caption {
+        background-color: $color-default-white;
+
+        color: $color-blue;
       }
     }
   }
@@ -242,27 +400,30 @@
 
   box-shadow: none;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: size(-282px);
-    right: size(-42px);
-    z-index: -1;
+  .container {
+    position: relative;
 
-    width: size(428px);
-    height: size(428px);
-    border-radius: 50%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: size(-310px);
+      right: size(-42px);
+      z-index: -1;
 
-    background-color: $color-blue;
+      width: size(428px);
+      height: size(428px);
+      border-radius: 50%;
 
-    @include vp-767 {
-      display: none;
+      background-color: $color-blue;
+
+      @include vp-1279 {
+        display: none;
+      }
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1280px) {
     .header__button-start {
-      //-.btn__icon {
         transition: opacity $trans-default;
 
       .icon {
@@ -284,18 +445,6 @@
       }
     }
   }
-  /*
-  .header__button-start.btn {
-
-    @include hover-focus {
-      opacity: 0.7;
-
-      .btn__text {
-        color: $color-default-white;
-      }
-    }
-  }
-  */
 }
 
 .header--shadow {
@@ -317,7 +466,7 @@
     color: $color-default-white;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1280px) {
     .header__link {
       color: $color-default-white;
 
@@ -327,7 +476,7 @@
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1280px) {
     .header__button-start {
       .icon {
         color: $color-default-white;
@@ -348,12 +497,12 @@
   }
 
   .header__burger {
-    background-color: $color-black-2;
+    span {
+      background-color: $color-default-white;
+    }
   }
 
   &.is-open {
-    .header__burger {
-      background-color: $color-default-white;
-    }
+    background-color: $color-blue;
   }
 }

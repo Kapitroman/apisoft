@@ -2,16 +2,23 @@ mixin header(headerMods, currentUrl)
   header.header(class=headerMods, data-header="")
     .container
       +logo()
-      nav.header__nav
-        ul.header__list
-          each link in headerNavigation
-            li.header__item
-              a.header__link(href=link.href)= link.text
-        +btn({
-          href: headerButtonStart.href,
-          icon: headerButtonStart.icon,
-          text: headerButtonStart.text,
-        }).btn--white.header__button-start
+      .header__wrapper(data-close-menu)
+        nav.header__nav
+          .header__nav-wrapper
+            ul.header__list
+              each link in headerNavigation
+                li.header__item
+                  a.header__link(href=link.href)= link.text
+            .header__add-nav
+              .header__contacts
+                a(href=footerContacts[0].href)=footerContacts[0].text
+                p=footerContacts[1].text
+                a(href=footerContacts[2].href)=footerContacts[2].text
+              +btn({
+                href: headerButtonStart.href,
+                icon: headerButtonStart.icon,
+                text: headerButtonStart.text,
+              }).btn--white.header__button-start
       +btn({
         caption: toggleLanguage.caption,
         href: toggleLanguage.href,

@@ -13,12 +13,18 @@
   font-size: size(24px);
   line-height: size(17px);
 
-  @include vp-767 {
+  @include vp-1279 {
+    padding: size(13px) size(19px) size(15px) size(19px);
+
+    font-size: size(20px);
+    line-height: size(14px);
+  }
+
+  @include vp-959 {
     padding: size(9px) size(15px) size(11px) size(15px);
 
     font-size: size(16px);
     line-height: size(11px);
-
   }
 
   svg {
@@ -26,7 +32,12 @@
     height: size(16px);
     margin-left: size(12px);
 
-    @include vp-767 {
+    @include vp-1279 {
+      width: size(16px);
+      height: size(12px);
+    }
+
+    @include vp-959 {
       width: size(12px);
       height: size(9px);
       margin-left: size(8px);
@@ -40,7 +51,12 @@
   padding: 0;
   border-radius: 50%;
 
-  @include vp-767 {
+  @include vp-1279 {
+    width: size(44px);
+    height: size(44px);
+  }
+
+  @include vp-959 {
     width: size(33px);
     height: size(33px);
   }

@@ -4,6 +4,30 @@
 // 1) ремы в плюс
 
 // functions.scss
+
+/*
+@function size($size-in-px) {
+  @return calc($size-in-px / 1);
+}
+
+@function size-desktop($size-in-px) {
+  @return calc($size-in-px / 1);
+}
+
+@function size-notebook($size-in-px) {
+  @return calc($size-in-px / 1);
+}
+
+@function size-tablet($size-in-px) {
+  @return calc($size-in-px / 1);
+}
+
+@function size-mobile($size-in-px) {
+  @return calc($size-in-px / 1);
+}
+*/
+
+
 @function size($size-in-px) {
   @return calc($size-in-px / $fz-default * 1rem);
 }
@@ -12,9 +36,18 @@
   @return calc($size-in-px / $vp-1600 * 100vw);
 }
 
-@function size-mobile($size-in-px) {
- @return calc($size-in-px / $vp-320 * 100vw);
+@function size-notebook($size-in-px) {
+  @return calc($size-in-px / $vp-960 * 100vw);
 }
+
+@function size-tablet($size-in-px) {
+  @return calc($size-in-px / $vp-768 * 100vw);
+}
+
+@function size-mobile($size-in-px) {
+  @return calc($size-in-px / $vp-320 * 100vw);
+}
+
 
 // reboot.scss
 // html {

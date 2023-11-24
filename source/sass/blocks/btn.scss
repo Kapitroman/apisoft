@@ -46,7 +46,7 @@
     font-size: size(14px);
     line-height: size(17px);
 
-    transition: background-color $trans-default, color $trans-default;
+    transition: background-color $trans-default, color $trans-default, border-color $trans-default;
   }
 
   &__text {
@@ -57,9 +57,14 @@
     line-height: size(22px);
     color: $color-black;
 
+    @include vp-1279 {
+      font-size: size(16px);
+      line-height: size(18px);
+    }
+
     @include vp-767 {
       font-size: size(14px);
-      line-height: size(17px);
+      line-height: size(16px);
     }
   }
 
