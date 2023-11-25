@@ -2,8 +2,15 @@
   display: grid;
 
   width: calc((100% - #{size(20px)}) / 2);
-  //width: size(690px);
   aspect-ratio: 690 / 450;
+
+  @include vp-1279 {
+    aspect-ratio: 430 / 430;
+  }
+
+  @include vp-959 {
+    width: calc((100% - #{size(10px)}) / 2);
+  }
 
   @include vp-479 {
     width: 100%;
@@ -22,6 +29,14 @@
 
       object-fit: cover;
 
+      @include vp-1279 {
+        border-radius: size(24px);
+      }
+
+      @include vp-959 {
+        border-radius: size(18px);
+      }
+
       @include vp-479 {
         border-radius: size(10px);
       }
@@ -32,6 +47,14 @@
     border-radius: size(32px);
 
     transition: background-color $trans-default;
+
+    @include vp-1279 {
+      border-radius: size(24px);
+    }
+
+    @include vp-959 {
+      border-radius: size(18px);
+    }
 
     @include vp-479 {
       border-radius: size(10px);
@@ -50,19 +73,34 @@
 
     background-color: $color-blue;
 
-    svg {
-      width: size(140px);
-      height: size(140px);
+    @include vp-1279 {
+      width: size(120px);
+      height: size(120px);
+      margin: size(20px) size(20px) auto auto;
+    }
 
-      @include vp-479 {
-        width: size(75px);
-        height: size(75px);
-      }
+    @include vp-959 {
+      margin: size(10px) size(10px) auto auto;
     }
 
     @include vp-479 {
       width: size(100px);
       height: size(100px);
+    }
+
+    img {
+      width: size(140px);
+      height: size(140px);
+
+      @include vp-1279 {
+        width: size(90px);
+        height: size(90px);
+      }
+
+      @include vp-479 {
+        width: size(75px);
+        height: size(75px);
+      }
     }
   }
 
@@ -82,14 +120,19 @@
 
     transition: color $trans-default, background-color $trans-default;
 
-    @include vp-479 {
-      margin: size(10px);
+    @include vp-1279 {
+      margin: size(20px);
       margin-top: auto;
-      padding: size(14px) size(16px) size(16px) size(16px);
+      padding: size(15px);
       border-radius: size(10px);
 
       font-size: size(14px);
       line-height: size(20px);
+    }
+
+    @include vp-959 {
+      margin: size(10px);
+      margin-top: auto;
     }
   }
 
@@ -105,25 +148,16 @@
   }
 }
 
-.projects-item--insale {
-  .projects-item__logo {
-    img {
-      width: size(144px);
-      height: size(41px);
-
-      @include vp-479 {
-        width: size(80px);
-        height: size(23px);
-      }
-    }
-  }
-}
-
 .projects-item--airmap {
   .projects-item__logo {
     img {
       width: size(140px);
       height: size(95px);
+
+      @include vp-1279 {
+        width: size(93px);
+        height: size(63px);
+      }
 
       @include vp-479 {
         width: size(78px);
@@ -139,6 +173,11 @@
       width: size(127px);
       height: size(60px);
 
+      @include vp-1279 {
+        width: size(84px);
+        height: size(40px);
+      }
+
       @include vp-479 {
         width: size(71px);
         height: size(34px);
@@ -153,10 +192,16 @@
       width: size(80px);
       height: size(108px);
 
+      @include vp-1279 {
+        width: size(53px);
+        height: size(60px);
+      }
+
       @include vp-479 {
-        width: size(44px);
+        width: size(72px);
         height: size(60px);
       }
     }
   }
 }
+

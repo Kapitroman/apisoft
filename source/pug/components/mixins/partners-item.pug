@@ -10,4 +10,6 @@ mixin partners-item(item)
         +icon(item.logo[0], item.logo[1], item.logo[2])(aria-label=item.name)
     if item.arrow
       .partners-item__icon-arrow
-        +icon("arrow-rotate", 50, 30)
+        span.icon
+          +icon("arrow", 12, 10)
+

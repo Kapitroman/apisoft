@@ -1,24 +1,21 @@
 .our-projects {
-  /*
-  margin-bottom: size(105px);
-
-  @include vp-479 {
-    margin-bottom: size(54px);
-  }
-  */
   &__title-group {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: size(37px);
+    margin-bottom: size(35px);
+
+    @include vp-1279 {
+      margin-bottom: size(30px);
+    }
 
     @include vp-479 {
       flex-direction: column;
       justify-content: initial;
       align-items: initial;
 
-      margin-bottom: size(30px);
+      margin-bottom: size(25px);
     }
 
     h2 {
@@ -36,12 +33,14 @@
       line-height: size(24px);
       color: $color-blue;
 
+      @include vp-1279 {
+        font-size: size(14px);
+        line-height: size(20px);
+      }
+
       @include vp-479 {
         width: size(200px);
         margin-left: 0;
-
-        font-size: size(14px);
-        line-height: size(20px);
       }
     }
   }
@@ -58,11 +57,19 @@
 
     margin-bottom: size(50px);
 
-    @include vp-479 {
+    @include vp-1279 {
+      margin-bottom: size(30px);
+    }
+
+    @include vp-959 {
       width: 100%;
       gap: size(10px);
 
       margin-bottom: size(30px);
+    }
+
+    @include vp-479 {
+      width: 100%;
     }
   }
 

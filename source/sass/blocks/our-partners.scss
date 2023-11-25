@@ -1,17 +1,13 @@
 .our-partners {
-  /*
-  margin-bottom: size(78px);
-
-  @include vp-479 {
-    margin-bottom: size(60px);
-  }
-  */
-
   h2 {
-    margin-bottom: size(38px);
+    margin-bottom: size(35px);
+
+    @include vp-1279 {
+      margin-bottom: size(30px);
+    }
 
     @include vp-479 {
-      margin-bottom: size(26px);
+      margin-bottom: size(25px);
     }
   }
 
@@ -22,18 +18,17 @@
     grid-auto-flow: row dense;
     gap: size(16px);
 
+    @include vp-1279 {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: size(8px);
+    }
+
+    @include vp-959 {
+      gap: size(6px);
+    }
+
     @include vp-479 {
       grid-template-columns: 1fr 1fr;
-      gap: size(6px);
     }
   }
 }
-/*
-.our-partners--services {
-  margin-bottom: size(100px);
-
-  @include vp-479 {
-    margin-bottom: size(60px);
-  }
-}
-*/
