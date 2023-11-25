@@ -9,17 +9,33 @@
 
   color: $color-blue;
 
-  @include vp-767 {
+  @include vp-1279 {
     flex-direction: column;
-    gap: size(14px);
+    gap: size(25px);
+  }
 
-    margin-bottom: size(18px);
+  @include vp-959 {
+    flex-direction: row;
+    gap: size(85px);
+  }
+
+  @include vp-479 {
+    flex-direction: column;
+    gap: size(19px);
+
+    margin-bottom: size(32px);
   }
 
   li {
     flex-grow: 1;
 
-    @include vp-767 {
+    @include vp-1279 {
+      //display: flex;
+
+      widows: 100%;
+    }
+
+    @include vp-479 {
       display: flex;
 
       width: 100%;
@@ -30,7 +46,11 @@
     margin: 0;
     margin-bottom: size(24px);
 
-    @include vp-767 {
+    @include vp-1279 {
+      margin-bottom: size(16px);
+    }
+
+    @include vp-479 {
       width: size(133px);
       margin-right: size(10px);
     }
@@ -41,7 +61,12 @@
       font-size: size(64px);
       line-height: size(64px);
 
-      @include vp-767 {
+      @include vp-1279 {
+        font-size: size(48px);
+        line-height: size(48px);
+      }
+
+      @include vp-479 {
         font-size: size(36px);
         line-height: size(36px);
       }
@@ -53,7 +78,12 @@
       font-size: size(24px);
       line-height: size(24px);
 
-      @include vp-767 {
+      @include vp-1279 {
+        font-size: size(20px);
+        line-height: size(24px);
+      }
+
+      @include vp-479 {
         font-size: size(16px);
         line-height: size(21px);
       }
@@ -66,7 +96,17 @@
     font-size: size(16px);
     line-height: size(24px);
 
-    @include vp-767 {
+    @include vp-1279 {
+      font-size: size(16px);
+      line-height: size(26px);
+    }
+
+    @include vp-959 {
+      font-size: size(14px);
+      line-height: size(22px);
+    }
+
+    @include vp-479 {
       width: size(148px);
       font-size: size(14px);
       line-height: size(22px);
@@ -81,7 +121,7 @@
 
   color: $color-default-white;
 
-  @include vp-767 {
+  @include vp-479 {
     gap: size(14px);
     width: calc(100% - 2 * #{size(15px)});
   }

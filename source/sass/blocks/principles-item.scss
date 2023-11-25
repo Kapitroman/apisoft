@@ -7,7 +7,7 @@
   border-radius: size(24px);
   border: size(1px) solid $color-blue;
 
-  @include vp-767 {
+  @include vp-479 {
     min-height: auto;
     padding: size(20px);
     border-radius: size(15px);
@@ -40,7 +40,7 @@
     font-weight: 500;
     line-height: size(26px);
 
-    @include vp-767 {
+    @include vp-479 {
       margin-bottom: size(10px);
     }
   }
@@ -51,7 +51,7 @@
     font-size: size(16px);
     line-height: size(26px);
 
-    @include vp-767 {
+    @include vp-479 {
       font-size: size(14px);
       line-height: size(21px);
     }
@@ -59,7 +59,7 @@
 }
 
 .principles-item--special {
-  @media (min-width: 768px) {
+  @media (min-width: 480px) {
     grid-column: span 2;
   }
 }

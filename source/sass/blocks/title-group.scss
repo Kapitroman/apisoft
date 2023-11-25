@@ -4,7 +4,7 @@
 
   margin-bottom: size(80px);
 
-  @include vp-767 {
+  @include vp-479 {
     flex-direction: column;
     align-items: initial;
 
@@ -18,7 +18,7 @@
       line-height: size(40px);
       margin-bottom: size(52px);
 
-      @include vp-767 {
+      @include vp-479 {
         margin-bottom: size(9px);
       }
     }
@@ -31,7 +31,7 @@
       line-height: size(24px);
       color: $color-blue;
 
-      @include vp-767 {
+      @include vp-479 {
         width: size(200px);
         margin-left: 0;
 
@@ -47,7 +47,7 @@
 
     margin-left: size(50px);
 
-    @include vp-767 {
+    @include vp-479 {
       width: 100%;
       margin-left: 0;
       margin-bottom: size(30px);
@@ -62,7 +62,7 @@
 
       object-fit: cover;
 
-      @include vp-767 {
+      @include vp-479 {
         border-radius: size(20px);
       }
     }

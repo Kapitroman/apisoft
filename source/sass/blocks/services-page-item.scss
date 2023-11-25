@@ -6,7 +6,7 @@
   border-radius: size(31px);
   border: size(1px) solid rgba($color-blue, 0.6);
 
-  @include vp-767 {
+  @include vp-479 {
     flex-direction: column;
 
     padding: size(19px);
@@ -19,7 +19,7 @@
     width: size(455px);
     margin-right: size(119px);
 
-    @include vp-767 {
+    @include vp-479 {
       display: contents;
 
       width: 100%;
@@ -33,7 +33,7 @@
       font-size: size(32px);
       line-height: size(22px);
 
-      @include vp-767 {
+      @include vp-479 {
         margin-right: size(20px);
 
         font-size: size(18px);
@@ -48,7 +48,7 @@
       font-weight: 500;
       line-height: size(21px);
 
-      @include vp-767 {
+      @include vp-479 {
         line-height: size(18px);
       }
     }
@@ -63,7 +63,7 @@
       }
     }
 
-    @include vp-767 {
+    @include vp-479 {
       order: 2;
     }
   }
@@ -73,7 +73,7 @@
     flex-wrap: wrap;
     gap: size(8px);
 
-    @include vp-767 {
+    @include vp-479 {
       margin-bottom: size(20px);
     }
   }

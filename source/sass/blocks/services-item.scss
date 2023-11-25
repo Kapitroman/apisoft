@@ -34,7 +34,19 @@
     }
   }
 
-  @include vp-767 {
+  @include vp-1279 {
+    min-height: size(226px);
+    padding: size(35px) size(20px) size(20px) size(20px);
+    border-radius: size(20px);
+  }
+
+  @include vp-959 {
+    min-height: size(159px);
+    padding: size(35px) size(20px) size(20px) size(20px);
+    border-radius: size(20px);
+  }
+
+  @include vp-479 {
     min-height: auto;
     padding: size(35px) size(20px) size(20px) size(20px);
     border-radius: size(20px);
@@ -45,7 +57,7 @@
 
     margin-bottom: size(25px);
 
-    @include vp-767 {
+    @include vp-1279 {
       margin-bottom: size(10px);
     }
   }
@@ -61,7 +73,12 @@
 
     transition: color $trans-default;
 
-    @include vp-767 {
+    @include vp-1279 {
+      font-size: size(16px);
+      line-height: size(24px);
+    }
+
+    @include vp-479 {
       display: block;
 
       font-size: size(14px);
@@ -82,7 +99,7 @@
 
       transition: opacity $trans-default, color $trans-default;
 
-      @include vp-767 {
+      @include vp-479 {
         opacity: 1;
       }
     }
@@ -90,9 +107,21 @@
 }
 
 .services-item--special {
-  @media (min-width: 768px) {
+  @media (min-width: 480px) {
     grid-column: span 2;
 
+    p {
+      display: block;
+    }
+  }
+
+  @include vp-959 {
+    p {
+      display: none;
+    }
+  }
+
+  @include vp-479 {
     p {
       display: block;
     }

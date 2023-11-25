@@ -6,11 +6,11 @@ h1 {
   line-height: size(79px);
 
   @include vp-1279 {
-    font-size: 48px;
-    line-height: 53px;
+    font-size: size(48px);
+    line-height: size(53px);
   }
 
-  @include vp-767 {
+  @include vp-479 {
     font-size: size(32px);
     line-height:size(42px);
   }
@@ -24,8 +24,13 @@ h1.title-2 {
   font-size: size(54px);
   line-height: size(65px);
 
-  @include vp-767 {
-    font-size: size(26px);
+  @include vp-1279 {
+    font-size: size(36px);
+    line-height: size(43px);
+  }
+
+  @include vp-479 {
+    font-size: size(22px);
     line-height: size(26px);
   }
 }
@@ -37,7 +42,12 @@ h3 {
   font-size: size(32px);
   line-height: size(35px);
 
-  @include vp-767 {
+  @include vp-1279 {
+    font-size: size(20px);
+    line-height: size(22px);
+  }
+
+  @include vp-479 {
     font-size: size(20px);
     line-height: size(22px);
   }

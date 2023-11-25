@@ -34,8 +34,12 @@ html {
   @include vp-959 {
     font-size: size-tablet($fz-default);
   }
-
+  /*
   @include vp-767 {
+    font-size: size-mobile($fz-default);
+  }
+  */
+  @include vp-479 {
     font-size: size-mobile($fz-default);
   }
 }

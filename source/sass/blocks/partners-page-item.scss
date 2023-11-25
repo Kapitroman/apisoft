@@ -4,7 +4,7 @@
   padding: size(30px) size(40px) size(30px) size(30px);
   border: size(1px) solid $color-blue;
 
-  @include vp-767 {
+  @include vp-479 {
     flex-direction: column;
 
     border-radius: size(20px);
@@ -25,7 +25,7 @@
 
     background-color: $color-blue;
 
-    @include vp-767 {
+    @include vp-479 {
       width: size(80px);
       height: size(80px);
 
@@ -38,7 +38,7 @@
       width: size(60px);
       height: size(60px);
 
-      @include vp-767 {
+      @include vp-479 {
         width: size(45px);
         height: size(45px);
       }
@@ -58,10 +58,10 @@
     font-size: size(20px);
     line-height: size(26px);
 
-    @include vp-767 {
+    @include vp-479 {
       margin-bottom: size(10px);
 
-      @include vp-767 {
+      @include vp-479 {
         font-size: size(16px);
         line-height: size(22px);
       }
@@ -75,7 +75,7 @@
     font-size: size(16px);
     line-height: size(26px);
 
-    @include vp-767 {
+    @include vp-479 {
       margin-bottom: size(25px);
 
       font-size: size(14px);
@@ -86,7 +86,7 @@
   .btn {
     margin-top: auto;
 
-    @include vp-767 {
+    @include vp-479 {
       margin-right: auto;
       margin-left: auto;
     }

@@ -11,7 +11,7 @@
 
   background-color: $color-default-white;
 
-  @include vp-767 {
+  @include vp-479 {
     min-height: initial;
     border-radius: size(16px);
     padding: size(20px);
@@ -27,7 +27,7 @@
     font-size: size(32px);
     line-height: size(22px);
 
-    @include vp-767 {
+    @include vp-479 {
       width: size(215px);
       margin-right: size(16px);
 
@@ -42,7 +42,7 @@
       line-height: size(18px);// 31
       color: #9B9BB4;
 
-      @include vp-767 {
+      @include vp-479 {
         order: -1;
         margin-left: 0;
         margin-bottom: size(10px);

@@ -1,16 +1,10 @@
 .digital-products {
-  /*
-  margin-bottom: size(105px);
 
-  @include vp-767 {
-    margin-bottom: size(54px);
-  }
-  */
   .container {
     display: flex;
     align-items: flex-start;
 
-    @include vp-767 {
+    @include vp-959 {
       flex-direction: column;
       align-items: initial;
     }
@@ -26,11 +20,27 @@
 
     overflow: hidden;
 
-    @include vp-767 {
+    @include vp-1279 {
+      width: size(393px);
+      aspect-ratio: 393 / 529;
+      border-radius: size(24px);
+      margin-right: size(48px);
+    }
+
+    @include vp-959 {
+      width: size(726px);
+      aspect-ratio: 726 / 408;
+      border-radius: size(20px);
+      margin-right: 0;
+      margin-bottom: size(72px);
+    }
+
+    @include vp-479 {
       width: size(291px);
       aspect-ratio: 291 / 303;
       margin-right: 0;
       border-radius: size(15px);
+      margin-bottom: 0;
 
       order: 2;
     }
@@ -48,7 +58,23 @@
 
       background-color: $color-blue;
 
-      @include vp-767 {
+      @include vp-1279 {
+        top: size(-151px);
+        left: size(-74px);
+
+        width: size(430px);
+        height: size(430px);
+      }
+
+      @include vp-959 {
+        top: size(-131px);
+        left: size(-54px);
+
+        width: size(358px);
+        height: size(358px);
+      }
+
+      @include vp-479 {
         top: size(-151px);
         left: size(-78px);
 
@@ -60,10 +86,29 @@
     }
 
     img {
-      width: 100%;
-      height: 100%;
+      width: 115%;
+      height: 115%;
 
       object-fit: cover;
+      object-position: size(-288px);
+
+      @include vp-1279 {
+        object-position: size(-268px);
+      }
+
+      @include vp-959 {
+        width: 160%;
+        height: 160%;
+
+        object-position: size(-75px) size(-150px);
+      }
+
+      @include vp-479 {
+        width: 125%;
+        height: 125%;
+
+        object-position: 50% 50%;
+      }
     }
   }
 
@@ -74,12 +119,33 @@
 
     width: size(280px);
 
-    font-weight: 600;
+    font-weight: 400;
     font-size: size(24px);
     line-height: size(36px);
     color: $color-default-white;
 
-    @include vp-767 {
+    @include vp-1279 {
+      top: size(30px);
+      left: size(30px);
+
+      width: size(280px);
+
+      font-size: size(20px);
+      line-height: size(32px);
+    }
+
+    @include vp-959 {
+      top: size(30px);
+      left: size(30px);
+
+      width: size(225px);
+
+      font-size: size(16px);
+      line-height: size(26px);
+    }
+
+
+    @include vp-479 {
       top: size(20px);
       left: size(8px);
 
@@ -96,7 +162,19 @@
     padding-top: size(86px);
     padding-bottom: size(94px);
 
-    @include vp-767 {
+    @include vp-1279 {
+      width: size(390px);
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    @include vp-959 {
+      width: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    @include vp-479 {
       display: contents;
     }
   }
@@ -105,88 +183,24 @@
     width: size(615px);
     margin-bottom: size(80px);
 
-    @include vp-767 {
+    @include vp-1279 {
+      width: 100%;
+      margin-bottom: size(35px);
+      margin-top: size(-10px);
+      letter-spacing: -0.03em;
+    }
+
+    @include vp-959 {
+      width: size(390px);
+      margin-bottom: size(40px);
+      margin-top: 0;
+    }
+
+    @include vp-479 {
       order: -1;
 
-      width: size(252px);
+      width: size(240px);
       margin-bottom: size(18px);
     }
   }
-  /*
-  &__achievements {
-    display: flex;
-    gap: size(80px);
-
-    margin: 0;
-    padding-left: 0;
-
-    list-style: none;
-
-    color: $color-blue;
-
-    @include vp-767 {
-      flex-direction: column;
-      gap: size(14px);
-
-      margin-bottom: size(18px);
-    }
-
-    li {
-      flex-grow: 1;
-
-      @include vp-767 {
-        display: flex;
-
-        width: 100%;
-      }
-    }
-
-    p:first-child {
-      margin: 0;
-      margin-bottom: size(24px);
-
-      @include vp-767 {
-        width: size(133px);
-        margin-right: size(10px);
-      }
-
-      span:first-child {
-        display: block;
-
-        font-size: size(64px);
-        line-height: size(64px);
-
-        @include vp-767 {
-          font-size: size(36px);
-          line-height: size(36px);
-        }
-      }
-
-      span:last-child {
-        display: block;
-
-        font-size: size(24px);
-        line-height: size(24px);
-
-        @include vp-767 {
-          font-size: size(16px);
-          line-height: size(21px);
-        }
-      }
-    }
-
-    p:last-child {
-      margin: 0;
-
-      font-size: size(16px);
-      line-height: size(24px);
-
-      @include vp-767 {
-        width: size(148px);
-        font-size: size(14px);
-        line-height: size(22px);
-      }
-    }
-  }
-  */
 }

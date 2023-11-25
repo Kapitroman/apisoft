@@ -18,7 +18,7 @@
     }
   }
 
-  @include vp-767 {
+  @include vp-479 {
     border-radius: size(10px);
   }
 
@@ -34,7 +34,7 @@
     padding: size(30px);
     //-border: size(1px) solid $color-blue;
 
-    @include vp-767 {
+    @include vp-479 {
       padding: size(20px);
     }
 
@@ -44,7 +44,7 @@
       font-size: size(18px);
       line-height: size(29px);
 
-      @include vp-767 {
+      @include vp-479 {
         font-size: size(14px);
         line-height: size(18px);
       }
@@ -62,7 +62,7 @@
 
     transition: opacity $trans-default;
 
-    @include vp-767 {
+    @include vp-479 {
       //-border-radius: size(10px);
     }
 
@@ -71,7 +71,7 @@
       height: size(120px);
       margin: auto;
 
-      @include vp-767 {
+      @include vp-479 {
         width: size(60px);
         height: size(60px);
       }
@@ -87,7 +87,7 @@
 
     transition: opacity $trans-default;
 
-    @include vp-767 {
+    @include vp-479 {
       //-border-radius: size(10px);
     }
 
@@ -97,7 +97,7 @@
       margin: auto;
       margin-bottom: size(30px);
 
-      @include vp-767 {
+      @include vp-479 {
         margin-bottom: size(20px);
       }
     }
@@ -108,7 +108,7 @@
   opacity: 0;
   pointer-events: none;
 
-  @include vp-767 {
+  @include vp-479 {
     display: none;
   }
 }
@@ -120,7 +120,7 @@
       height: size(45px);
       margin-bottom: size(120px);
 
-      @include vp-767 {
+      @include vp-479 {
         width: size(78px);
         height: size(22px);
         margin-bottom: size(90px);
@@ -134,7 +134,7 @@
     svg {
       margin-bottom: size(90px);
 
-      @include vp-767 {
+      @include vp-479 {
         margin-bottom: size(60px);
       }
     }

@@ -11,7 +11,7 @@
 
   overflow: hidden;
 
-  @include vp-767 {
+  @include vp-479 {
     padding-top: size(250px);
     padding-bottom: size(40px);
   }
@@ -31,7 +31,7 @@
 
     background-color: $color-blue;
 
-    @include vp-767 {
+    @include vp-479 {
       bottom: size(-200px);
       width: size(650px);
       height: size(650px);
@@ -47,7 +47,7 @@
 
     color: $color-default-white;
 
-    @include vp-767 {
+    @include vp-479 {
       margin-bottom: size(40px);
     }
   }
@@ -67,12 +67,12 @@
 
       object-fit: cover;
 
-      @include vp-767 {
+      @include vp-479 {
         border-radius: size(15px);
       }
     }
 
-    @include vp-767 {
+    @include vp-479 {
       //display: none;
     }
   }
@@ -84,7 +84,7 @@
     width: size(471px);
     height: size(233px);
 
-    @include vp-767 {
+    @include vp-479 {
       top: size(100px);
       left: size(-60px);
 
@@ -101,7 +101,7 @@
     width: size(430px);
     height: size(225px);
 
-    @include vp-767 {
+    @include vp-479 {
       top:size(40px);
       right: size(-40px);
 
@@ -117,7 +117,7 @@
     width: size(281px);
     height: size(172px);
 
-    @include vp-767 {
+    @include vp-479 {
       display: none;
     }
   }

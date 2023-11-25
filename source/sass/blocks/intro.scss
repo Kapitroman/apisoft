@@ -17,7 +17,7 @@
     padding-bottom: size(34px);
   }
 
-  @include vp-767 {
+  @include vp-479 {
     padding-top: size(91px);
     padding-bottom: size(55px);
   }
@@ -36,7 +36,7 @@
       letter-spacing: -0.03em;
     }
 
-    @include vp-767 {
+    @include vp-479 {
       width: 100%;
       margin-bottom: size(25px);
     }
@@ -61,7 +61,7 @@
       gap: size(4px);
     }
 
-    @include vp-767 {
+    @include vp-479 {
       width: calc(size(1296px));//1353
       //margin-left: size(-317px);
     }
@@ -95,7 +95,7 @@
       margin-bottom: size(147px)
     }
 
-    @include vp-767 {
+    @include vp-479 {
       width: size(260px);
       margin-bottom: size(323px)
     }
@@ -121,7 +121,7 @@
         line-height: size(21px);
       }
 
-      @include vp-767 {
+      @include vp-479 {
         margin-bottom: size(25px);
 
         font-size: size(16px);
@@ -163,7 +163,7 @@
       width: size(508px);
     }
 
-    @include vp-767 {
+    @include vp-479 {
       top: size(150px);
       right: size(-68px);
 
@@ -207,7 +207,7 @@
         height: size(300px);
       }
 
-      @include vp-767 {
+      @include vp-479 {
         top: size(27px);
         left: size(29px);
 

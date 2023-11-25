@@ -11,7 +11,7 @@
 
   background-color: $color-blue;
 
-  @include vp-767 {
+  @include vp-479 {
     flex-direction: column;
 
     min-height: initial;
@@ -29,7 +29,7 @@
       font-size: size(20px);
       line-height: size(26px);
 
-      @include vp-767 {
+      @include vp-479 {
         margin-bottom: size(30px);
 
         font-size: size(14px);
@@ -53,7 +53,7 @@
 
       transition: opacity $trans-default;
 
-      @include vp-767 {
+      @include vp-479 {
         opacity: 0.7;
       }
     }
@@ -66,7 +66,7 @@
       width: size(40px);
       height: size(40px);
 
-      @include vp-767 {
+      @include vp-479 {
         top: size(20px);
         right: auto;
         left: size(20px);
@@ -82,7 +82,7 @@
   .connect-us__main {
     width: size(435px);
 
-    @include vp-767 {
+    @include vp-479 {
       width: 100%;
     }
   }
@@ -94,7 +94,7 @@
     width: size(42px);
     height: size(30px);
 
-    @include vp-767 {
+    @include vp-479 {
       top: size(20px);
       right: auto;
       left: size(20px);
@@ -109,7 +109,7 @@
   .connect-us__main {
     width: size(450px);
 
-    @include vp-767 {
+    @include vp-479 {
       width: 100%;
     }
   }
@@ -121,7 +121,7 @@
     width: size(40px);
     height: size(40px);
 
-    @include vp-767 {
+    @include vp-479 {
       top: size(20px);
       right: auto;
       left: size(20px);
@@ -136,7 +136,7 @@
   padding: size(50px);
   min-height: size(211px);
 
-  @include vp-767 {
+  @include vp-479 {
     padding: size(20px);
   }
 
@@ -144,7 +144,7 @@
     width: size(500px);
     margin-right: size(50px);
 
-    @include vp-767 {
+    @include vp-479 {
       display: contents;
 
       width: 100%;
@@ -157,7 +157,7 @@
       font-size: size(32px);
       line-height: size(22px);
 
-      @include vp-767 {
+      @include vp-479 {
         width: size(200px);
         margin-bottom: size(30px);
 
@@ -167,7 +167,7 @@
     }
 
     button {
-      @include vp-767 {
+      @include vp-479 {
         order: 2;
         margin-right: auto;
       }
@@ -179,7 +179,7 @@
     gap: size(10px);
     margin-left: auto;
 
-    @include vp-767 {
+    @include vp-479 {
       flex-direction: column;
       margin-left: 0;
       margin-bottom: size(30px);

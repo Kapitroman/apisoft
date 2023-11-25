@@ -9,7 +9,7 @@
 
   color: $color-black;
 
-  @include vp-767 {
+  @include vp-479 {
     height: auto;
     padding: size(30px) size(20px);
     border-radius: size(12px);
@@ -21,7 +21,7 @@
 
     margin-bottom: size(34px);
 
-    @include vp-767 {
+    @include vp-479 {
       margin-bottom: size(16px);
     }
   }
@@ -32,7 +32,7 @@
     font-size: size(20px);
     line-height: size(22px);
 
-    @include vp-767 {
+    @include vp-479 {
       display: block;
     }
   }
@@ -48,7 +48,7 @@
 
     background-color: $color-blue;
 
-    @include vp-767 {
+    @include vp-479 {
       width: size(45px);
       height: size(45px);
     }
@@ -57,7 +57,7 @@
       width: size(32px);
       height: size(32px);
 
-      @include vp-767 {
+      @include vp-479 {
         width: size(24px);
         height: size(24px);
       }
@@ -67,7 +67,7 @@
   &__main {
     margin-bottom: size(50px);
 
-    @include vp-767 {
+    @include vp-479 {
       margin-bottom: size(20px);
     }
 
@@ -77,7 +77,7 @@
       font-size: size(32px);
       line-height: size(35px);
 
-      @include vp-767 {
+      @include vp-479 {
         margin-bottom: size(16px);
 
         font-size: size(20px);
@@ -91,7 +91,7 @@
       font-size: size(16px);
       line-height: size(26px);
 
-      @include vp-767 {
+      @include vp-479 {
         font-size: size(14px);
         line-height: size(22px);
       }
@@ -103,7 +103,7 @@
     line-height: 27px;
     color: #9B9BB4;
 
-    @include vp-767 {
+    @include vp-479 {
       font-size: size(14px);
       line-height: size(22px);
     }
@@ -125,7 +125,7 @@
   border: none;
   height: auto;
 
-  @include vp-767 {
+  @include vp-479 {
     display: none;
   }
 
