@@ -18,13 +18,12 @@ mixin footer(footerMods)
               li
                 a(href=link.href)=link.text
         +contacts-action(footerAction)
-        //-a(href=footerAction.href).footer__action
-          span.footer__action-text=footerAction.text
-          span.footer__action-icon
-            +icon(footerAction.icon, 47, 47)
       .footer__info
-        a.footer__info-designer(href=footerInfo[0].href)
-          +icon(footerInfo[0].icon, 125, 17)
-          span.visually-hidden=footerInfo[0].text
-        a.footer__offer(href=footerInfo[1].href)=footerInfo[1].text
-        a.footer__agreement(href=footerInfo[2].href)=footerInfo[2].text
+        p.footer__info-designer
+          a(href=footerInfo[0].href)
+            +icon(footerInfo[0].icon, 125, 17)
+            span.visually-hidden=footerInfo[0].text
+        p.footer__offer
+          a(href=footerInfo[1].href)=footerInfo[1].text
+        p.footer__agreement
+          a(href=footerInfo[2].href)=footerInfo[2].text

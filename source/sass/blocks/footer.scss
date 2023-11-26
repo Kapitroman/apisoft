@@ -5,6 +5,10 @@
 
   background-color: $color-black-2;
 
+  @include vp-959 {
+    padding: size(40px) 0;
+  }
+
   a {
     color: $color-default-white;
   }
@@ -22,6 +26,8 @@
   }
 
   &__content {
+    position: relative;
+
     display: flex;
 
     margin-bottom: size(40px);
@@ -35,6 +41,14 @@
     width: size(450px);
     padding-right: size(50px);
 
+    @include vp-1279 {
+      width: size(297px);
+    }
+
+    @include vp-959 {
+      width: size(323px);
+    }
+
     @include vp-479 {
       width: 100%;
       padding-right: 0;
@@ -47,8 +61,16 @@
     flex-direction: column;
     row-gap: size(15px);
 
-    @include vp-479 {
+    @include vp-1279 {
       row-gap: size(14px);
+    }
+
+    @include vp-959 {
+      margin-bottom: size(80px);
+    }
+
+    @include vp-479 {
+      margin-bottom: 0;
     }
 
     a, p {
@@ -58,7 +80,7 @@
       font-size: size(16px);
       line-height: size(19px);
 
-      @include vp-479 {
+      @include vp-1279 {
         font-size: size(14px);
         line-height: size(17px);
       }
@@ -78,6 +100,14 @@
 
     width: size(600px);
 
+    @include vp-1279 {
+      width: size(340px);
+    }
+
+    @include vp-959 {
+      width: size(403px);
+    }
+
     @include vp-479 {
       width: 100%;
       order: 2;
@@ -94,6 +124,16 @@
       padding-right: size(30px);
 
       list-style: none;
+
+      @include vp-1279 {
+        width: size(184px);
+        padding-right: size(20px);
+      }
+
+      @include vp-959 {
+        width: size(224px);
+        padding-right: size(20px);
+      }
 
       @include vp-479 {
         width: size(164px);
@@ -122,7 +162,7 @@
 
       transition: color $trans-default;
 
-      @include vp-479 {
+      @include vp-1279 {
         font-size: size(14px);
         line-height: size(17px);
       }
@@ -132,64 +172,23 @@
       }
     }
   }
-  /*
-  &__action {
-    display: flex;
-    align-items: center;
-
-    margin-bottom: auto;
-    margin-left: auto;
-
-    @include vp-479 {
-      margin-bottom: size(60px);
-      margin-left: 0;
-    }
-
-    @include hover-focus {
-      .footer__action-text {
-        background-color: $color-gray-02;
-      }
-    }
-  }
-
-  &__action-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-right: size(16px);
-    padding: size(12px) size(24px) size(14px) size(24px);
-    border-radius: size(15px);
-
-    font-weight: 600;
-    font-size: size(16px);
-    line-height: size(19px);
-
-    color: $color-default-white;
-
-    background-color: $color-gray-01;
-
-    @include vp-479 {
-      flex-grow: 1;
-    }
-  }
-
-  &__action-icon {
-    display: flex;
-
-    svg {
-      width: size(45px);
-      height: size(45px);
-      border-radius: 50%;
-    }
-  }
-  */
 
   .contacts-action {
     margin-bottom: auto;
     margin-left: auto;
 
+    @include vp-959 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+
     @include vp-479 {
+      position: static;
+
       margin-bottom: size(60px);
       margin-left: 0;
     }
@@ -197,7 +196,11 @@
 
   &__info {
     display: flex;
-    align-items: center;
+
+    p {
+      display: flex;
+      margin: 0;
+    }
 
     a {
       color: $color-gray-05;
@@ -218,13 +221,25 @@
     width: size(450px);
     padding-right: size(50px);
 
-    svg {
-      width: size(125px);
-      height: size(17px);
+    @include vp-1279 {
+      width: size(297px);
+    }
+
+    @include vp-959 {
+      width: size(334px);
     }
 
     @include vp-479 {
       width: 100%;
+    }
+
+    a {
+      display: inline-flex;
+    }
+
+    svg {
+      width: size(125px);
+      height: size(17px);
     }
   }
 
@@ -238,6 +253,23 @@
 
     @include vp-479 {
       width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  &__offer {
+    @include vp-1279 {
+      width: size(168px);
+    }
+
+    @include vp-959 {
+      width: size(209px);
+    }
+  }
+
+  &__agreement {
+    @include vp-959 {
+      width: size(216px);
       padding-right: 0;
     }
   }

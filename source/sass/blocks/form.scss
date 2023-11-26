@@ -1,4 +1,15 @@
 .form {
+  width: size(600px);
+  margin: 0 auto;
+
+  @include vp-1279 {
+    width: size(525px);
+  }
+
+  @include vp-479 {
+    width: 100%;
+  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -13,17 +24,28 @@
 
     margin-bottom: size(40px);
 
-    @include vp-479 {
+    @include vp-1279 {
       gap: size(8px);
 
       margin-bottom: size(30px);
+
+      .custom-input {
+        width: calc((100% - #{size(8px)}) / 2);
+        //width: auto;
+        //flex-grow: 1;
+      }
+    }
+
+    @include vp-479 {
+      .custom-input {
+        width: 100%;
+      }
     }
   }
 
   p {
     margin: 0 auto size(32px) auto;
 
-    font-weight: 500;
     font-size: size(14px);
     line-height: size(20px);
 
@@ -58,13 +80,19 @@
 }
 
 .form--modal {
+  width: 100%;
+
   .form__fields {
-    gap: size(10px);
+    gap: size(8px);
   }
 
   .custom-input {
     //width: calc((100% - #{size(12px)}) / 2);
     width: auto;
     flex-grow: 1;
+
+    @include vp-479 {
+      width: 100%;
+    }
   }
 }

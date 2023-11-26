@@ -18,7 +18,7 @@ mixin header(headerMods, currentUrl)
                 href: headerButtonStart.href,
                 icon: headerButtonStart.icon,
                 text: headerButtonStart.text,
-              }).btn--white.header__button-start
+              }).btn--white.header__button-start(data-open-modal="message")
       +btn({
         caption: toggleLanguage.caption,
         href: toggleLanguage.href,
@@ -27,7 +27,7 @@ mixin header(headerMods, currentUrl)
         href: headerButtonStart.href,
         icon: headerButtonStart.icon,
         text: headerButtonStart.text,
-      }).header__button-start
+      }).header__button-start(data-open-modal="message")
       button.header__burger(type="button", data-burger, aria-label="Переключатель отображения меню", aria-pressed="false")
         span
         span

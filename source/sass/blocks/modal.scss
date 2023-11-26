@@ -39,7 +39,7 @@
     padding: size(60px) size(40px);
 
     @include vp-479 {
-      padding: 60px 16px;
+      padding: size(60px) size(15px);
     }
   }
 
@@ -66,9 +66,19 @@
 
     color: $color-default-white;
 
+    @include vp-1279 {
+      padding: size(60px) size(50px) size(40px) size(50px);
+      border-radius: size(31px);
+    }
+
+    @include vp-959 {
+      width: size(728px);
+    }
+
     @include vp-479 {
       width: 100%;
-      padding: 20px;
+      padding: size(40px) size(20px);
+      border-radius: size(18px);
     }
   }
 
@@ -88,9 +98,23 @@
 
     transition: opacity $trans-default;
 
+    @include vp-1279 {
+      top: size(50px);
+    }
+
+    @include vp-479 {
+      top: size(40px);
+      right: size(20px);
+    }
+
     svg {
       width: size(40px);
       height: size(40px);
+
+      @include vp-479 {
+        width: size(34px);
+        height: size(34px);
+      }
     }
 
     @include hover-focus {
@@ -138,26 +162,73 @@
 
     font-size: size(54px);
     line-height: size(38px);
+
+    @include vp-1279 {
+      margin-bottom: size(20px);
+
+      font-size: size(36px);
+      line-height: size(25px);
+    }
+
+    @include vp-479 {
+      margin-bottom: size(10px);
+
+      font-size: size(20px);
+      line-height: size(14px);
+    }
   }
 
   .modal__subtitle {
     margin: 0;
-    margin-bottom: size(61px);
+    margin-bottom: size(40px);
+
+    font-weight: 500;
+    font-size: size(16px);
+    line-height: size(22px);
+
+    @include vp-1279 {
+      font-size: size(14px);
+      line-height: size(20px);
+    }
+
+    @include vp-479 {
+      width: size(190px);
+      margin-bottom: size(30px);
+
+      font-size: size(14px);
+      line-height: size(20px);
+    }
   }
 }
 
 .modal--success,
 .modal--error {
   .modal__content {
+    width: size(596px);
     padding: size(60px) size(50px) size(70px) size(50px);
+
+    @include vp-479 {
+      width: size(290px);
+      border-radius: size(18px);
+      padding: size(35px) size(20px) size(40px) size(20px);
+    }
   }
 
   .modal__title {
+    width: size(300px);
     margin: 0;
     margin-bottom: size(26px);
 
     font-size: size(32px);
     line-height: size(35px);
+
+    @include vp-479 {
+      width: size(200px);
+      margin-bottom: size(10px);
+
+      font-size: size(20px);
+      line-height: size(26px);
+    }
   }
 
   .modal__subtitle {
@@ -165,5 +236,21 @@
 
     font-size: size(16px);
     line-height: size(22px);
+
+    @include vp-479 {
+      font-size: size(14px);
+      line-height: size(19px);
+    }
+  }
+
+  .modal__close-btn {
+    top: size(60px);
+    right: size(50px);
+
+    @include vp-479 {
+      top: size(35px);
+      right: size(20px);
+
+    }
   }
 }

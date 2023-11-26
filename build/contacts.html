@@ -31,7 +31,7 @@
                   <div class="header__contacts"><a href="mailto:info@api-soft.com">info@api-soft.com</a>
                     <p>Москва, ул. Профсоюзная, 57</p><a href="tel:+74994551508">+7 499 455 15 08</a>
                   </div>
-                  <a class="btn btn--white header__button-start" href="#"><span class="icon">
+                  <a class="btn btn--white header__button-start" href="#" data-open-modal="message"><span class="icon">
                       <svg width="12" height="10" aria-hidden="true">
                         <use xlink:href="img/sprite.svg#arrow"></use>
                       </svg></span><span class="btn__text">Начать проект</span>
@@ -42,7 +42,7 @@
           </div>
           <a class="btn toggle-language" href="#"><span class="btn__caption">EN</span>
           </a>
-          <a class="btn header__button-start" href="#"><span class="icon">
+          <a class="btn header__button-start" href="#" data-open-modal="message"><span class="icon">
               <svg width="12" height="10" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#arrow"></use>
               </svg></span><span class="btn__text">Начать проект</span>
@@ -56,7 +56,7 @@
             <div class="container">
               <div class="contacts__info">
                 <h1 class="title-2">Контакты</h1><a class="contacts__tel" href="+74994551508">+7 (499) 455-15-08</a>
-                <div class="contacts-action contacts-action--blue"><a class="contacts-action__mail" href="mailto:info@api-soft.com.ru">info@api-soft.com.ru</a><a class="contacts-action__telegram" href="#">
+                <div class="contacts-action contacts-action--blue"><a class="contacts-action__mail" href="mailto:info@api-soft.com.ru" data-open-modal="message">info@api-soft.com.ru</a><a class="contacts-action__telegram" href="#">
                     <svg width="47" height="47" aria-hidden="true">
                       <use xlink:href="img/sprite.svg#telegram"></use>
                     </svg><span class="visually-hidden">telegram</span></a></div>
@@ -88,18 +88,19 @@
                     </label>
                   </div>
                   <div class="input-upload input-upload--file-drop" data-upload="file-drop" tabindex="0" data-validate-type="file" data-max-size="10485760">
-                    <div class="input-upload__drop-zone" data-drop-zone><span class="input-upload__drop-zone-text">
+                    <div class="input-upload__drop-zone" data-drop-zone>
+                      <div class="input-upload__drop-zone-text">
                         <svg width="32" height="32" aria-hidden="true">
                           <use xlink:href="img/sprite.svg#link"></use>
-                        </svg>Перетащите или нажмите, чтобы загрузить техническое задание или файлы</span></div>
+                        </svg><span>Перетащите или нажмите, чтобы загрузить техническое задание или файлы</span>
+                      </div>
+                    </div>
                     <label>
                       <input type="file" name="upload-file" tabindex="-1">
                     </label>
                   </div>
                 </div>
-                <p>
-                  Оставляя заявку, вы соглашаетесь с
-                  <a href="#">Политикой конфидециальности</a>
+                <p>Оставляя заявку, вы соглашаетесь с <a href="#">Политикой конфидециальности</a>
                 </p>
                 <button class="btn btn--white" type="submit"><span class="icon">
                     <svg width="12" height="10" aria-hidden="true">
@@ -136,15 +137,19 @@
                 <li><a href="#">Вакансии</a></li>
               </ul>
             </div>
-            <div class="contacts-action"><a class="contacts-action__mail" href="mailto:info@api-soft.com.ru">Написать нам</a><a class="contacts-action__telegram" href="#">
+            <div class="contacts-action"><a class="contacts-action__mail" href="#" data-open-modal="message">Написать нам</a><a class="contacts-action__telegram" href="#">
                 <svg width="47" height="47" aria-hidden="true">
                   <use xlink:href="img/sprite.svg#telegram"></use>
                 </svg><span class="visually-hidden">telegram</span></a></div>
           </div>
-          <div class="footer__info"><a class="footer__info-designer" href="#">
-              <svg width="125" height="17" aria-hidden="true">
-                <use xlink:href="img/sprite.svg#designer"></use>
-              </svg><span class="visually-hidden">Дизайн-RUSO</span></a><a class="footer__offer" href="#">Публичная оферта</a><a class="footer__agreement" href="#">Согласие на обработку данных</a></div>
+          <div class="footer__info">
+            <p class="footer__info-designer"><a href="#">
+                <svg width="125" height="17" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#designer"></use>
+                </svg><span class="visually-hidden">Дизайн-RUSO</span></a></p>
+            <p class="footer__offer"><a href="#">Публичная оферта</a></p>
+            <p class="footer__agreement"><a href="#">Согласие на обработку данных</a></p>
+          </div>
         </div>
       </footer>
     </div>

@@ -1,9 +1,17 @@
 .send-message {
   position: relative;
-  padding: size(109px) 0 size(100px) 0;
+  padding: size(122px) 0 size(100px) 0;
+
+  @include vp-1279 {
+    padding: size(80px) 0 size(60px) 0;
+  }
+
+  @include vp-959 {
+    padding: size(90px) 0 size(66px) 0;
+  }
 
   @include vp-479 {
-    padding: size(60px) 0 size(60px) 0;
+    padding: size(60px) 0 size(52px) 0;
   }
 
   color: $color-default-white;
@@ -24,9 +32,9 @@
 
     background-color: $color-blue;
 
-    @include vp-479 {
-      width: size(700px);
-      height: size(700px);
+    @include vp-1279 {
+      width: size(877px);
+      height: size(877px);
     }
   }
 
@@ -34,19 +42,14 @@
     display: flex;
     flex-direction: column;
 
-    padding: 0 size(500px);
-
-    @include vp-479 {
-      padding: 0 size(15px);
-    }
   }
 
   h2 {
     margin: 0 auto;
-    margin-bottom: size(47px);
+    margin-bottom: size(60px);
 
-    @include vp-479 {
-      margin-bottom: size(35px);
+    @include vp-1279 {
+      margin-bottom: size(40px);
     }
   }
 }
