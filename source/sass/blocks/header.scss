@@ -462,9 +462,12 @@
 .header--special.header--black {
   background-color: $color-black-2;
 
-  &::before {
-    display: none;
+  .container {
+    &::before {
+      display: none;
+    }
   }
+
 
   .logo {
     color: $color-default-white;

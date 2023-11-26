@@ -1,9 +1,17 @@
 .apisoft {
   padding-top: size(184px);
-  // padding-bottom: size(74px);
+
   background-color: $color-black-2;
 
   color: $color-default-white;
+
+  @include vp-1279 {
+    padding-top: size(159px);
+  }
+
+  @include vp-479 {
+    padding-top: size(120px);
+  }
 
   &__wrapper {
     position: relative;
@@ -20,10 +28,20 @@
     color: $color-default-white;
     text-align: center;
 
+    @include vp-1279 {
+      padding: size(50px);
+      padding-top: size(110px);
+      border-radius: size(40px);
+    }
+
+    @include vp-959 {
+      padding: size(40px);
+      padding-top: size(90px);
+      border-radius: size(32px);
+    }
+
     @include vp-479 {
-      padding: size(33px);
-      padding-top: size(100px);
-      border-radius: size(15px);
+      padding: size(60px) size(15px);
     }
 
     svg {
@@ -35,10 +53,22 @@
       margin-left: auto;
       margin-right: auto;
 
+      @include vp-1279 {
+        width: size(665px);
+        height: size(82px);
+        margin-bottom: size(40px);
+      }
+
+      @include vp-959 {
+        width: size(530px);
+        height: size(65px);
+        margin-bottom: size(30px);
+      }
+
       @include vp-479 {
-        width: size(220px);
-        height: size(27px);
-        margin-bottom: size(35px);
+        width: size(244px);
+        height: size(30px);
+        margin-bottom: size(30px);
       }
     }
   }
@@ -51,19 +81,31 @@
     font-size: size(24px);
     line-height: size(38px);
 
+    @include vp-1279 {
+      width: size(548px);
+
+      font-size: size(20px);
+      line-height: size(32px);
+    }
+
+    @include vp-959 {
+      width: size(453px);
+
+      font-size: size(16px);
+      line-height: size(26px);
+    }
+
     @include vp-479 {
       width: 100%;
 
       font-size: size(16px);
-      line-height: size(24px);
-
-      text-align: left;
+      line-height: size(26px);
     }
   }
 
   &__achievement {
     position: absolute;
-    top: size(-100px);
+    top: size(-65px);
     left: size(31px);
 
     display: flex;
@@ -73,24 +115,40 @@
     width: size(250px);
     height: size(250px);
     border-radius: 50%;
+    margin: 0;
 
     background-color: $color-blue;
 
     font-size: size(32px);
     line-height: size(35px);
 
-    @include vp-479 {
-      top: size(-80px);
-      left: 5%;
+    @include vp-1279 {
+      top: size(-57px);
+      left: size(30px);
 
-      // transform: translateX(-50%);
+      width: size(150px);
+      height: size(150px);
+
+      font-size: size(20px);
+      line-height: size(22px);
+    }
+
+    @include vp-959 {
+      top: size(-41px);
+      left: size(30px);
 
       width: size(120px);
       height: size(120px);
 
       font-size: size(16px);
-      line-height: size(22px);
+      line-height: size(18px);
+    }
 
+    @include vp-479 {
+      top: auto;
+      left: size(20px);
+      bottom: size(-70px);
+      z-index: 3;
     }
   }
 }
