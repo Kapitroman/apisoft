@@ -11,9 +11,19 @@
 
   overflow: hidden;
 
+  @include vp-1279 {
+    padding-top: size(232px);
+    padding-bottom: size(80px);
+  }
+
+  @include vp-959 {
+    padding-top: size(225px);
+    padding-bottom: size(60px);
+  }
+
   @include vp-479 {
-    padding-top: size(250px);
-    padding-bottom: size(40px);
+    padding-top: size(288px);
+    padding-bottom: size(50px);
   }
 
   &::before {
@@ -31,24 +41,48 @@
 
     background-color: $color-blue;
 
+    @include vp-1279 {
+      bottom: size(-435px);
+
+      width: size(880px);
+      height: size(880px);
+    }
+
+    @include vp-959 {
+      bottom: size(-571px);
+
+      width: size(930px);
+      height: size(930px);
+    }
+
     @include vp-479 {
-      bottom: size(-200px);
-      width: size(650px);
-      height: size(650px);
+      bottom: size(-193px);
+      z-index: 1;
+
+      width: size(600px);
+      height: size(600px);
     }
   }
 
   h2 {
     position: relative;
     z-index: 1;
-    margin-bottom: size(84px);
+    margin-bottom: size(85px);
     margin-left: auto;
     margin-right: auto;
 
     color: $color-default-white;
 
-    @include vp-479 {
+    @include vp-1279 {
+      margin-bottom: size(50px);
+    }
+
+    @include vp-959 {
       margin-bottom: size(40px);
+    }
+
+    @include vp-479 {
+      margin-bottom: size(30px);
     }
   }
 
@@ -67,13 +101,17 @@
 
       object-fit: cover;
 
-      @include vp-479 {
+      @include vp-1279 {
+        border-radius: size(18px);
+      }
+
+      @include vp-959 {
         border-radius: size(15px);
       }
-    }
 
-    @include vp-479 {
-      //display: none;
+      @include vp-479 {
+        border-radius: size(10px);
+      }
     }
   }
 
@@ -84,29 +122,62 @@
     width: size(471px);
     height: size(233px);
 
-    @include vp-479 {
-      top: size(100px);
-      left: size(-60px);
+    @include vp-1279 {
+      top: size(126px);
+      left: 0;
 
-      width: size(235px);
-      height: size(116px);
+      width: size(280px);
+      height: size(139px);
+    }
+
+    @include vp-959 {
+      top: size(128px);
+      left: size(-53px);
+
+      width: size(262px);
+      height: size(130px);
+    }
+
+    @include vp-479 {
+      top: size(178px);
+      left: size(15px);
+      z-index: 0;
+
+      width: size(193px);
+      height: size(96px);
     }
   }
 
   &__picture--1 {
     top:size(74px);
     right: size(87px);
-    z-index: 3;
+    z-index: 0;
 
     width: size(430px);
     height: size(225px);
 
-    @include vp-479 {
+    @include vp-1279 {
       top:size(40px);
-      right: size(-40px);
+      right: size(40px);
 
-      width: size(215px);
-      height: size(112px);
+      width: size(292px);
+      height: size(153px);
+    }
+
+    @include vp-959 {
+      top:size(20px);
+      right: size(20px);
+
+      width: size(292px);
+      height: size(153px);
+    }
+
+    @include vp-479 {
+      top:size(30px);
+      right: size(15px);
+
+      width: size(226px);
+      height: size(118px);
     }
   }
 
@@ -117,7 +188,7 @@
     width: size(281px);
     height: size(172px);
 
-    @include vp-479 {
+    @include vp-1279 {
       display: none;
     }
   }

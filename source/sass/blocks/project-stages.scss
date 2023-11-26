@@ -4,18 +4,32 @@
 
   background-color: $color-black-2;
 
+  @include vp-1279 {
+    padding-top: size(90px);
+    padding-bottom: size(90px);
+  }
+
+  @include vp-959 {
+    padding-top: size(80px);
+    padding-bottom: size(80px);
+  }
+
   @include vp-479 {
     padding-top: size(60px);
     padding-bottom: size(40px);
   }
 
   h2 {
-    margin-bottom: size(50px);
-
     color: $color-default-white;
 
+    margin-bottom: size(35px);
+
+    @include vp-1279 {
+      margin-bottom: size(30px);
+    }
+
     @include vp-479 {
-      margin-bottom: 30px;
+      margin-bottom: size(25px);
     }
   }
 
@@ -30,6 +44,17 @@
 
     width: size(450px);
     margin-right: size(100px);
+
+    @include vp-1279 {
+      gap: size(10px);
+
+      width: size(293px);
+      margin-right: size(20px);
+    }
+
+    @include vp-959 {
+      width: size(263px);
+    }
 
     @include vp-479 {
       display: none;
@@ -50,9 +75,21 @@
 
     color: $color-default-white;
     cursor: pointer;
+    text-align: left;
 
     font-size: size(19px);
     line-height: size(26px);
+
+    @include vp-1279 {
+      border-radius: size(10px);
+
+      font-size: size(16px);
+      line-height: size(21px);
+    }
+
+    @include vp-959 {
+      padding: size(18px) size(15px);
+    }
 
     span {
       width: size(36px);
@@ -63,6 +100,15 @@
       line-height: size(42px);
 
       color: #0F69F5;
+
+      @include vp-1279 {
+        width: size(23px);
+        height: size(26px);
+        margin-right: size(14px);
+
+        font-size: size(20px);
+        line-height: size(26px);
+      }
     }
   }
 
@@ -81,6 +127,16 @@
 
     transition: height $trans-default;
 
+    @include vp-1279 {
+      width: size(567px);
+      min-height: size(642px);
+    }
+
+    @include vp-959 {
+      width: size(445px);
+      min-height: size(420px);
+    }
+
     @include vp-479 {
       width: 100%;
       min-height: auto;
@@ -95,17 +151,9 @@
     display: flex;
     flex-direction: column;
     gap: size(14px);
-  }
-  /*
-  &__element-content {
-    width: 100%;
-    height: size(432px);
-    padding: size(40px) size(30px);
 
+    @include vp-1279 {
+      gap: size(10px);
+    }
   }
-
-  &__element-content--add {
-    height: auto;
-  }
-  */
 }

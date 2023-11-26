@@ -116,12 +116,26 @@
 
 .digital-achievements--about {
   gap: size(58px);
+  flex-grow: 1;
 
   width: size(750px);
 
   color: $color-default-white;
 
+  @include vp-1279 {
+    flex-direction: row;
+    width: size(630px);
+    gap: size(35px);
+  }
+
+  @include vp-959 {
+    flex-direction: row;
+    width: size(650px);
+    gap: size(45px);
+  }
+
   @include vp-479 {
+    flex-direction: column;
     gap: size(14px);
     width: calc(100% - 2 * #{size(15px)});
   }

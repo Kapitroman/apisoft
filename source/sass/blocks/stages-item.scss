@@ -9,6 +9,18 @@
 
   color: $color-black;
 
+  overflow: auto;
+
+  @include vp-1279 {
+    padding: size(30px);
+    border-radius: size(18px);
+    height: size(474px);
+  }
+
+  @include vp-959 {
+    height: size(420px);
+  }
+
   @include vp-479 {
     height: auto;
     padding: size(30px) size(20px);
@@ -20,6 +32,10 @@
     justify-content: space-between;
 
     margin-bottom: size(34px);
+
+    @include vp-1279 {
+      margin-bottom: size(36px);////////
+    }
 
     @include vp-479 {
       margin-bottom: size(16px);
@@ -48,7 +64,7 @@
 
     background-color: $color-blue;
 
-    @include vp-479 {
+    @include vp-959 {
       width: size(45px);
       height: size(45px);
     }
@@ -57,7 +73,7 @@
       width: size(32px);
       height: size(32px);
 
-      @include vp-479 {
+      @include vp-959 {
         width: size(24px);
         height: size(24px);
       }
@@ -67,7 +83,11 @@
   &__main {
     margin-bottom: size(50px);
 
-    @include vp-479 {
+    @include vp-1279 {
+      margin-bottom: size(40px);
+    }
+
+    @include vp-959 {
       margin-bottom: size(20px);
     }
 
@@ -76,6 +96,13 @@
 
       font-size: size(32px);
       line-height: size(35px);
+
+      @include vp-1279 {
+        margin-bottom: size(16px);
+
+        font-size: size(20px);
+        line-height: size(22px);
+      }
 
       @include vp-479 {
         margin-bottom: size(16px);
@@ -91,7 +118,7 @@
       font-size: size(16px);
       line-height: size(26px);
 
-      @include vp-479 {
+      @include vp-959 {
         font-size: size(14px);
         line-height: size(22px);
       }
@@ -99,11 +126,11 @@
   }
 
   &__add {
-    font-size: 16px;
-    line-height: 27px;
+    font-size: size(16px);
+    line-height: size(27px);
     color: #9B9BB4;
 
-    @include vp-479 {
+    @include vp-959 {
       font-size: size(14px);
       line-height: size(22px);
     }
@@ -137,8 +164,14 @@
     margin-bottom: 0;
 
     h3 {
+      font-size: size(32px);
       line-height: size(22px);
       margin-bottom: 0;
+
+      @include vp-1279 {
+        font-size: size(20px);
+        line-height: size(14px);
+      }
     }
 
     p {
