@@ -30,6 +30,23 @@
   }
 }
 /*
+.margin-bottom-80-60-60-50 {
+  margin-bottom: size(80px);
+
+  @include vp-1279 {
+    margin-bottom: size(60px);
+  }
+
+  @include vp-959 {
+    margin-bottom: size(60px);
+  }
+
+  @include vp-479 {
+    margin-bottom: size(50px);
+  }
+}
+*/
+/*
 .margin-bottom-108-92-72-55 {
   margin-bottom: size(108px);
 

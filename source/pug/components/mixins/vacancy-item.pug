@@ -1,10 +1,10 @@
 mixin vacancy-item(options)
-  .vacancy-item
+  .vacancy-item&attributes(attributes)
     .vacancy-item__name
       a.vacancy-item__back-href(href=options.backHref)
         +icon("small-arrow", 12, 10)
         span=options.textBackHref
-      h1=options.title
+      h1.title-2=options.title
       p=options.description
       ul.vacancy-item__features
         each item in options.features

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
 
-  @include vp-479 {
+  @include vp-959 {
     flex-direction: column;
     justify-content: initial;
   }
@@ -12,10 +12,18 @@
     width: size(500px);
     margin-right: size(40px);
 
-    @include vp-479 {
+    @include vp-1279 {
+      width: size(351px);
+    }
+
+    @include vp-959 {
       width: 100%;
       margin-right: 0;
-      margin-bottom: size(35px);
+      margin-bottom: size(50px);
+    }
+
+    @include vp-479 {
+      margin-bottom: size(40px);
     }
   }
 
@@ -32,6 +40,10 @@
 
     transition: opacity $trans-default;
 
+    @include vp-959 {
+      margin-bottom: size(24px);
+    }
+
     svg {
       width: size(12px);
       height: size(10px);
@@ -43,19 +55,16 @@
     }
   }
 
-  h1 {
+  h1.title-2 {
     margin: 0;
-    margin-bottom: size(35px);
+    margin-bottom: size(50px);
 
-    font-size: size(54px);
-    font-weight: 500;
-    line-height: size(38px);
+    @include vp-1279 {
+      margin-bottom: size(40px);
+    }
 
-    @include vp-479 {
-      margin-bottom: size(20px);
-
-      font-size: size(22px);
-      line-height: size(26px);
+    @include vp-959 {
+      margin-bottom: size(30px);
     }
   }
 
@@ -66,11 +75,12 @@
     font-size: size(14px);
     line-height: size(24px);
 
-    @include vp-479 {
-      margin-bottom: size(30px);
+    @include vp-1279 {
+      margin-bottom: size(40px);
+    }
 
-      font-size: size(14px);
-      line-height: size(18px);
+    @include vp-959 {
+      margin-bottom: size(20px);
     }
   }
 
@@ -84,6 +94,10 @@
 
     list-style: none;
 
+    @include vp-479 {
+      gap: size(6px);
+    }
+
     li {
       padding: size(10px) size(20px);
       border-radius: size(15px);
@@ -94,15 +108,6 @@
       color: $color-default-white;
 
       background-color: $color-blue;
-
-      @include vp-479 {
-        padding: size(10px);
-        border-radius: size(10px);
-
-        font-size: size(14px);
-        font-weight: 500;
-        line-height: size(18px);
-      }
     }
   }
 
@@ -113,18 +118,24 @@
 
     width: size(820px);
 
-    @include vp-479 {
+    @include vp-959 {
       width: 100%;
+      gap: size(16px);
+    }
+
+    @include vp-479 {
+      gap: size(8px);
     }
   }
 
   &__details-section {
     padding: size(30px) size(30px) size(40px) size(30px);
+    border-radius: size(15px);
 
     background-color: rgba($color-blue, 0.05);
 
     @include vp-479 {
-      padding: size(20px);
+      padding: size(30px) size(14px);
     }
 
     p {
@@ -136,12 +147,13 @@
       line-height: size(26px);
       color: $color-blue;
 
-      @include vp-479 {
-        margin-bottom: 15px;
+      @include vp-1279 {
+        font-size: size(16px);
+        line-height: size(21px);
+      }
 
-        font-weight: 600;
-        font-size: size(18px);
-        line-height: size(26px);
+      @include vp-959 {
+        margin-bottom: 10px;
       }
     }
 
@@ -151,10 +163,52 @@
       font-size: size(16px);
       line-height: size(24px);
 
-      @include vp-479 {
+      @include vp-959 {
         padding-left: size(15px);
         font-size: size(14px);
-        line-height: size(18px);
+        line-height: size(21px);
+      }
+    }
+  }
+}
+
+.vacancy-item--960 {
+  @include vp-1279 {
+    flex-direction: column;
+    justify-content: initial;
+  }
+
+  .vacancy-item__name {
+    @include vp-1279 {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: size(60px);
+    }
+  }
+
+  .vacancy-item__back-href {
+    @include vp-1279 {
+      margin-bottom: size(24px);
+    }
+  }
+
+  p {
+     @include vp-1279 {
+      margin-bottom: size(20px);
+    }
+  }
+
+  .vacancy-item__details {
+    @include vp-1279 {
+      width: 100%;
+      gap: size(16px);
+    }
+  }
+
+  .vacancy-item__details-section {
+    p {
+      @include vp-1279 {
+        margin-bottom: 10px;
       }
     }
   }
