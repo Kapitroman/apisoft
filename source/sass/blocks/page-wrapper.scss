@@ -1,11 +1,17 @@
 .page-wrapper {
   padding-top: size(160px);
-  // padding-top: size(70px);
-  padding-bottom: size(100px);
+  padding-bottom: size(120px);
+
+  @include vp-1279 {
+    padding-top: size(120px);
+    padding-bottom: size(100px);
+  }
+
+  @include vp-959 {
+    padding-bottom: size(80px);
+  }
 
   @include vp-479 {
-    padding-top: size(114px);
-    // padding-top: size(40px);
     padding-bottom: size(60px);
   }
 

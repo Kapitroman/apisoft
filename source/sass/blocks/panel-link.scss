@@ -11,10 +11,18 @@
 
   background-color: $color-default-white;
 
+  @include vp-1279 {
+    min-height: size(70px);
+    padding: size(19px);
+    border-radius: size(18px);
+  }
+
   @include vp-479 {
+    flex-direction: column;
+    justify-content: initial;
+    align-items: initial;
     min-height: initial;
-    border-radius: size(16px);
-    padding: size(20px);
+    padding: size(30px) size(20px);
   }
 
   h3 {
@@ -27,11 +35,14 @@
     font-size: size(32px);
     line-height: size(22px);
 
-    @include vp-479 {
-      width: size(215px);
-      margin-right: size(16px);
+    @include vp-1279 {
+      font-size: size(20px);
+      line-height: size(14px);
+    }
 
-      font-size: size(16px);
+    @include vp-479 {
+      width: 100%;
+      margin-bottom: size(30px);
     }
 
     span {
@@ -50,7 +61,6 @@
         font-size: size(14px);
         line-height: size(14px)
       }
-
     }
   }
 
