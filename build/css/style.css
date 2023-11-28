@@ -4547,11 +4547,18 @@ h2.title-3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 12.5rem;
   border-radius: 1.5rem;
   padding: 2.4375rem 1.8125rem;
   border: 0.0625rem solid #2D69C3;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+@media (max-width: 1279px) {
+  .modules-item {
+    min-height: 9.375rem;
+    border-radius: 0.875rem;
+  }
 }
 @media (max-width: 479px) {
   .modules-item {
@@ -4566,10 +4573,16 @@ h2.title-3 {
   line-height: 1.375rem;
   font-weight: 400;
 }
+@media (max-width: 1279px) {
+  .modules-item h4 {
+    margin-bottom: 0.875rem;
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+  }
+}
 @media (max-width: 479px) {
   .modules-item h4 {
-    margin-bottom: 1.25rem;
-    font-size: 1.125rem;
+    margin-bottom: 0.625rem;
   }
 }
 .modules-item p {
@@ -4577,10 +4590,10 @@ h2.title-3 {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 959px) {
   .modules-item p {
     font-size: 0.875rem;
-    line-height: 1.125rem;
+    line-height: 1.3125rem;
   }
 }
 @media (hover: hover) {
@@ -4602,9 +4615,14 @@ h2.title-3 {
   line-height: 1.375rem;
   color: #2D69C3;
 }
+@media (max-width: 1279px) {
+  .modules-section h3 {
+    font-size: 1.25rem;
+  }
+}
 @media (max-width: 479px) {
   .modules-section h3 {
-    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
   }
 }
 .modules-section__list {
@@ -4612,6 +4630,11 @@ h2.title-3 {
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-flow: row dense;
   gap: 0.625rem;
+}
+@media (max-width: 1279px) {
+  .modules-section__list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media (max-width: 479px) {
   .modules-section__list {
@@ -6331,12 +6354,28 @@ h2.title-3 {
           flex-direction: column;
   gap: 5rem;
   width: 100%;
-  margin-bottom: 5rem;
+}
+@media (max-width: 1279px) {
+  .modules__wrapper {
+    gap: 3.125rem;
+  }
+}
+@media (max-width: 959px) {
+  .modules__wrapper {
+    gap: 2.5rem;
+  }
 }
 @media (max-width: 479px) {
   .modules__wrapper {
-    gap: 2.5rem;
-    margin-bottom: 3.75rem;
+    gap: 3.125rem;
+  }
+}
+.modules .title-group .title-group__text {
+  width: 21.1875rem;
+}
+@media (max-width: 1279px) {
+  .modules .title-group .title-group__text {
+    width: 15.75rem;
   }
 }
 

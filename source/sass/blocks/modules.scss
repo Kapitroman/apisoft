@@ -1,24 +1,31 @@
 .modules {
-  //padding-top: size(70px);
-  //padding-bottom: size(116px);
-
-  //@include vp-479 {
-    //padding-top: size(40px);
-    //padding-bottom: size(60px);
-  //}
-
   &__wrapper {
     display: flex;
     flex-direction: column;
     gap: size(80px);
 
     width: 100%;
-    margin-bottom: size(80px);
+
+    @include vp-1279 {
+      gap: size(50px);
+    }
+
+    @include vp-959 {
+      gap: size(40px);
+    }
 
     @include vp-479 {
-      gap: size(40px);
+      gap: size(50px);
+    }
+  }
 
-      margin-bottom: size(60px);
+  .title-group {
+    .title-group__text {
+      width: size(339px);
+
+      @include vp-1279 {
+        width: size(252px);
+      }
     }
   }
 }
