@@ -156,15 +156,25 @@
 
 .connect-us--add {
   padding: size(50px);
-  min-height: size(211px);
+  min-height: initial;
+  align-items: center;
+
+  @include vp-1279 {
+    padding: size(40px) size(30px);
+  }
 
   @include vp-479 {
-    padding: size(20px);
+    padding: size(50px) size(20px);
+    align-items: initial;
   }
 
   .connect-us__main {
     width: size(500px);
     margin-right: size(50px);
+
+    @include vp-1279 {
+      width: size(280px);
+    }
 
     @include vp-479 {
       display: contents;
@@ -177,7 +187,12 @@
     p {
       margin-bottom: size(45px);
       font-size: size(32px);
-      line-height: size(22px);
+      line-height: size(35px);
+
+      @include vp-1279 {
+        font-size: size(20px);
+        line-height: size(22px);
+      }
 
       @include vp-479 {
         width: size(200px);

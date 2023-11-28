@@ -1,25 +1,39 @@
 .add-block {
   width: size(317px);
   border-radius: size(16px);
-  padding: size(27px) size(30px);
+  padding: size(26px) size(29px);
 
   color: $color-default-white;
 
   background-color: rgba($color-default-white, 0.1);
 
+  @include vp-1279 {
+    width: size(200px);
+  }
+
+  @include vp-959 {
+    width: size(170px);
+    padding: size(26px) size(20px);
+    border-radius: size(10px);
+  }
+
   @include vp-479 {
     width: 100%;
-    border-radius: size(10px);
-    padding: size(15px);
+    padding: size(20px);
   }
 
   p:first-child {
     margin: 0;
     margin-bottom: size(4px);
 
-    font-size: 16px;
-    line-height: 26px;
-    color: rgba($color-default-white, 0.7)
+    font-size: size(16px);
+    line-height: size(26px);
+    color: rgba($color-default-white, 0.7);
+
+    @include vp-959 {
+      font-size: size(14px);
+      line-height: size(22px);
+    }
   }
 
   p:last-child {
@@ -28,5 +42,10 @@
     font-weight: 500;
     font-size: size(20px);
     line-height: size(26px);
+
+    @include vp-1279 {
+      font-size: size(16px);
+      line-height: size(21px);
+    }
   }
 }
