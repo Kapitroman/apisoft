@@ -26,6 +26,8 @@
   }
 
   h3 {
+    position: relative;
+
     display: inline-flex;
     flex-wrap: wrap;
 
@@ -33,16 +35,20 @@
     margin-right: size(30px);
 
     font-size: size(32px);
-    line-height: size(22px);
+    line-height: size(30px);
 
     @include vp-1279 {
       font-size: size(20px);
-      line-height: size(14px);
+      line-height: size(20px);
     }
 
     @include vp-479 {
       width: 100%;
+      margin-right: 0;
+      padding-right: size(50px);
       margin-bottom: size(30px);
+      display: flex;
+      justify-content: space-between;
     }
 
     span {
@@ -53,13 +59,15 @@
       line-height: size(18px);// 31
       color: #9B9BB4;
 
-      @include vp-479 {
-        order: -1;
-        margin-left: 0;
-        margin-bottom: size(10px);
-
+      @include vp-1279 {
         font-size: size(14px);
-        line-height: size(14px)
+        line-height: size(14px);// 31
+      }
+
+      @include vp-479 {
+        position: absolute;
+        right: 0;
+        top: 0;
       }
     }
   }
