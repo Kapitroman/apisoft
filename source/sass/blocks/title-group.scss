@@ -93,3 +93,11 @@
     }
   }
 }
+
+.title-group--none-picture {
+  p {
+    @include vp-479 {
+      margin-bottom: 0;
+    }
+  }
+}

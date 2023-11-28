@@ -1,8 +1,9 @@
 mixin title-group(options)
-  .title-group
+  .title-group&attributes(attributes)
     .title-group__text
       h1.title-2=options.title
       p=options.text
     if options.picture
       .title-group__image
         +picture(options.picture[0], options.picture[1], options.picture[2], 500, 320, options.picture[3], false)
+
