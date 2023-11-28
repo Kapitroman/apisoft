@@ -1,7 +1,7 @@
 .error {
   display: flex;
   justify-content: center;
-  align-items: center;
+  //align-items: center;
 
   width: 100%;
 
@@ -10,50 +10,69 @@
     flex-direction: column;
 
     width: size(495px);
-    margin-top: size(175px);
-    //margin-top: size(85px);
+    margin-top: size(210px);
     padding: 0 size(15px);
     margin-bottom: size(150px);
-    //min-height: size(332px);
-    //margin-top: size(-60px);
+
+    @include vp-1279 {
+      margin-top: size(140px);
+      margin-bottom: size(100px);
+    }
+
+    @include vp-959 {
+      margin-top: size(140px);
+      margin-bottom: size(85px);
+    }
 
     @include vp-479 {
       width: 100%;
-      margin-top: size(159px);
-      //margin-top: size(85px);
-      margin-bottom: size(150px);
+      margin-top: size(120px);
+      margin-bottom: size(65px);
     }
-
   }
 
   &__status {
     margin: 0 auto;
-    margin-bottom: size(40px);
+    margin-bottom: size(80px);
 
     font-weight: 400;
     font-size: size(160px);
     line-height: size(176px);
     color: $color-blue;
 
+    @include vp-1279 {
+      margin-bottom: size(60px);
+
+      font-size: size(128px);
+      line-height: size(141px);
+    }
+
     @include vp-479 {
-      margin-bottom: size(20px);
+      margin-bottom: size(60px);
 
       font-weight: 400;
-      font-size: size(80px);
-      line-height: size(88px);
+      font-size: size(64px);
+      line-height: size(70px);
     }
   }
 
   &__message {
     margin: 0;
-    margin-bottom: size(45px);
+    margin-bottom: size(50px);
 
     font-size: size(32px);
     line-height: size(38px);
     text-align: center;
 
+    @include vp-1279 {
+      margin-bottom: size(30px);
+
+      font-size: size(20px);
+      line-height: size(24px);
+    }
+
     @include vp-479 {
-      margin-bottom: size(23px);
+      margin-bottom: size(30px);
 
       font-size: size(16px);
       line-height: size(19px);
