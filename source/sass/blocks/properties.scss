@@ -1,9 +1,13 @@
 .properties {
   h1.title-2 {
-    margin-bottom: size(67px);
+    margin-bottom: size(35px);
+
+    @include vp-1279 {
+      margin-bottom: size(30px);
+    }
 
     @include vp-479 {
-      margin-bottom: size(36px);
+      margin-bottom: size(25px);
     }
   }
 
@@ -13,28 +17,32 @@
     gap: size(10px);
   }
 
-  &__wrapper {
-    margin-bottom: size(80px);
+  .properties__block + .properties__block {
+    margin-top: size(80px);
+
+    @include vp-1279 {
+      margin-top: size(60px);
+    }
+
+    @include vp-959 {
+      margin-top: size(50px);
+    }
   }
 
   &__block {
-    margin-bottom: size(80px);
-
-    @include vp-479 {
-      margin-bottom: size(50px);
-    }
-
-    h3 {
+    h2 {
       margin: 0;
-      margin-bottom: 40px;
+      margin-bottom: size(40px);
       font-size: size(32px);
-      line-height: size(22px);
-      //line-height:size(35px);
+      // line-height: size(22px);
+      line-height:size(35px);
       color: $color-blue;
 
-      @include vp-479 {
-        margin-bottom: size(25px);
-        font-size: size(22px);
+      @include vp-1279 {
+        margin-bottom: size(30px);
+
+        font-size: size(20px);
+        line-height: size(22px);
       }
     }
   }
@@ -42,14 +50,22 @@
   &__group {
     margin-bottom: size(40px);
 
+    @include vp-1279 {
+      margin-bottom: size(25px);
+    }
+
     @include vp-479 {
-      margin-bottom: size(15px);
+      margin-bottom: size(40px);
     }
   }
 
   &__item {
     display: flex;
     margin-bottom: size(15px);
+
+    @include vp-1279 {
+      margin-bottom: size(10px);
+    }
 
     @include vp-479 {
       flex-direction: column;
@@ -64,13 +80,16 @@
       font-weight: 500;
       line-height: size(26px);
 
+      @include vp-1279 {
+        width: size(395px);
+
+        font-size: size(16px);
+        line-height: size(21px);
+      }
+
       @include vp-479 {
         width: 100%;
         padding-right: 0;
-        margin-bottom: size(5px);
-
-        font-size: size(18px);
-        line-height: size(24px);
       }
     }
 
@@ -81,11 +100,17 @@
       font-size: size(16px);
       line-height: size(22px);
 
+      @include vp-1279 {
+        width: calc(100% - #{size(395px)});
+      }
+
+      @include vp-959 {
+        font-size: size(14px);
+        line-height: size(22px);
+      }
+
       @include vp-479 {
         width: 100%;
-
-        font-size: size(14px);
-        line-height: size(18px);
       }
     }
   }

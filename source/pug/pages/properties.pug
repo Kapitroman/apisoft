@@ -16,10 +16,10 @@ block main
         .container
           h1.title-2=propertiesTitle
 
-          .properties__wrapper
+          .properties__wrapper.margin-bottom-80-60-50-40
             each block in propertiesData
               .properties__block
-                h3.properties__title=block.title
+                h2.properties__title=block.title
                 each group in block.propertiesSection
                   .properties__group
                     each item in group
