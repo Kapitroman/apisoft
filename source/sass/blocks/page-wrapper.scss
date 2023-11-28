@@ -20,10 +20,14 @@
   }
 }
 
-.page-wrapper--button {
+.page-wrapper--bottom {
   padding-bottom: size(80px);
 
+  @include vp-1279 {
+    padding-bottom: size(60px);
+  }
+
   @include vp-479 {
-    padding-bottom: size(50px);
+    padding-bottom: size(40px);
   }
 }
