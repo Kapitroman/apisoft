@@ -9,7 +9,7 @@ mixin introduction-crm()
             icon: "arrow",
             href: introductionCRMData.href,
             text: introductionCRMData.textButton,
-          })
+          })(data-open-modal="message")
         .introduction-crm__intro-feature
           each item in introductionCRMData.features
             +features-item(item)
