@@ -3996,7 +3996,7 @@ h2.title-3 {
     line-height: 1.125rem;
   }
 }
-.connect-us__main button {
+.connect-us__main .connect-us__link {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -4011,27 +4011,28 @@ h2.title-3 {
   font-size: 1rem;
   line-height: 1.1875rem;
   color: #1E1E1E;
+  background-color: #ffffff;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 @media (max-width: 1279px) {
-  .connect-us__main button {
+  .connect-us__main .connect-us__link {
     padding: 0.75rem 1.5rem 0.75rem 1.5rem;
     font-size: 0.875rem;
     line-height: 1.0625rem;
   }
 }
 @media (max-width: 479px) {
-  .connect-us__main button {
+  .connect-us__main .connect-us__link {
     width: 100%;
   }
 }
 @media (hover: hover) {
-  .connect-us__main button:hover:not(.focus-visible) {
+  .connect-us__main .connect-us__link:hover:not(.focus-visible) {
     opacity: 0.7;
   }
 }
-.connect-us__main button.focus-visible:focus {
+.connect-us__main .connect-us__link.focus-visible:focus {
   opacity: 0.7;
 }
 .connect-us__main svg {

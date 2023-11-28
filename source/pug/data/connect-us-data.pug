@@ -1,21 +1,24 @@
 -
   const mailConnect = {
     text: "Если вы не нашли подходящей вакансии, но хотите у нас работать,пишите на почту",
-    textButton: "hr@api-soft.com",
+    href: "mailto:hr@api-soft.com.ru",
+    textHref: "hr@api-soft.com",
     icon: ["mail", 42, 30],
   };
 
 -
   const fillConnect = {
     text: "Заполните бриф на разработку модуля для решения вашей задачи",
-    textButton: "Заполнить",
+    modal: true,
+    textHref: "Заполнить",
     icon: ["pencil", 32, 32],
   };
 
 -
   const introductionConnect = {
     text: "Интеграция Битрикс24 с 1С",
-    textButton: "Оставить заявку",
+    modal: true,
+    textHref: "Оставить заявку",
     add: [
       {
        name: "Срок выполнения",
