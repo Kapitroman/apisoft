@@ -7,7 +7,7 @@ mixin services-page-item(options)
         href: options.href,
         icon: "arrow",
         text: options.textButton,
-      })
+      })(data-open-modal="message")
     .services-page-item__features
       each item in options.features
         +features-item(item)
