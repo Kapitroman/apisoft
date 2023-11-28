@@ -1308,6 +1308,7 @@ a:focus-visible {
 }
 .footer__contacts a, .footer__contacts p {
   margin: 0;
+  margin-right: auto;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.1875rem;
