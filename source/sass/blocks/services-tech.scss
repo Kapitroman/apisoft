@@ -1,19 +1,4 @@
 .services-tech {
-  /*
-  padding-top: size(70px);
-  padding-bottom: size(100px);
-
-  @include vp-479 {
-    padding-top: size(40px);
-    padding-bottom: size(60px);
-  }
-  */
-  margin-bottom: size(100px);
-
-  @include vp-479 {
-    margin-bottom: size(60px);
-  }
-
   .services-page-item + .services-page-item {
     margin-top: size(10px);
   }

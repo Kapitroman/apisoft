@@ -13,13 +13,13 @@ block variables
 block main
   main
     .page-wrapper
-      section.services-tech
+      section.services-tech.margin-bottom-120-100-80-60
         .container
           +title-group(servicesTechTitleGroup)
           .services-tech__wrapper
             each item in servicesTechFeaturesList
               +services-page-item(item)
-      +our-partners(ourServicesPartnersTitle, ourServicesPartnersItems)
+      +our-partners(ourServicesPartnersTitle, ourServicesPartnersItems).our-partners--960
 
 
 

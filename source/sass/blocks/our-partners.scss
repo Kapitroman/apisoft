@@ -32,3 +32,12 @@
     }
   }
 }
+
+.our-partners--960 {
+  .our-partners__wrapper {
+    @include vp-1279 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: size(10px);
+    }
+  }
+}

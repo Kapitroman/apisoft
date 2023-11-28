@@ -2,15 +2,23 @@
   display: flex;
   align-items: flex-start;
 
+
   padding: size(39px);
   border-radius: size(31px);
   border: size(1px) solid rgba($color-blue, 0.6);
 
+  @include vp-1279 {
+    border-radius: size(24px);
+    padding: size(39px) size(29px);
+  }
+
+  @include vp-959 {
+    padding: size(39px) size(19px);
+    border-radius: size(18px);
+  }
+
   @include vp-479 {
     flex-direction: column;
-
-    padding: size(19px);
-    border-radius: size(20px);
   }
 
   &__description {
@@ -19,24 +27,30 @@
     width: size(455px);
     margin-right: size(119px);
 
+    @include vp-1279 {
+      width: size(380px);
+      margin-right: size(40px);
+    }
+
+    @include vp-959 {
+      width: size(336px);
+      margin-right: size(20px);
+    }
+
     @include vp-479 {
       display: contents;
 
       width: 100%;
       margin-right: 0;
+      margin-bottom: size(20px);
     }
 
-    h3 {
+    h2.title-3 {
       margin: 0;
       margin-bottom: size(20px);
 
-      font-size: size(32px);
-      line-height: size(22px);
-
       @include vp-479 {
-        margin-right: size(20px);
-
-        font-size: size(18px);
+        margin-bottom: size(12px);
       }
     }
 
@@ -48,8 +62,8 @@
       font-weight: 500;
       line-height: size(21px);
 
-      @include vp-479 {
-        line-height: size(18px);
+      @include vp-1279 {
+        margin-bottom: size(20px);
       }
     }
   }
