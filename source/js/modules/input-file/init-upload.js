@@ -1,8 +1,8 @@
 import {Upload} from './upload.js';
 
-const uploadFileBlock = document.querySelector('[data-upload="file"]');
-const uploadImageDropBlock = document.querySelector('[data-upload="img-drop"]');
-const uploadFileDropBlock = document.querySelector('[data-upload="file-drop"]');
+// const uploadFileBlock = document.querySelector('[data-upload="file"]');
+// const uploadImageDropBlock = document.querySelector('[data-upload="img-drop"]');
+const uploadFileDropBlocks = document.querySelectorAll('[data-upload="file-drop"]');
 /*
 export const uploadFile = () => new Upload(uploadFileBlock, {
   uploadLength: 5,
@@ -46,6 +46,8 @@ export const uploadImageDrop = () => new Upload(uploadImageDropBlock, {
   errorMessage: 'Выделенные файлы превышают максимальный размер',
 });
 */
+
+/*
 export const uploadFileDrop = () => new Upload(uploadFileDropBlock, {
   uploadLength: 5,
   dropZone: true,
@@ -64,3 +66,51 @@ export const uploadFileDrop = () => new Upload(uploadFileDropBlock, {
   // emptyMessage: 'Добавление файла обязательно',
   errorMessage: 'Выделенные файлы превышают максимальный размер в 10 Мегабайт',
 });
+
+*/
+/*
+export const uploadFileDrop = () => new Upload(uploadFileDropBlock, {
+  uploadLength: 5,
+  dropZone: true,
+  maxFileSize: 10485760,
+  accept: ['.pdf', '.docx', '.xlsx', 'doc', 'rtf', 'xls', 'zip', 'rar', 'jpg', 'png'],
+  iconFormat: {
+    xlsx: './img/file/icon-file-xlsx.png',
+    docx: './img/file/icon-file-docx.png',
+    pdf: './img/file/icon-file-pdf.png',
+    default: './img/file/icon-file-docx.png',
+  },
+  fileInfo: {
+    fileName: true,
+    fileSize: true,
+  },
+  // emptyMessage: 'Добавление файла обязательно',
+  errorMessage: 'Выделенные файлы превышают максимальный размер в 10 Мегабайт',
+});
+*/
+export const initUpload = () => {
+  if (!uploadFileDropBlocks.length) {
+    return;
+  }
+
+  uploadFileDropBlocks.forEach((item) => {
+    new Upload(item, {
+      uploadLength: 5,
+      dropZone: true,
+      maxFileSize: 10485760,
+      accept: ['.pdf', '.docx', '.xlsx', 'doc', 'rtf', 'xls', 'zip', 'rar', 'jpg', 'png'],
+      iconFormat: {
+        xlsx: './img/file/icon-file-xlsx.png',
+        docx: './img/file/icon-file-docx.png',
+        pdf: './img/file/icon-file-pdf.png',
+        default: './img/file/icon-file-docx.png',
+      },
+      fileInfo: {
+        fileName: true,
+        fileSize: true,
+      },
+      // emptyMessage: 'Добавление файла обязательно',
+      errorMessage: 'Выделенные файлы превышают максимальный размер в 10 Мегабайт',
+    });
+  })
+}
