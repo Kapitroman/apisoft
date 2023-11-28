@@ -20,3 +20,9 @@ block main
               +partners-page-item(item)
 
 block modals
+  +modal("modal--message modal--no-scale")(data-modal="message")
+    +modal-message()
+  +modal("modal--success modal--no-scale")(data-modal="success")
+    +modal-success()
+  +modal("modal--error modal--no-scale")(data-modal="error")
+    +modal-error()
