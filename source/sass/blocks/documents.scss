@@ -1,9 +1,13 @@
 .documents {
   h1.title-2 {
-    margin-bottom: size(67px);
+    margin-bottom: size(35px);
+
+    @include vp-1279 {
+      margin-bottom: size(30px);
+    }
 
     @include vp-479 {
-      margin-bottom: size(36px);
+      margin-bottom: size(25px);
     }
   }
 
