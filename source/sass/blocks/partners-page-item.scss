@@ -1,14 +1,14 @@
 .partners-page-item {
+  position: relative;
+
   display: flex;
   border-radius: size(32px);
   padding: size(30px) size(40px) size(30px) size(30px);
   border: size(1px) solid $color-blue;
 
   @include vp-479 {
-    flex-direction: column;
-
-    border-radius: size(20px);
-    padding: size(20px);
+    border-radius: size(18px);
+    padding: size(45px) size(30px) size(20px) size(30px);
   }
 
   &__logo {
@@ -25,23 +25,43 @@
 
     background-color: $color-blue;
 
-    @include vp-479 {
-      width: size(80px);
-      height: size(80px);
+    @include vp-959 {
+      width: size(90px);
+      height: size(90px);
+      margin-right: size(30px);
+    }
 
-      margin-right: auto;
-      margin-left: auto;
-      margin-bottom: size(25px);
+    @include vp-479 {
+      position: absolute;
+      top: size(20px);
+      right: size(20px);
+
+      width: size(70px);
+      height: size(70px);
+      margin-right: 0;
     }
 
     svg {
-      width: size(60px);
-      height: size(60px);
+      width: size(120px);
+      height: size(120px);
+
+      @include vp-959 {
+        width: size(90px);
+        height: size(90px);
+      }
 
       @include vp-479 {
-        width: size(45px);
-        height: size(45px);
+        width: size(70px);
+        height: size(70px);
       }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      border-radius: 50%;
     }
   }
 
@@ -50,7 +70,7 @@
     flex-direction: column;
   }
 
-  h3 {
+  h2 {
     margin: 0;
     margin-bottom: size(20px);
 
@@ -58,13 +78,13 @@
     font-size: size(20px);
     line-height: size(26px);
 
-    @include vp-479 {
-      margin-bottom: size(10px);
+    @include vp-1279 {
+      font-size: size(16px);
+      line-height: size(21px);
+    }
 
-      @include vp-479 {
-        font-size: size(16px);
-        line-height: size(22px);
-      }
+    @include vp-479 {
+      margin-bottom: size(44px);
     }
   }
 
@@ -74,6 +94,10 @@
 
     font-size: size(16px);
     line-height: size(26px);
+
+    @include vp-1279 {
+      margin-bottom: size(20px);
+    }
 
     @include vp-479 {
       margin-bottom: size(25px);
@@ -88,7 +112,6 @@
 
     @include vp-479 {
       margin-right: auto;
-      margin-left: auto;
     }
 
     @include hover-focus {
@@ -99,4 +122,62 @@
       }
     }
   }
+}
+
+.our-partners-page--960 {
+  .partners-page-item {
+    @include vp-1279 {
+      border-radius: size(18px);
+      padding: size(55px) size(20px) size(30px) size(20px);
+    }
+
+    @include vp-959 {
+      border-radius: size(32px);
+      padding: size(30px) size(40px) size(30px) size(30px);
+    }
+
+    .partners-page-item__logo {
+      @include vp-1279 {
+        position: absolute;
+        top: size(20px);
+        right: size(20px);
+
+        width: size(90px);
+        height: size(90px);
+        margin-right: 0;
+      }
+
+      @include vp-959 {
+        position: static;
+        margin-right: 30px;
+      }
+
+      svg {
+        @include vp-1279 {
+          width: size(90px);
+          height: size(90px);
+        }
+      }
+    }
+
+    h2 {
+      @include vp-1279 {
+        margin-bottom: size(54px);
+      }
+
+      @include vp-959 {
+        margin-bottom: size(14px);
+      }
+    }
+
+    p {
+      @include vp-1279 {
+        font-size: size(14px);
+        line-height: size(22px);
+      }
+    }
+  }
+
+
+
 }
