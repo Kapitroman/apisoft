@@ -136,6 +136,11 @@
       padding: size(30px) size(40px) size(30px) size(30px);
     }
 
+    @include vp-479 {
+      border-radius: size(18px);
+      padding: size(45px) size(30px) size(20px) size(30px);
+    }
+
     .partners-page-item__logo {
       @include vp-1279 {
         position: absolute;
@@ -152,10 +157,25 @@
         margin-right: 30px;
       }
 
+      @include vp-479 {
+        position: absolute;
+        top: size(20px);
+        right: size(20px);
+
+        width: size(70px);
+        height: size(70px);
+        margin-right: 0;
+      }
+
       svg {
         @include vp-1279 {
           width: size(90px);
           height: size(90px);
+        }
+
+        @include vp-479 {
+          width: size(70px);
+          height: size(70px);
         }
       }
     }
@@ -168,6 +188,10 @@
       @include vp-959 {
         margin-bottom: size(14px);
       }
+
+      @include vp-479 {
+        margin-bottom: size(44px);
+      }
     }
 
     p {
@@ -175,9 +199,13 @@
         font-size: size(14px);
         line-height: size(22px);
       }
+
+      @include vp-479 {
+        margin-bottom: size(25px);
+
+        font-size: size(14px);
+        line-height: size(18px);
+      }
     }
   }
-
-
-
 }
