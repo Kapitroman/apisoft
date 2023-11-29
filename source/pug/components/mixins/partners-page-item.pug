@@ -1,7 +1,6 @@
 mixin partners-page-item(item)
   .partners-page-item
     .partners-page-item__logo
-      //-+icon(item.logo[0], item.logo[1], item.logo[2])
       img(src=`img/svg/${item.logo[0]}.svg`, width=item.logo[1], height=item.logo[2], alt=item.title, loading="lazy")
     .partners-page-item__content
       h2=item.title
