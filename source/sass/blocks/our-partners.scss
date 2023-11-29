@@ -39,5 +39,10 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: size(10px);
     }
+
+    @include vp-479 {
+      grid-template-columns: 1fr 1fr;
+      gap: size(6px);
+    }
   }
 }

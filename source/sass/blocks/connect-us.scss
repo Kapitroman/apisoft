@@ -204,7 +204,7 @@
       }
     }
 
-    button {
+    .connect-us__link {
       @include vp-479 {
         order: 2;
         margin-right: auto;
@@ -222,6 +222,8 @@
       margin-left: 0;
       margin-bottom: size(30px);
     }
+
+
   }
 }
 
