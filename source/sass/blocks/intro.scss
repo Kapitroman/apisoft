@@ -62,8 +62,7 @@
     }
 
     @include vp-479 {
-      width: calc(size(1296px));//1353
-      //margin-left: size(-317px);
+      width: calc(size(1296px));
     }
   }
 
