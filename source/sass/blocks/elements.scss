@@ -1,0 +1,129 @@
+.elements-typographic {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: size(48px);
+  }
+
+
+  font-family: $ff-golos;
+
+  &__block {
+    margin-bottom: size(48px);
+  }
+
+  &__element-description {
+    display: flex;
+    align-items: center;
+  }
+
+  &__element {
+    margin: 0;
+    margin-bottom: size(24px);
+
+    font-family: $ff-golos;
+    font-size: size(24px);
+    font-weight: 600;
+    line-height: size(28px);
+  }
+
+  &__font-data {
+    width: size(200px);
+    margin-right: size(8px);
+    font-family: $ff-golos;
+    font-size: size(14px);
+    font-weight: 400;
+    line-height: size(16px);
+  }
+
+  &__name-font,
+  &__values-font,
+  &__font-sample {
+    margin: 0;
+  }
+
+  &__name-font {
+    margin-bottom: size(8px);
+  }
+
+  .h1  {
+    font-size: size(72px);
+    font-weight: 600;
+    line-height: size(79px);
+  }
+
+  .h2  {
+    font-size: size(54px);
+    font-weight: 500;
+    line-height: size(65px);
+  }
+
+  .h3  {
+    font-size: size(32px);
+    font-weight: 400;
+    line-height: size(35px);
+  }
+
+  .h4  {
+    font-size: size(20px);
+    font-weight: 500;
+    line-height: size(26px);
+  }
+
+  .h5  {
+    font-size: size(16px);
+    font-weight: 500;
+    line-height: size(22px);
+  }
+
+  .text  {
+    font-size: size(16px);
+    font-weight: 400;
+    line-height: size(26px);
+  }
+
+  .text-2  {
+    font-size: size(24px);
+    font-weight: 500;
+    line-height: size(38px);
+  }
+
+  .link-btn {
+    font-size: size(16px);
+    font-weight: 600;
+    line-height: size(19px);
+  }
+
+  .numbers  {
+    font-size: size(64px);
+    font-weight: 400;
+    line-height: size(83px);
+  }
+
+  .description  {
+    font-size: size(14px);
+    font-weight: 500;
+    line-height: size(21px);
+  }
+
+  .menu {
+    font-size: size(18px);
+    font-weight: 400;
+    line-height: size(21px);
+  }
+}
+
+.elements-text {
+  &__text-block {
+    p {
+      font-size: size(16px);
+      font-weight: 400;
+      line-height: size(26px);
+    }
+
+    p + p {
+      margin-top: size(12px);
+    }
+
+  }
+}

@@ -63,6 +63,13 @@
 
     transition: opacity $trans-default;
 
+    border-radius: size(20px);
+    overflow: hidden;
+
+    @include vp-1279 {
+      border-radius: size(10px);
+    }
+
     img {
       width: 100%;
       height: 100%;

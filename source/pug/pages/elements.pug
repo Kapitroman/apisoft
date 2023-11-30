@@ -1,0 +1,51 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Элементы. APISOFT — CRM, интернет-эквайринг, логистика, модули для интернет-магазинов под ключ" //- на страницах кроме главной используйте О нас — ProjectName
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "elements.html" //- для остальных страниц пишем пустую строку или индекс активного headerLinks
+
+
+block main
+  main
+    .page-wrapper.page-wrapper--not-bottom
+      section.elements-typographic.margin-bottom-150-120-80-60
+        h1.visually-hidden Elements
+        .container
+          each item in typographicData
+            .elements-typographic__block
+              p.elements-typographic__element=item.element
+              .elements-typographic__element-description
+                .elements-typographic__font-data
+                  p.elements-typographic__name-font=item.fontName
+                  p.elements-typographic__values-font=item.fontValues
+                - const addClass = `elements-typographic__font-sample ${item.addClass}`
+                p(class=addClass)=item.sample
+      section.elements-text.margin-bottom-150-120-80-60
+        .container
+          .elements-text__text-block.margin-bottom-100-80-60-40
+            p=elementsText1
+            p=elementsText2
+          .elements-text__text-block.margin-bottom-100-80-60-40
+            p
+              =`${elementsTextWithLink.textBefore}`
+              =" "
+              a(href=elementsTextWithLink.href)=elementsTextWithLink.textLink
+              =" "
+              =`${elementsTextWithLink.textAfter}`
+
+      section.elements-form-field
+
+
+
+block modals
+  +modal("modal--message modal--no-scale")(data-modal="message")
+    +modal-message()
+  +modal("modal--success modal--no-scale")(data-modal="success")
+    +modal-success()
+  +modal("modal--error modal--no-scale")(data-modal="error")
+    +modal-error()

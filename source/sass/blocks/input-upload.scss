@@ -194,10 +194,23 @@
   }
 
   span {
+    /*
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    */
+    @include vp-479 {
+      display: none;
+    }
+  }
+
+  span:last-child {
+    display: none;
+
+    @include vp-479 {
+      display: block;
+    }
   }
 }
 

@@ -46,3 +46,19 @@
   }
 }
 
+.margin-bottom-150-120-80-60 {
+  margin-bottom: size(150px);
+
+  @include vp-1279 {
+    margin-bottom: size(120px);
+  }
+
+  @include vp-959 {
+    margin-bottom: size(80px);
+  }
+
+  @include vp-479 {
+    margin-bottom: size(60px);
+  }
+}
+

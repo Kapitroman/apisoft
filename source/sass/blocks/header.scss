@@ -274,11 +274,27 @@
       height: size(2px);
       background-color: $color-blue;
 
-      transition: background-color $trans-default;
+      transition: transform $trans-600, opacity $trans-default, background-color $trans-default;
+    }
+
+    span:nth-child(1) {
+      .is-open & {
+        transform: translateY(size(7px)) rotate(225deg);
+      }
+    }
+
+    span:nth-child(3) {
+      .is-open & {
+        transform: translateY(size(-7px)) rotate(-225deg);
+      }
     }
 
     span:nth-child(2) {
       width: size(20px);
+
+      .is-open & {
+        opacity: 0;
+      }
     }
 
     @include vp-1279 {
