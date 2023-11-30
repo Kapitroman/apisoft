@@ -123,37 +123,40 @@
 
   &__content {
     width: size(845px);
-    min-height: size(664px);
+    //min-height: size(664px);
+    height: size(664px);//664
 
     transition: height $trans-default;
 
     @include vp-1279 {
       width: size(567px);
-      min-height: size(642px);
+      //min-height: size(642px);
+      height: size(670px);//642
     }
 
     @include vp-959 {
       width: size(445px);
-      min-height: size(420px);
+      //min-height: size(588px);
+      height: size(670px);//588
     }
 
     @include vp-479 {
       width: 100%;
-      min-height: auto;
-
-      display: flex;
-      flex-direction: column;
-      gap: size(6px);
+      height: auto;
     }
-  }
 
-  &__element {
-    display: flex;
-    flex-direction: column;
-    gap: size(14px);
+    .swiper-wrapper {
+      @include vp-479 {
+        display: flex;
+        flex-direction: column;
+        gap: size(6px);
+      }
+    }
 
-    @include vp-1279 {
-      gap: size(10px);
+    .swiper-slide {
+      @include vp-479 {
+        height: auto;
+      }
     }
   }
 }

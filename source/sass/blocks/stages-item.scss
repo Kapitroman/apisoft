@@ -1,8 +1,14 @@
 .stages-item {
+  //display: flex; //////
+  //flex-direction: column; //////
+
   padding: size(40px) size(30px);
   border-radius: size(24px);
   border: size(1px) solid $color-blue;
-  height: size(432px);  //////
+  //min-height: size(465px);  //////432
+  //height: auto;
+  height: 465px;
+  width: 100%;
 
   background-color: $color-default-white;
   box-shadow: 0px size(20px) size(40px) 0px #3E60900D;
@@ -14,15 +20,17 @@
   @include vp-1279 {
     padding: size(30px);
     border-radius: size(18px);
-    height: size(474px);
+    //min-height: size(494px);
+    height: size(494px);
   }
 
   @include vp-959 {
-    height: size(420px);
+    //min-height: size(445px);
+    height: size(445px);
   }
 
   @include vp-479 {
-    height: auto;
+    min-height: initial;
     padding: size(30px) size(20px);
     border-radius: size(12px);
   }
@@ -31,10 +39,10 @@
     display: flex;
     justify-content: space-between;
 
-    margin-bottom: size(34px);
+    margin-bottom: size(30px);//34
 
     @include vp-1279 {
-      margin-bottom: size(36px);////////
+      margin-bottom: size(30px);//34
     }
 
     @include vp-479 {
@@ -81,14 +89,15 @@
   }
 
   &__main {
-    margin-bottom: size(50px);
+    //margin-bottom: size(50px);
+    margin-bottom: size(15px);
 
     @include vp-1279 {
-      margin-bottom: size(40px);
+      //margin-bottom: size(40px);
     }
 
     @include vp-959 {
-      margin-bottom: size(20px);
+      //margin-bottom: size(20px);
     }
 
     h3 {
@@ -116,23 +125,25 @@
       margin: 0;
 
       font-size: size(16px);
-      line-height: size(26px);
+      line-height: size(24px);
 
       @include vp-959 {
         font-size: size(14px);
-        line-height: size(22px);
+        line-height: size(20px);
       }
     }
   }
 
   &__add {
+    //margin-top: auto;
+
     font-size: size(16px);
-    line-height: size(27px);
+    line-height: size(24px);
     color: #9B9BB4;
 
     @include vp-959 {
       font-size: size(14px);
-      line-height: size(22px);
+      line-height: size(20px);
     }
 
     P {

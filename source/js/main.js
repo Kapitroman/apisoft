@@ -2,14 +2,12 @@ import {mobileVhFix} from './utils/mobile-vh-fix.js';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 // import {CustomSelect} from './modules/select/custom-select';
-// import {uploadFile, uploadImageDrop, uploadFileDrop} from './modules/input-file/init-upload';
 import {initUpload} from './modules/input-file/init-upload';
 import {Burger} from './modules/burger';
 import {checkThemeHeader} from './modules/check-theme-header';
 import {blink} from './modules/blink';
 import {initYM} from './modules/init-map';
-import {initTabs} from './modules/init-tabs';
-
+import {initStagesProjectSlider} from './modules/init-stages-project-slider';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -26,11 +24,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    // uploadFile();
-    // uploadImageDrop();
-    // uploadFileDrop();
     // const select = new CustomSelect();
     // select.init();
+
     initUpload();
     const form = new Form();
     window.form = form;
@@ -41,9 +37,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     checkThemeHeader();
     blink();
-    initTabs();
     initYM();
-
+    initStagesProjectSlider();
   });
 });
 
