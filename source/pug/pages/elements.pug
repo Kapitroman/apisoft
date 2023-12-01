@@ -28,17 +28,105 @@ block main
       section.elements-text.margin-bottom-150-120-80-60
         .container
           .elements-text__text-block.margin-bottom-100-80-60-40
-            p=elementsText1
-            p=elementsText2
+            .elements-text__sample-text
+              p=elementsText1
+              p=elementsText2
           .elements-text__text-block.margin-bottom-100-80-60-40
-            p
-              =`${elementsTextWithLink.textBefore}`
-              =" "
-              a(href=elementsTextWithLink.href)=elementsTextWithLink.textLink
-              =" "
-              =`${elementsTextWithLink.textAfter}`
+            .elements-text__sample-text
+              p
+                =`${elementsTextWithLink.textBefore}`
+                =" "
+                a(href=elementsTextWithLink.href)=elementsTextWithLink.textLink
+                =" "
+                =`${elementsTextWithLink.textAfter}`
+              .elements-text__links-block
+                a(href="#")=elementsTextLink
+                a.hover(href="#")=elementsTextLink
+          .elements-text__text-block.margin-bottom-100-80-60-40
+            .accordion(data-accordion="parent", data-single)
+              each item, index in elementsAccordionData
+                if index === 0
+                  .accordion__element.is-active(data-accordion="element")
+                    button.accordion__button(type="button", data-accordion="button")
+                      span=item.title
+                      +icon("accordion-arrow", 20, 20)
+                    .accordion__content(data-accordion="content")
+                      .accordion__wrapper
+                        p=item.text
+                else
+                  .accordion__element(data-accordion="element")
+                    button.accordion__button.accordion__button(type="button", data-accordion="button")
+                      span=item.title
+                      +icon("accordion-arrow", 20, 20)
+                    .accordion__content(data-accordion="content")
+                      .accordion__wrapper
+                        p=item.text
+
+          .elements-text__text-block.margin-bottom-100-80-60-40
+            .elements-text__large-text
+              p=elementsBlockText
+            .elements-text__large-text.elements-text__large-text--padding
+              p=elementsBlockText
+
+          .elements-text__text-block.margin-bottom-100-80-60-40
+            .elements-text__lists
+              ul
+                each item in elementsList
+                  li=item
+              ol
+                each item in elementsList
+                  li=item
+
+          .elements-text__text-block.margin-bottom-100-80-60-40
+            .elements-text__table
+              table
+                thead
+                  tr
+                    each title in elementsTable.titles
+                      th=title
+                tbody
+                  each string in elementsTable.data
+                    tr
+                      each value in string
+                        td=value
+
+
 
       section.elements-form-field
+        .container
+
+
+          form.elements-form-field__wrapper(action="#")
+            .elements-form-field__state-cases
+              ul.elements-form-field__cases-name
+                each item in elementsCasesName
+                  li=item
+
+              .elements-form-field__cases-field
+                +custom-input({
+                  inputPlaceholder: "Имя",
+                })
+                +custom-input({
+                  inputPlaceholder: "Имя",
+                }).hover
+                +custom-input({
+                  inputAutofocus: true
+                })
+                +custom-input({
+                  inputValue: "Алексей",
+                }).is-valid
+                +custom-input({
+                  inputPlaceholder: "Имя",
+                  inputErrorMessage: "Поле обязательно к заполнению"
+                }).is-invalid
+
+            .elements-form-field__toggle-group
+              .elements-form-field__checks
+                +custom-toggle({
+                  inputChecked: true,
+                }).custom-toggle--checkbox
+                +custom-toggle().custom-toggle--checkbox
+              .elements-form-field__toggle
 
 
 

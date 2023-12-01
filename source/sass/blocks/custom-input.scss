@@ -105,6 +105,7 @@
   &.is-valid {
     input {
       border: 1px solid $color-default-white;
+      //color: red;
       /*
       &:focus,
       &:hover {
@@ -116,15 +117,21 @@
 
   .input-message {
     position: absolute;
-    right: 0;
-    bottom: -5px;
+    left: (24px);
+    bottom: size(-26px);
 
     &.is-invalid {
-      color: #ff0000;
-    }
+      // color: #ff0000;
 
+      font-size: size(14px);
+      line-height: size(21px);
+      color: $color-default-white;
+    }
+    /*
     &.is-valid {
       color: #15ab07;
     }
+    */
   }
 }
+

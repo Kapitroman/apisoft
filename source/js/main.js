@@ -8,6 +8,7 @@ import {checkThemeHeader} from './modules/check-theme-header';
 import {blink} from './modules/blink';
 import {initYM} from './modules/init-map';
 import {initStagesProjectSlider} from './modules/init-stages-project-slider';
+import {initAccordions} from './modules/accordions/init-accordion';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -26,7 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     // const select = new CustomSelect();
     // select.init();
-
     initUpload();
     const form = new Form();
     window.form = form;
@@ -35,6 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const burger = new Burger();
     burger.init();
 
+    initAccordions()
     checkThemeHeader();
     blink();
     initYM();

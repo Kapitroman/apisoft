@@ -1,13 +1,14 @@
 .custom-toggle {
   position: relative;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 300;
+  //font-size: 18px;
+  //line-height: 27px;
+  //font-weight: 300;
 
   display: flex;
-  width: 500px;
-  padding: 14px 0 10px 36px;
 
+  //width: 500px;
+  //padding: 14px 0 10px 36px;
+  /*
   @media screen and (max-width: 767px) {
     padding: 14px 0 10px 0;
     width: 100%;
@@ -20,7 +21,7 @@
       padding: 14px 0 58px 0;
     }
   }
-
+  */
   input {
     position: absolute;
 
@@ -34,7 +35,7 @@
   label {
     position: relative;
 
-    padding-left: 52px;
+    //padding-left: 52px;
 
     cursor: pointer;
 
@@ -45,15 +46,19 @@
   }
 
   &--checkbox {
+    width: size(22px);
+    height: size(22px);
+    background-color: $color-transparent;
+
     .custom-toggle__icon {
       position: absolute;
       top: 0;
       left: 0;
 
-      width: 28px;
-      height: 28px;
-
-      border: 1.5px solid #2c39f2;
+      width: size(22px);
+      height: size(22px);
+      border-radius: size(5px);
+      border: size(1px) solid $color-default-white;
 
       transition: border 0.3s ease;
 
@@ -65,12 +70,14 @@
 
         width: 20px;
         height: 20px;
+        //background-image: url("../img/svg/check.svg");
+        //background-repeat: no-repeat;
 
         background-color: rgba(#2c39f2, 0);
 
         transform: translate(-50%, -50%);
 
-        transition: background-color 0.3s ease;
+        //transition: background-color 0.3s ease;
       }
     }
   }

@@ -115,7 +115,27 @@
 
 .elements-text {
   &__text-block {
+    .accordion {
+      width: size(857px);
+    }
+  }
+
+  a {
+    color: $color-blue;
+
+    transition: text-decoration $trans-default;
+
+    @include hover-focus {
+      text-decoration: underline;
+      text-underline-offset: size(4px);
+    }
+  }
+
+  &__sample-text {
+    width: size(613px);
+
     p {
+      margin: 0;
       font-size: size(16px);
       font-weight: 400;
       line-height: size(26px);
@@ -125,5 +145,192 @@
       margin-top: size(12px);
     }
 
+    p + .elements-text__links-block {
+      margin-top: size(30px);
+    }
+
+  }
+
+  &__links-block {
+    display: flex;
+    align-items: center;
+    gap: size(30px);
+
+    width: size(306px);
+    padding: size(19px);
+
+    border: 1px dashed #9747FF;
+
+    .hover {
+      text-decoration: underline;
+      text-underline-offset: size(4px);
+    }
+  }
+
+  &__large-text {
+    width: size(867px);
+
+    p {
+      margin: 0;
+
+      font-size: size(28px);
+      line-height: size(31px);
+    }
+  }
+
+  &__large-text--padding {
+    p {
+      padding: size(30px) size(40px);
+      border-radius: size(20px);
+
+      color: $color-blue;
+
+      background-color: #2D69C326;
+    }
+  }
+
+  .elements-text__large-text + .elements-text__large-text {
+    margin-top: size(40px);
+  }
+
+  &__lists {
+    display: flex;
+    gap: size(34px)
+
+    li {
+      font-size: size(16px);
+      line-height: size(18px);
+    }
+  }
+
+  ul {
+    li::marker {
+      color: $color-blue;
+    }
+  }
+
+  .elements-text__table {
+    width: size(960px);
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      border-bottom: size(1px) solid #2D69C3CC;
+
+      font-size: size(16px);
+      line-height: size(22px);
+
+      color: $color-blue;
+    }
+
+    thead th:nth-child(1) {
+      width: 50%;
+    }
+
+    thead th:nth-child(2) {
+      width: 29%;
+    }
+
+    thead th:nth-child(3) {
+      width: 21%;
+    }
+
+    th,
+    td {
+      padding: size(20px) size(20px) size(20px) 0;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      font-weight: 400;
+    }
+
+    td {
+      font-size: size(16px);
+      font-weight: 400;
+      line-height: size(26px);
+    }
+
+    tbody td:nth-child(1) {
+      font-size: size(20px);
+      font-weight: 400;
+      line-height: size(26px);
+    }
+  }
+}
+
+.elements-form-field {
+  background-color: $color-blue;
+  color: $color-default-white;
+  padding-top: size(100px);
+  padding-bottom: size(120px);
+
+  &__state-cases  {
+    display: flex;
+
+    margin-bottom: size(41px);
+  }
+
+  &__cases-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: size(200px);
+    margin: 0;
+    margin-right: size(25px);
+    padding-left: 0;
+    padding-top: size(37px);
+    padding-bottom: size(107px);
+
+    list-style: none;
+
+    font-size: size(20px);
+    line-height: size(26px);
+  }
+
+  &__cases-field {
+    display: flex;
+    flex-direction: column;
+    gap: size(30px);
+
+    width: size(840px);
+    padding: size(20px);
+    padding-bottom: size(90px);
+    border: size(1px) solid #9747FF
+  }
+
+  .custom-input.hover {
+    input {
+      border: 1px solid rgba($color-default-white, 0.1);
+
+      background-color: rgba($color-default-white, 0.1);
+
+      color: rgba($color-default-white, 0.8);
+    }
+  }
+
+  .custom-input.focus {
+    input {
+      border: 1px solid $color-default-white;
+    }
+  }
+
+  &__toggle-group {
+    padding-left: size(225px);
+  }
+
+  &__checks {
+    display: flex;
+    gap: size(12px);
+
+    width: size(96px);
+    padding: size(20px);
+    border: 1px solid #9747FF;
   }
 }
