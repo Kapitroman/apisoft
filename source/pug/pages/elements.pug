@@ -127,6 +127,17 @@ block main
                 }).custom-toggle--checkbox
                 +custom-toggle().custom-toggle--checkbox
               .elements-form-field__toggle
+                +custom-toggle({
+                  inputType: "radio",
+                  inputChecked: true,
+                  inputName: "radio",
+                  inputId: "radio-1",
+                }).custom-toggle--radio
+                +custom-toggle({
+                  inputType: "radio",
+                  inputName: "radio",
+                  inputId: "radio-2",
+                }).custom-toggle--radio
 
 
 

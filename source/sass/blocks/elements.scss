@@ -322,6 +322,9 @@
   }
 
   &__toggle-group {
+    display: flex;
+    gap: size(60px);
+    align-items: center;
     padding-left: size(225px);
   }
 
@@ -329,8 +332,23 @@
     display: flex;
     gap: size(12px);
 
-    width: size(96px);
+    //width: size(96px);
+    width: auto;
     padding: size(20px);
     border: 1px solid #9747FF;
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+
+    width: size(44px);
+    height: size(24px);
+    margin-right: auto;
+    padding: size(3px);
+    border-radius: size(35px);
+    border: size(1px) solid $color-default-white;
   }
 }
