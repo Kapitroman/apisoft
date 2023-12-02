@@ -141,8 +141,18 @@
     top: size(30px);
     right: size(60px);
 
-    width: size(40px);
-    height: size(40px);
+    width: size(33px);
+    height: size(32px);
+
+    @include vp-1279 {
+      top: size(40px);
+      right: size(30px);
+    }
+
+    @include vp-959 {
+      width: size(23px);
+      height: size(22px);
+    }
 
     @include vp-479 {
       top: size(50px);
