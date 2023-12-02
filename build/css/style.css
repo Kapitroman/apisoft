@@ -6495,7 +6495,6 @@ h2.title-3 {
   display: -ms-flexbox;
   display: flex;
   gap: 0.3125rem;
-  width: calc(13.625rem + 100% + 10.5rem);
   margin-bottom: 3.9375rem;
 }
 @media (max-width: 1279px) {
