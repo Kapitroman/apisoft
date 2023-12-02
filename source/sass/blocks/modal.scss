@@ -23,6 +23,10 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 
+  @include vp-479 {
+    background-color: $color-blue;
+  }
+
   &::-webkit-scrollbar {
     display: none;
   }

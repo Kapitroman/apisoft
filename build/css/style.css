@@ -1503,8 +1503,8 @@ a:focus-visible {
 }
 @media (max-width: 959px) {
   .header .logo svg {
-    width: 7.3125rem;
-    height: 0.875rem;
+    width: 8.375rem;
+    height: 1rem;
   }
 }
 .header__wrapper {
@@ -2398,6 +2398,11 @@ a:focus-visible {
   pointer-events: none;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+@media (max-width: 479px) {
+  .modal {
+    background-color: #2D69C3;
+  }
 }
 .modal::-webkit-scrollbar {
   display: none;
@@ -3510,8 +3515,8 @@ a:focus-visible {
 }
 @media (max-width: 479px) {
   .logo svg {
-    width: 7.3125rem;
-    height: 0.875rem;
+    width: 8.375rem;
+    height: 1rem;
   }
 }
 
