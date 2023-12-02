@@ -11,6 +11,7 @@ import {initYM} from './modules/init-map';
 import {initStagesProjectSlider} from './modules/init-stages-project-slider';
 import {initAccordions} from './modules/accordions/init-accordion';
 import {noneClickLinkTech} from './modules/none-click-link-tech';
+import {noneClickLinkProject} from './modules/none-click-link-project.js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -44,6 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initYM();
     initStagesProjectSlider();
     noneClickLinkTech();
+    noneClickLinkProject();
   });
 });
 

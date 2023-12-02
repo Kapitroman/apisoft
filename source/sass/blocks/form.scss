@@ -68,10 +68,14 @@
   .btn {
     margin: 0 auto;
 
-    transition: opacity $trans-default;
+    .btn__text {
+      transition: opacity $trans-default;
+    }
 
     @include hover-focus {
-      opacity: 0.7;
+      .btn__text {
+        opacity: 0.8;
+      }
     }
   }
 

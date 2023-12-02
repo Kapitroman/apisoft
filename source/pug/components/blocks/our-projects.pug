@@ -7,7 +7,7 @@ mixin our-projects()
       .our-projects__wrapper
         .our-projects__container
           each item in ourProjectsView
-            +projects-item(item)
+            +projects-item(item)(data-projects-item)
         +btn({
           icon: "arrow",
           href: ourProjectsButton.href,

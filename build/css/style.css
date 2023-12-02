@@ -3966,20 +3966,28 @@ h2.title-3 {
   }
 }
 @media (hover: hover) {
+  .projects-item:hover:not(.focus-visible) {
+    /*
+    .projects-item__text {
+      color: $color-black;
+      background-color: $color-default-white;
+    }
+    */
+  }
   .projects-item:hover:not(.focus-visible) .projects-item__over-layer {
     background-color: rgba(0, 0, 0, 0.5);
   }
-  .projects-item:hover:not(.focus-visible) .projects-item__text {
-    color: #1E1E1E;
-    background-color: #ffffff;
+}
+.projects-item.focus-visible:focus {
+  /*
+  .projects-item__text {
+    color: $color-black;
+    background-color: $color-default-white;
   }
+  */
 }
 .projects-item.focus-visible:focus .projects-item__over-layer {
   background-color: rgba(0, 0, 0, 0.5);
-}
-.projects-item.focus-visible:focus .projects-item__text {
-  color: #1E1E1E;
-  background-color: #ffffff;
 }
 
 .projects-item--airmap .projects-item__logo img {
@@ -4282,16 +4290,18 @@ h2.title-3 {
 }
 .form .btn {
   margin: 0 auto;
+}
+.form .btn .btn__text {
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 @media (hover: hover) {
-  .form .btn:hover:not(.focus-visible) {
-    opacity: 0.7;
+  .form .btn:hover:not(.focus-visible) .btn__text {
+    opacity: 0.8;
   }
 }
-.form .btn.focus-visible:focus {
-  opacity: 0.7;
+.form .btn.focus-visible:focus .btn__text {
+  opacity: 0.8;
 }
 
 .form--modal {
@@ -6362,7 +6372,7 @@ h2.title-3 {
   line-height: 1.625rem;
 }
 
-.is-active button svg {
+.accordion__element.is-active button svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }

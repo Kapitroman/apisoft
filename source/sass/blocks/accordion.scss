@@ -49,7 +49,7 @@
   }
 }
 
-.is-active {
+.accordion__element.is-active {
   button {
     svg {
       transform: rotate(180deg);
