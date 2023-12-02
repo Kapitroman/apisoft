@@ -1938,60 +1938,6 @@ a:focus-visible {
   color: #2D69C3;
 }
 
-.header--special {
-  background-color: rgba(255, 255, 255, 0);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-.header--special .container {
-  position: relative;
-}
-.header--special .container::before {
-  content: "";
-  position: absolute;
-  top: -19.375rem;
-  right: -2.625rem;
-  z-index: -1;
-  width: 26.75rem;
-  height: 26.75rem;
-  border-radius: 50%;
-  background-color: #2D69C3;
-}
-@media (max-width: 1279px) {
-  .header--special .container::before {
-    display: none;
-  }
-}
-@media (min-width: 1280px) {
-  .header--special .header__button-start {
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
-  }
-  .header--special .header__button-start .icon {
-    color: #2D69C3;
-    background-color: #ffffff;
-  }
-  .header--special .header__button-start .btn__text {
-    color: #ffffff;
-  }
-}
-@media (min-width: 1280px) and (hover: hover) {
-  .header--special .header__button-start:hover:not(.focus-visible) {
-    opacity: 0.7;
-  }
-  .header--special .header__button-start:hover:not(.focus-visible) .btn__text {
-    color: #ffffff;
-  }
-}
-@media (min-width: 1280px) {
-  .header--special .header__button-start.focus-visible:focus {
-    opacity: 0.7;
-  }
-  .header--special .header__button-start.focus-visible:focus .btn__text {
-    color: #ffffff;
-  }
-}
-
 .header--shadow {
   -webkit-box-shadow: 0.125rem 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1), 0 0 0 0.5rem rgba(255, 255, 255, 0.7);
           box-shadow: 0.125rem 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1), 0 0 0 0.5rem rgba(255, 255, 255, 0.7);
@@ -2003,59 +1949,168 @@ a:focus-visible {
   }
 }
 
+/*
+.header--special {
+  background-color: $color-transparent;
+
+  box-shadow: none;
+
+  .container {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: size(-310px);
+      right: size(-42px);
+      z-index: -1;
+
+      width: size(428px);
+      height: size(428px);
+      border-radius: 50%;
+
+      background-color: $color-blue;
+
+      @include vp-1279 {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .header__button-start {
+        transition: opacity $trans-default;
+
+      .icon {
+        color: $color-blue;
+
+        background-color: $color-default-white;
+      }
+
+      .btn__text {
+        color: $color-default-white;
+      }
+
+      @include hover-focus {
+        opacity: 0.7;
+
+        .btn__text {
+          color: $color-default-white;
+        }
+      }
+    }
+  }
+}
+*/
+/*
 .header--special.header--black {
+  background-color: $color-black-2;
+
+  .container {
+    &::before {
+      display: none;
+    }
+  }
+
+
+  .logo {
+    color: $color-default-white;
+  }
+
+  @media (min-width: 1280px) {
+    .header__link {
+      color: $color-default-white;
+
+      @include hover-focus {
+        color: $color-blue;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .header__button-start {
+      .icon {
+        color: $color-default-white;
+        background-color: $color-blue;
+      }
+      .btn__text {
+        color: $color-default-white;
+      }
+
+      @include hover-focus {
+        opacity: 1;
+
+        .btn__text {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+
+  .header__burger {
+    span {
+      background-color: $color-default-white;
+    }
+  }
+
+  &.is-open {
+    background-color: $color-blue;
+  }
+}
+*/
+.header--special {
   background-color: #2C2D32;
 }
-.header--special.header--black .container::before {
+.header--special .container::before {
   display: none;
 }
-.header--special.header--black .logo {
+.header--special .logo {
   color: #ffffff;
 }
 @media (min-width: 1280px) {
-  .header--special.header--black .header__link {
+  .header--special .header__link {
     color: #ffffff;
   }
 }
 @media (min-width: 1280px) and (hover: hover) {
-  .header--special.header--black .header__link:hover:not(.focus-visible) {
+  .header--special .header__link:hover:not(.focus-visible) {
     color: #2D69C3;
   }
 }
 @media (min-width: 1280px) {
-  .header--special.header--black .header__link.focus-visible:focus {
+  .header--special .header__link.focus-visible:focus {
     color: #2D69C3;
   }
 }
 @media (min-width: 1280px) {
-  .header--special.header--black .header__button-start .icon {
+  .header--special .header__button-start .icon {
     color: #ffffff;
     background-color: #2D69C3;
   }
-  .header--special.header--black .header__button-start .btn__text {
+  .header--special .header__button-start .btn__text {
     color: #ffffff;
   }
 }
 @media (min-width: 1280px) and (hover: hover) {
-  .header--special.header--black .header__button-start:hover:not(.focus-visible) {
+  .header--special .header__button-start:hover:not(.focus-visible) {
     opacity: 1;
   }
-  .header--special.header--black .header__button-start:hover:not(.focus-visible) .btn__text {
+  .header--special .header__button-start:hover:not(.focus-visible) .btn__text {
     color: #2D69C3;
   }
 }
 @media (min-width: 1280px) {
-  .header--special.header--black .header__button-start.focus-visible:focus {
+  .header--special .header__button-start.focus-visible:focus {
     opacity: 1;
   }
-  .header--special.header--black .header__button-start.focus-visible:focus .btn__text {
+  .header--special .header__button-start.focus-visible:focus .btn__text {
     color: #2D69C3;
   }
 }
-.header--special.header--black .header__burger span {
+.header--special .header__burger span {
   background-color: #ffffff;
 }
-.header--special.header--black.is-open {
+.header--special.is-open {
   background-color: #2D69C3;
 }
 

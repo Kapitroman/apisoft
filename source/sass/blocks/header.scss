@@ -419,6 +419,15 @@
   }
 }
 
+.header--shadow {
+  box-shadow: size(2px) size(4px) size(8px) 0 rgba($color-default-black, 0.1), 0 0 0 size(8px) rgba($color-default-white, 0.7);
+
+  @include vp-479 {
+    box-shadow: size(1px) size(2px) size(4px) 0 rgba($color-default-black, 0.1), 0 0 0 size(4px) rgba($color-default-white, 0.7);
+  }
+}
+
+/*
 .header--special {
   background-color: $color-transparent;
 
@@ -470,16 +479,66 @@
     }
   }
 }
+*/
 
-.header--shadow {
-  box-shadow: size(2px) size(4px) size(8px) 0 rgba($color-default-black, 0.1), 0 0 0 size(8px) rgba($color-default-white, 0.7);
+/*
+.header--special.header--black {
+  background-color: $color-black-2;
 
-  @include vp-479 {
-    box-shadow: size(1px) size(2px) size(4px) 0 rgba($color-default-black, 0.1), 0 0 0 size(4px) rgba($color-default-white, 0.7);
+  .container {
+    &::before {
+      display: none;
+    }
+  }
+
+
+  .logo {
+    color: $color-default-white;
+  }
+
+  @media (min-width: 1280px) {
+    .header__link {
+      color: $color-default-white;
+
+      @include hover-focus {
+        color: $color-blue;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .header__button-start {
+      .icon {
+        color: $color-default-white;
+        background-color: $color-blue;
+      }
+      .btn__text {
+        color: $color-default-white;
+      }
+
+      @include hover-focus {
+        opacity: 1;
+
+        .btn__text {
+          color: $color-blue;
+        }
+      }
+    }
+  }
+
+  .header__burger {
+    span {
+      background-color: $color-default-white;
+    }
+  }
+
+  &.is-open {
+    background-color: $color-blue;
   }
 }
+*/
 
-.header--special.header--black {
+.header--special {
   background-color: $color-black-2;
 
   .container {
