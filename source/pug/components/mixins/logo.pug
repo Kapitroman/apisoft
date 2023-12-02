@@ -1,6 +1,6 @@
 mixin logo()
   if(currentUrl === logo.href)
-    a.logo(href="#start", aria-label=logo.label)
+    a.logo(href=`${logo.href}#start`, aria-label=logo.label, data-trigger)
       +icon(logo.name, logo.width, logo.height)
       span.visually-hidden=logo.span
   else
