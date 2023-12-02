@@ -1543,6 +1543,11 @@ a:focus-visible {
   display: -ms-flexbox;
   display: flex;
 }
+@media (max-width: 479px) {
+  .header__nav {
+    height: 100%;
+  }
+}
 .header__nav .header__add-nav {
   display: none;
   opacity: 0;
