@@ -158,6 +158,11 @@
     }
 
     ul {
+      display: flex;
+      flex-direction: column;
+      gap: size(10px);
+
+      margin: 0;
       padding-left: size(30px);
 
       font-size: size(16px);

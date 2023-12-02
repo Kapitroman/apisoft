@@ -4224,55 +4224,55 @@ h2.title-3 {
   }
 }
 
-.partners-item--empty {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.partners-item.partners-item--empty.partners-item--empty-first {
+.partners-item.empty.partners-item--empty-first {
   grid-column: 2/3;
   grid-row: 1/2;
 }
 @media (max-width: 479px) {
-  .partners-item.partners-item--empty.partners-item--empty-first {
+  .partners-item.empty.partners-item--empty-first {
     display: none;
   }
 }
 
-.partners-item.partners-item--empty.partners-item--empty-second {
+.partners-item.empty.partners-item--empty-second {
   grid-column: 5/6;
   grid-row: 1/2;
 }
 @media (max-width: 1279px) {
-  .partners-item.partners-item--empty.partners-item--empty-second {
+  .partners-item.empty.partners-item--empty-second {
     display: none;
   }
 }
 
-.partners-item.partners-item--empty.partners-item--empty-third {
+.partners-item.empty.partners-item--empty-third {
   grid-column: 1/2;
   grid-row: 2/3;
 }
 @media (max-width: 1279px) {
-  .partners-item.partners-item--empty.partners-item--empty-third {
+  .partners-item.empty.partners-item--empty-third {
     grid-column: 3/4;
     grid-row: 2/3;
   }
 }
 @media (max-width: 479px) {
-  .partners-item.partners-item--empty.partners-item--empty-third {
+  .partners-item.empty.partners-item--empty-third {
     display: none;
   }
 }
 
-.partners-item.partners-item--empty.partners-item--empty-fourth {
+.partners-item.empty.partners-item--empty-fourth {
   grid-column: 4/5;
   grid-row: 2/3;
 }
 @media (max-width: 1279px) {
-  .partners-item.partners-item--empty.partners-item--empty-fourth {
+  .partners-item.empty.partners-item--empty-fourth {
     display: none;
   }
+}
+
+.empty {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .partners-item--arrow .partners-item__icon-logo svg {
@@ -5746,6 +5746,15 @@ h2.title-3 {
   }
 }
 .vacancy-item__details-section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.625rem;
+  margin: 0;
   padding-left: 1.875rem;
   font-size: 1rem;
   line-height: 1.5rem;

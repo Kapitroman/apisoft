@@ -21,9 +21,9 @@ const initYM = () => {
     },
     {
       iconLayout: 'default#image',
-      iconImageHref: 'img/content/myIcon.png',
-      iconImageSize: [30, 42],
-      iconImageOffset: [-5, -38]
+      iconImageHref: 'img/content/pin-map.png',
+      iconImageSize: [30, 30],
+      iconImageOffset: [-15, -30]
     });
 
     myMap.geoObjects.add(myPlacemark)
