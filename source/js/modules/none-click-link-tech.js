@@ -1,5 +1,5 @@
 const noneClickLinkTech = () => {
-  const techLinks = document.querySelector('[tech-link]');
+  const techLinks = document.querySelector('[data-tech-link]');
 
   if (!techLinks) {
     return;

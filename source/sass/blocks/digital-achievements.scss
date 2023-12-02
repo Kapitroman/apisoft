@@ -30,7 +30,7 @@
     flex-grow: 1;
 
     @include vp-1279 {
-      widows: 100%;
+      width: 100%;
     }
 
     @include vp-479 {

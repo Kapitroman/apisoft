@@ -195,7 +195,7 @@
 
   &__lists {
     display: flex;
-    gap: size(34px)
+    gap: size(34px);
 
     li {
       font-size: size(16px);
@@ -332,7 +332,6 @@
     display: flex;
     gap: size(12px);
 
-    //width: size(96px);
     width: auto;
     padding: size(20px);
     border: 1px solid #9747FF;

@@ -5923,7 +5923,7 @@ h2.title-3 {
 }
 @media (max-width: 1279px) {
   .digital-achievements li {
-    widows: 100%;
+    width: 100%;
   }
 }
 @media (max-width: 479px) {
@@ -8657,9 +8657,11 @@ h2.title-3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2.125rem li;
-  gap-font-size: 1rem;
-  gap-line-height: 1.125rem;
+  gap: 2.125rem;
+}
+.elements-text__lists li {
+  font-size: 1rem;
+  line-height: 1.125rem;
 }
 .elements-text ul li::marker {
   color: #2D69C3;

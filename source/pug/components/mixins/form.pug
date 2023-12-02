@@ -5,19 +5,16 @@ mixin form()
         +custom-input({
           inputPlaceholder: placeholdersForm.name,
           inputName: "name",
-          inputId: "name",
           inputType: "text",
         })(data-required, data-validate-type="text")
         +custom-input({
           inputPlaceholder: placeholdersForm.telOrMail,
           inputName: "contact",
-          inputId: "contact",
           inputType: "text",
         })(data-required, data-validate-type="text")
         +custom-textarea({
           inputPlaceholder: placeholdersForm.textArea,
           inputName: "message",
-          inputId: "message",
         })(data-required, data-validate-type="text")
         .input-upload.input-upload--file-drop(data-upload="file-drop", tabindex=0, data-validate-type="file",  data-max-size="10485760")
           .input-upload__drop-zone(data-drop-zone)
