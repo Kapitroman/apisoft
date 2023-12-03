@@ -49,13 +49,15 @@
       &:hover {
         border: 1px solid rgba($color-default-white, 0.1);
 
-        background-color: rgba($color-default-white, 0.1);
+        // background-color: rgba($color-default-white, 0.1);
 
         // color: rgba($color-default-white, 0.8);
       }
 
       &:focus {
         border: 1px solid $color-default-white;
+        background-color: rgba($color-default-white, 0.1);
+
       }
     }
 
@@ -83,8 +85,8 @@
   &.is-invalid {
     input,
     textarea {
-      border: 1px solid $color-default-white;
-
+      //border: 1px solid $color-default-white;
+      border: 1px solid #ff1553;
       background-color: $color-default-white;
 
       color: $color-black;
@@ -99,6 +101,12 @@
         border: 2px solid rgba(#ff1553, 0.5);
       }
       */
+      &:focus {
+        &::placeholder {
+          color: rgba($color-default-white, 0.7);
+          -webkit-text-fill-color: rgba($color-default-white, 0.7);
+        }
+      }
     }
   }
 

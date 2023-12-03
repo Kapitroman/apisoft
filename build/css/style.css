@@ -2847,13 +2847,13 @@ a:focus-visible {
 .custom-textarea label input:hover,
 .custom-textarea label textarea:hover {
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: rgba(255, 255, 255, 0.1);
 }
 .custom-input label input:focus,
 .custom-input label textarea:focus,
 .custom-textarea label input:focus,
 .custom-textarea label textarea:focus {
   border: 1px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .custom-input label textarea,
 .custom-textarea label textarea {
@@ -2879,7 +2879,7 @@ a:focus-visible {
 .custom-input.is-invalid textarea,
 .custom-textarea.is-invalid input,
 .custom-textarea.is-invalid textarea {
-  border: 1px solid #ffffff;
+  border: 1px solid #ff1553;
   background-color: #ffffff;
   color: #1E1E1E;
   /*
@@ -2907,6 +2907,25 @@ a:focus-visible {
 .custom-textarea.is-invalid textarea::placeholder {
   color: #1E1E1E;
   -webkit-text-fill-color: #1E1E1E;
+}
+.custom-input.is-invalid input:focus::-webkit-input-placeholder, .custom-input.is-invalid textarea:focus::-webkit-input-placeholder, .custom-textarea.is-invalid input:focus::-webkit-input-placeholder, .custom-textarea.is-invalid textarea:focus::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+}
+.custom-input.is-invalid input:focus::-moz-placeholder, .custom-input.is-invalid textarea:focus::-moz-placeholder, .custom-textarea.is-invalid input:focus::-moz-placeholder, .custom-textarea.is-invalid textarea:focus::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+}
+.custom-input.is-invalid input:focus::-ms-input-placeholder, .custom-input.is-invalid textarea:focus::-ms-input-placeholder, .custom-textarea.is-invalid input:focus::-ms-input-placeholder, .custom-textarea.is-invalid textarea:focus::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
+}
+.custom-input.is-invalid input:focus::placeholder,
+.custom-input.is-invalid textarea:focus::placeholder,
+.custom-textarea.is-invalid input:focus::placeholder,
+.custom-textarea.is-invalid textarea:focus::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.7);
 }
 .custom-input.is-valid input,
 .custom-textarea.is-valid input {
