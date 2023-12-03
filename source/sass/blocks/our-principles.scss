@@ -18,11 +18,13 @@
     }
 
     h2 {
+      flex-shrink: 0;
+
       @include vp-479 {
         margin-bottom: size(20px);
       }
     }
-
+    /*
     p {
       width: size(345px);
       margin: 0;
@@ -35,6 +37,27 @@
 
       @include vp-479 {
         width: 100%;
+        margin-left: 0;
+      }
+    }
+    */
+
+    p {
+      margin: 0;
+      margin-left: size(60px);
+
+      font-weight: 500;
+      font-size: size(20px);
+      line-height: size(24px);
+      color: $color-blue;
+
+      @include vp-1279 {
+        font-size: size(14px);
+        line-height: size(20px);
+      }
+
+      @include vp-479 {
+        width: size(290px);
         margin-left: 0;
       }
     }

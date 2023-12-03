@@ -7295,7 +7295,7 @@ h2.title-3 {
 }
 .career__vacancy-list-empty {
   margin: 0;
-  margin-bottom: 3.75rem;
+  margin-bottom: 5rem;
   font-size: 2rem;
   line-height: 2.1875rem;
 }
@@ -7306,7 +7306,7 @@ h2.title-3 {
     line-height: 1.375rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 959px) {
   .career__vacancy-list-empty {
     margin-bottom: 1.875rem;
   }
@@ -8365,6 +8365,23 @@ h2.title-3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 2.1875rem;
+  /*
+  p {
+    width: size(345px);
+    margin: 0;
+    margin-left: size(30px);
+
+    font-size: size(16px);
+    font-weight: 600;
+    line-height: size(24px);
+    color: $color-blue;
+
+    @include vp-479 {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  */
 }
 @media (max-width: 1279px) {
   .our-principles__title-group {
@@ -8386,23 +8403,32 @@ h2.title-3 {
     margin-bottom: 1.5625rem;
   }
 }
+.our-principles__title-group h2 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
 @media (max-width: 479px) {
   .our-principles__title-group h2 {
     margin-bottom: 1.25rem;
   }
 }
 .our-principles__title-group p {
-  width: 21.5625rem;
   margin: 0;
-  margin-left: 1.875rem;
-  font-size: 1rem;
-  font-weight: 600;
+  margin-left: 3.75rem;
+  font-weight: 500;
+  font-size: 1.25rem;
   line-height: 1.5rem;
   color: #2D69C3;
 }
+@media (max-width: 1279px) {
+  .our-principles__title-group p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
 @media (max-width: 479px) {
   .our-principles__title-group p {
-    width: 100%;
+    width: 18.125rem;
     margin-left: 0;
   }
 }
