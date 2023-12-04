@@ -43,6 +43,7 @@
     */
 
     p {
+      width: size(430px);
       margin: 0;
       margin-left: size(60px);
 
@@ -52,6 +53,7 @@
       color: $color-blue;
 
       @include vp-1279 {
+        width: size(300px);
         font-size: size(14px);
         line-height: size(20px);
       }

@@ -1,7 +1,7 @@
 mixin partners-item(item)
   - const addClass = item.status ? `partners-item ${item.status}` : "partners-item";
 
-  a(href=item.href, class=addClass)&attributes(attributes)
+  div(class=addClass)&attributes(attributes)
     if item.name
       .partners-item__name
         span=item.name
@@ -13,3 +13,17 @@ mixin partners-item(item)
         span.icon
           +icon("arrow", 12, 10)
 
+//-mixin partners-item(item)
+  - const addClass = item.status ? `partners-item ${item.status}` : "partners-item";
+
+  a(href=item.href, class=addClass)&attributes(attributes)
+    if item.name
+      .partners-item__name
+        span=item.name
+    if item.logo
+      .partners-item__icon-logo
+        img(src=`img/svg/${item.logo[0]}.svg`, width=item.logo[1], height=item.logo[2], alt=item.name, loading="lazy")
+    if item.arrow
+      .partners-item__icon-arrow
+        span.icon
+          +icon("arrow", 12, 10)

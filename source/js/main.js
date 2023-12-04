@@ -10,8 +10,8 @@ import {blink} from './modules/blink';
 import {initYM} from './modules/init-map';
 import {initStagesProjectSlider} from './modules/init-stages-project-slider';
 import {initAccordions} from './modules/accordions/init-accordion';
-import {noneClickLinkTech} from './modules/none-click-link-tech';
-import {noneClickLinkProject} from './modules/none-click-link-project.js';
+// import {noneClickLinkTech} from './modules/none-click-link-tech';
+// import {noneClickLinkProject} from './modules/none-click-link-project.js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -44,8 +44,8 @@ window.addEventListener('DOMContentLoaded', () => {
     blink();
     initYM();
     initStagesProjectSlider();
-    noneClickLinkTech();
-    noneClickLinkProject();
+    // noneClickLinkTech();
+    // noneClickLinkProject();
   });
 });
 
