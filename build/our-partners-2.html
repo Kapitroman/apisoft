@@ -40,8 +40,12 @@
               </div>
             </nav>
           </div>
-          <a class="btn toggle-language" href="#"><span class="btn__caption">EN</span>
-          </a>
+          <fieldset class="toggle-language">
+            <legend class="visually-hidden">Переключатель языка</legend>
+            <label tabindex="0">
+              <input class="visually-hidden" type="checkbox" name="toggle-language" aria-label="default" tabindex="-1" checked><span>EN</span><span>RU</span>
+            </label>
+          </fieldset>
           <a class="btn header__button-start" href="#" data-open-modal="message"><span class="icon">
               <svg width="12" height="10" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#arrow"></use>
