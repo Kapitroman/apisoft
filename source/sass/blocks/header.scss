@@ -333,14 +333,18 @@
   }
 
   .toggle-language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: size(30px);
 
     width: size(50px);
     height: size(30px);
-    border-radius: size(100px);
-    border: size(1px) solid $color-blue;
+    //border-radius: size(100px);
+    //border: size(1px) solid $color-blue;
     padding: 0;
-    overflow: hidden;
+    border: none;
+    //overflow: hidden;
 
     color: $color-blue;
     font-weight: 500;
@@ -359,8 +363,12 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
-      height: 100%;
+
+      width: size(50px);
+      height: size(30px);
+      border-radius: size(100px);
+      border: size(1px) solid $color-blue;
+      overflow: hidden;
 
       cursor: pointer;
 

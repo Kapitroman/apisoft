@@ -1843,13 +1843,20 @@ a:focus-visible {
   }
 }
 .header .toggle-language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-right: 1.875rem;
   width: 3.125rem;
   height: 1.875rem;
-  border-radius: 6.25rem;
-  border: 0.0625rem solid #2D69C3;
   padding: 0;
-  overflow: hidden;
+  border: none;
   color: #2D69C3;
   font-weight: 500;
   font-size: 0.875rem;
@@ -1871,8 +1878,11 @@ a:focus-visible {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 3.125rem;
+  height: 1.875rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid #2D69C3;
+  overflow: hidden;
   cursor: pointer;
   -webkit-transition: color 0.3s ease, background-color 0.3s ease;
   transition: color 0.3s ease, background-color 0.3s ease;
@@ -2538,7 +2548,7 @@ a:focus-visible {
 }
 @media (max-width: 479px) {
   .modal__wrapper {
-    padding: 3.75rem 0.9375rem;
+    padding: 0 0.9375rem;
   }
 }
 .modal__overlay {
@@ -7074,8 +7084,8 @@ h2.title-3 {
   margin: 0;
   margin-left: 1.875rem;
   font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.375rem;
   color: #2D69C3;
 }
 @media (max-width: 1279px) {
@@ -8417,23 +8427,6 @@ h2.title-3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 2.1875rem;
-  /*
-  p {
-    width: size(345px);
-    margin: 0;
-    margin-left: size(30px);
-
-    font-size: size(16px);
-    font-weight: 600;
-    line-height: size(24px);
-    color: $color-blue;
-
-    @include vp-479 {
-      width: 100%;
-      margin-left: 0;
-    }
-  }
-  */
 }
 @media (max-width: 1279px) {
   .our-principles__title-group {
@@ -8469,8 +8462,8 @@ h2.title-3 {
   margin: 0;
   margin-left: 3.75rem;
   font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.375rem;
   color: #2D69C3;
 }
 @media (max-width: 1279px) {

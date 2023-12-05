@@ -43,7 +43,8 @@
     padding: size(60px) size(40px);
 
     @include vp-479 {
-      padding: size(60px) size(15px);
+      // padding: size(60px) size(15px);
+      padding: 0 size(15px);
     }
   }
 
