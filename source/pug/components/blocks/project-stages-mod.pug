@@ -1,0 +1,22 @@
+mixin project-stages-mod()
+  section.project-stages-mod&attributes(attributes)
+    .container
+      h2=projectStagesTitle
+      .project-stages-mod__main
+        .project-stages-mod__controls
+          each position, index in projectStagesContent
+            if index === 0
+              button.project-stages-mod__control.is-active(type='button', data-stage= index)
+                span=`0${index + 1}`
+                | #{position.title}
+            else
+              button.project-stages-mod__control(type='button', data-stage= index)
+                span=`0${index + 1}`
+                | #{position.title}
+
+        .project-stages-mod__content.swiper.project-stages-mod__content--mod
+          .swiper-wrapper
+            each item, index in projectStagesContent
+              +stages-item(item).swiper-slide
+
+

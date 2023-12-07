@@ -14,11 +14,11 @@ mixin project-stages()
                 span=`0${index + 1}`
                 | #{position.title}
 
-        .project-stages__content.swiper
+        .project-stages__content.swiper.project-stages__content--mod
           .swiper-wrapper
             each item, index in projectStagesContent
               +stages-item(item).swiper-slide
-          .swiper-pagination
+          //-.swiper-pagination
 
 
 
