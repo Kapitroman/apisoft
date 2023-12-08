@@ -135,7 +135,9 @@
       margin-top: auto;
     }
   }
+}
 
+a.projects-item {
   @include hover-focus {
     .projects-item__over-layer {
       background-color: rgba($color-default-black, 0.5);

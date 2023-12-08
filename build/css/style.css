@@ -4110,12 +4110,13 @@ h2.title-3 {
     margin-top: auto;
   }
 }
+
 @media (hover: hover) {
-  .projects-item:hover:not(.focus-visible) .projects-item__over-layer {
+  a.projects-item:hover:not(.focus-visible) .projects-item__over-layer {
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
-.projects-item.focus-visible:focus .projects-item__over-layer {
+a.projects-item.focus-visible:focus .projects-item__over-layer {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
