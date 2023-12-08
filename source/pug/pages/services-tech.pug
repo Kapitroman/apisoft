@@ -19,7 +19,7 @@ block main
           .services-tech__wrapper
             each item in servicesTechFeaturesList
               +services-page-item(item)
-      +our-partners(ourServicesPartnersTitle, ourServicesPartnersItems).our-partners--960(data-tech-link)
+      +our-partners(ourServicesPartnersTitle, ourServicesPartnersItems, false).our-partners--960(data-tech-link)
 
 
 
@@ -30,3 +30,4 @@ block modals
     +modal-success()
   +modal("modal--error modal--no-scale")(data-modal="error")
     +modal-error()
+

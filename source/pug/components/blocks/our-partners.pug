@@ -1,7 +1,7 @@
-mixin our-partners(title, list)
+mixin our-partners(title, list, isClickableItems)
   section.our-partners&attributes(attributes)
     .container
       h2=title
       .our-partners__wrapper
         each item in list
-          +partners-item(item)
+          +partners-item(isClickableItems, item)
