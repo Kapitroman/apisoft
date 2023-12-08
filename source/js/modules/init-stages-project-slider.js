@@ -13,13 +13,13 @@ const initSwiper = (slider) => {
     centeredSlides: true,
 
     coverflowEffect: {
-      rotate: 0,
-      stretch: 180,
+      rotate: -60,
+      stretch: sliderStagesProject.getBoundingClientRect().height / 6,
       depth: 100,
-      modifier: 3,
-      scale: 1,
+      modifier: 1,
+      scale: 0.9,
     },
-    slidesPerView: 1.5,
+    slidesPerView: 1.6,
   });
 
   const controlsStages = Array.from(document.querySelectorAll('.project-stages__control'));

@@ -1,18 +1,12 @@
 .stages-item {
-  //display: flex; //////
-  //flex-direction: column; //////
-
   padding: size(40px) size(30px);
   border-radius: size(24px);
-  border: size(1px) solid $color-blue;
-  //min-height: size(465px);  //////432
-  //height: auto;
-  height: 465px;
+  height: 400px;
   width: 100%;
+  border: none;
 
-  background-color: $color-default-white;
+  background-color: $color-transparent;
   box-shadow: 0px size(20px) size(40px) 0px #3E60900D;
-
   color: $color-black;
 
   overflow: auto;
@@ -20,12 +14,10 @@
   @include vp-1279 {
     padding: size(30px);
     border-radius: size(18px);
-    //min-height: size(494px);
     height: size(494px);
   }
 
   @include vp-959 {
-    //min-height: size(445px);
     height: size(445px);
   }
 
@@ -33,16 +25,17 @@
     min-height: initial;
     padding: size(30px) size(20px);
     border-radius: size(12px);
+    background-color: $color-default-white;
   }
 
   &__header {
     display: flex;
     justify-content: space-between;
 
-    margin-bottom: size(30px);//34
+    margin-bottom: size(30px);
 
     @include vp-1279 {
-      margin-bottom: size(30px);//34
+      margin-bottom: size(30px);
     }
 
     @include vp-479 {
@@ -89,15 +82,14 @@
   }
 
   &__main {
-    //margin-bottom: size(50px);
-    margin-bottom: size(15px);
+    margin-bottom: size(40px);
 
     @include vp-1279 {
-      //margin-bottom: size(40px);
+      margin-bottom: size(30px);
     }
 
     @include vp-959 {
-      //margin-bottom: size(20px);
+      margin-bottom: size(20px);
     }
 
     h3 {
@@ -135,8 +127,6 @@
   }
 
   &__add {
-    //margin-top: auto;
-
     font-size: size(16px);
     line-height: size(24px);
     color: #9B9BB4;
@@ -195,8 +185,22 @@
   }
 }
 
-.project-stages-mod__content {
-  .stages-item {
-    border: none;
-  }
+.stages-item.swiper-slide-active {
+  background-image: linear-gradient(to bottom,rgba(255,255,255,1), rgba(255, 255, 255, 1));
+}
+
+.stages-item.swiper-slide-prev {
+  background-image: linear-gradient(to top,rgba(255,255,255,1), rgba(255, 255, 255, 0));
+}
+
+.stages-item.swiper-slide-next {
+  background-image: linear-gradient(to bottom,rgba(255,255,255,1), rgba(255, 255, 255, 0));
+}
+
+.swiper-slide-shadow-top {
+  display: none;
+}
+
+.swiper-slide-shadow-bottom {
+  display: none;
 }
