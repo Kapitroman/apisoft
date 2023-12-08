@@ -3660,21 +3660,20 @@ a:focus-visible {
   }
 }
 
-@media (hover: hover) {
-  [href].logo:hover:not(.focus-visible) {
+/*
+[href].logo {
+  @include hover-focus {
     opacity: 0.7;
   }
 }
-[href].logo.focus-visible:focus {
-  opacity: 0.7;
-}
-
+*/
+/*
 .logo--hero {
-  width: 53.1875rem;
-  height: 6.5625rem;
-  color: #ffffff;
+  width: size(851px);
+  height: size(105px);
+  color: $color-default-white;
 }
-
+*/
 h1 {
   margin: 0;
   font-weight: 400;
