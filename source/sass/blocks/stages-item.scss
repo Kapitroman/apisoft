@@ -33,20 +33,22 @@
   &__header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    margin-bottom: size(30px);
+    margin-bottom: size(40px);
 
     @include vp-1279 {
-      margin-bottom: size(30px);
+      margin-bottom: size(40px);
     }
 
-    @include vp-479 {
-      margin-bottom: size(16px);
+    @include vp-959 {
+      margin-bottom: size(30px);
     }
   }
 
   &__number {
     display: none;
+    margin: 0;
 
     font-size: size(20px);
     line-height: size(22px);
@@ -84,14 +86,14 @@
   }
 
   &__main {
-    margin-bottom: size(50px);
+    margin-bottom: size(40px);
 
     @include vp-1279 {
       margin-bottom: size(40px);
     }
 
     @include vp-959 {
-      margin-bottom: size(20px);
+      margin-bottom: size(30px);
     }
 
     h3 {
@@ -101,17 +103,8 @@
       line-height: size(35px);
 
       @include vp-1279 {
-        margin-bottom: size(16px);
-
         font-size: size(20px);
         line-height: size(22px);
-      }
-
-      @include vp-479 {
-        margin-bottom: size(16px);
-
-        font-size: size(20px);
-        line-height: size(24px);
       }
     }
 
@@ -123,7 +116,7 @@
 
       @include vp-959 {
         font-size: size(14px);
-        line-height: size(20px);
+        line-height: size(22px);
       }
     }
   }
