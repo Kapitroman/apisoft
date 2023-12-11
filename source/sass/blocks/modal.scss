@@ -44,7 +44,9 @@
 
     @include vp-479 {
       // padding: size(60px) size(15px);
-      padding: 0 size(15px);
+      // padding: 0 size(15px);
+      align-items: initial;
+      padding: 0;
     }
   }
 
@@ -82,11 +84,61 @@
 
     @include vp-479 {
       width: 100%;
-      padding: size(40px) size(20px);
+      //padding: size(40px) size(20px);
+      padding: size(23px) size(15px);
+      padding-bottom: size(52px);
       border-radius: size(18px);
     }
   }
 
+  &__close-btn {
+    position: absolute;
+    top: size(80px);
+    right: size(50px);
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: size(5px);
+
+    width: size(28px);
+    height: size(28px);
+    border-radius: size(5px);
+    padding: 0;
+    border: none;
+
+    background-color: $color-transparent;
+
+    cursor: pointer;
+
+    @include vp-479 {
+      top: size(23px);
+      right: size(15px);
+    }
+
+    span {
+      width: size(28px);
+      height: size(2px);
+      background-color: $color-default-white;
+    }
+
+    span:nth-child(1) {
+      transform: translateY(size(7px)) rotate(225deg);
+    }
+
+    span:nth-child(3) {
+      transform: translateY(size(-7px)) rotate(-225deg);
+    }
+
+    span:nth-child(2) {
+      width: size(20px);
+      opacity: 0;
+    }
+  }
+
+  /*
   &__close-btn {
     position: absolute;
     top: size(80px);
@@ -126,7 +178,7 @@
       opacity: 0.5;
     }
   }
-
+  */
   &--responsive {
     .modal__content {
       width: 100%;
@@ -176,10 +228,13 @@
     }
 
     @include vp-479 {
-      margin-bottom: size(10px);
+      // margin-bottom: size(10px);
+      margin-bottom: size(23px);
+      // font-size: size(20px);
+      // line-height: size(14px);
+      font-size: size(22px);
+      line-height: size(28px);
 
-      font-size: size(20px);
-      line-height: size(14px);
     }
   }
 

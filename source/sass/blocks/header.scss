@@ -75,15 +75,13 @@
 
     @include vp-479 {
       top: size(74px);
+
+      background-color: $color-blue;
     }
   }
 
   &__nav {
     display: flex;
-
-    @include vp-479 {
-      height: 100%;
-    }
 
     .header__add-nav {
       display: none;
