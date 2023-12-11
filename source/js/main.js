@@ -1,4 +1,4 @@
-import {mobileVhFix} from './utils/mobile-vh-fix.js';
+import {mobileVhFix} from './utils/mobile-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initMoveTo} from './modules/init-move-to';
@@ -10,6 +10,7 @@ import {blink} from './modules/blink';
 import {initYM} from './modules/init-map';
 import {initStagesProjectSlider} from './modules/init-stages-project-slider';
 import {initAccordions} from './modules/accordions/init-accordion';
+import {initAnimateCount} from './modules/init-animate-count';
 
 // ---------------------------------
 
@@ -43,6 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
     blink();
     initYM();
     initStagesProjectSlider();
+    initAnimateCount();
   });
 });
 
