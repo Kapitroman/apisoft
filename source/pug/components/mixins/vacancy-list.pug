@@ -1,7 +1,7 @@
 mixin vacancy-list(list)
   if list.length === 0
-    p.career__vacancy-list-empty=careerVacancyEmptyText
+    p.career__vacancy-list-empty.margin-bottom-120-100-80-60=careerVacancyEmptyText
   else
-    .career__vacancy-list
+    .career__vacancy-list.margin-bottom-120-100-80-60
       each item in list
         +panel-link(item)

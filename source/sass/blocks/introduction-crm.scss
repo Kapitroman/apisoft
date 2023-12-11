@@ -215,20 +215,6 @@
   }
 
   &__cases {
-    margin-bottom: size(80px);
-
-    @include vp-1279 {
-      margin-bottom: size(60px);
-    }
-
-    @include vp-959 {
-      margin-bottom: size(40px);
-    }
-
-    @include vp-479 {
-      margin-bottom: size(60px);
-    }
-
     p {
       margin: 0;
       margin-bottom: size(20px);

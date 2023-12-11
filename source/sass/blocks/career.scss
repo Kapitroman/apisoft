@@ -3,39 +3,17 @@
     display: flex;
     flex-direction: column;
     gap: size(10px);
-
-    margin-bottom: size(60px);
-
-    @include vp-1279 {
-      margin-bottom: size(50px);
-    }
-
-    @include vp-959 {
-      margin-bottom: size(40px);
-    }
-
-    @include vp-479 {
-      margin-bottom: size(30px);
-    }
   }
 
   &__vacancy-list-empty {
     margin: 0;
-    margin-bottom: size(80px);
 
     font-size: size(32px);
     line-height: size(35px);
 
     @include vp-1279 {
-      margin-bottom: size(40px);
-
       font-size: size(20px);
       line-height: size(22px);
-
-    }
-
-    @include vp-959 {
-      margin-bottom: size(30px);
     }
   }
 }
