@@ -14,7 +14,7 @@ block main
   main
     .page-wrapper.page-wrapper--not-bottom
       h1.visually-hidden Elements
-      section.elements-typographic.margin-bottom-150-120-80-60
+      section.elements-typographic.margin-bottom-120-100-80-60
         h2.visually-hidden Typographic
         .container
           each item in typographicData
@@ -26,7 +26,7 @@ block main
                   p.elements-typographic__values-font=item.fontValues
                 - const addClass = `elements-typographic__font-sample ${item.addClass}`
                 p(class=addClass)=item.sample
-      section.elements-text.margin-bottom-150-120-80-60
+      section.elements-text.margin-bottom-120-100-80-60
         h2.visually-hidden Texts
         .container
           .elements-text__text-block.margin-bottom-100-80-60-40

@@ -8787,9 +8787,6 @@ a.projects-item.focus-visible:focus .projects-item__over-layer {
           flex-direction: column;
   gap: 3rem;
 }
-.elements-typographic__block {
-  margin-bottom: 3rem;
-}
 .elements-typographic__element-description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9003,7 +9000,7 @@ a.projects-item.focus-visible:focus .projects-item__over-layer {
 .elements-form-field {
   background-color: #2D69C3;
   color: #ffffff;
-  padding-top: 6.25rem;
+  padding-top: 7.5rem;
   padding-bottom: 7.5rem;
 }
 .elements-form-field__state-cases {
@@ -9049,8 +9046,6 @@ a.projects-item.focus-visible:focus .projects-item__over-layer {
 }
 .elements-form-field .custom-input.hover input {
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.8);
 }
 .elements-form-field .custom-input.focus input {
   border: 1px solid #ffffff;
