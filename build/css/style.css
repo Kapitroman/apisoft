@@ -6290,13 +6290,91 @@ a.projects-item.focus-visible:focus .projects-item__over-layer {
   }
 }
 
+/*
+.principles-item {
+  display: flex;
+  flex-direction: column;
+
+  padding: size(29px);
+  padding-bottom: size(40px);
+  border-radius: size(24px);
+  border: size(1px) solid $color-blue;
+
+  @include vp-959 {
+    padding: size(30px) size(20px);
+    border-radius: size(18px);
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: size(60px);
+    height: size(60px);
+    margin-bottom: size(40px);
+    padding: size(14px);
+    border-radius: size(10px);
+
+    background-color: $color-blue;
+
+    @include vp-1279 {
+      margin-bottom: size(30px);
+    }
+
+    @include vp-959 {
+      width: size(46px);
+      height: size(46px);
+      margin-bottom: size(24px);
+    }
+
+    svg {
+      width: size(32px);
+      height: size(32px);
+
+      @include vp-959 {
+        width: size(25px);
+        height: size(25px);
+      }
+    }
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: size(12px);
+
+    font-size: size(20px);
+    font-weight: 500;
+    line-height: size(26px);
+
+    @include vp-1279 {
+      font-size: size(20px);
+      font-weight: 400;
+      line-height: size(26px);
+    }
+  }
+
+  p {
+    margin: 0;
+
+    font-size: size(16px);
+    line-height: size(26px);
+  }
+}
+
+.principles-item--special {
+  @media (min-width: 480px) {
+    grid-column: span 2;
+  }
+}
+*/
 .stages-item {
   padding: 2.5rem 1.875rem;
   border-radius: 1.5rem;
-  height: 400px;
+  height: auto;
   width: 100%;
   border: none;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #ffffff;
   -webkit-box-shadow: 0px 1.25rem 2.5rem 0px rgba(62, 96, 144, 0.0509803922);
           box-shadow: 0px 1.25rem 2.5rem 0px rgba(62, 96, 144, 0.0509803922);
   color: #1E1E1E;
@@ -6383,11 +6461,11 @@ a.projects-item.focus-visible:focus .projects-item__over-layer {
   }
 }
 .stages-item__main {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.125rem;
 }
 @media (max-width: 1279px) {
   .stages-item__main {
-    margin-bottom: 1.875rem;
+    margin-bottom: 2.5rem;
   }
 }
 @media (max-width: 959px) {
@@ -6479,19 +6557,17 @@ a.projects-item.focus-visible:focus .projects-item__over-layer {
   display: none;
 }
 
+/*
 .stages-item.swiper-slide-active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(255, 255, 255)));
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255));
+  background-image: linear-gradient(to bottom,rgba(255,255,255,1), rgba(255, 255, 255, 1));
 }
 
 .stages-item.swiper-slide-prev {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
-  background-image: linear-gradient(to top, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to top,rgba(255,255,255,1), rgba(255, 255, 255, 0));
 }
 
 .stages-item.swiper-slide-next {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
-  background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to bottom,rgba(255,255,255,1), rgba(255, 255, 255, 0));
 }
 
 .swiper-slide-shadow-top {
@@ -6501,7 +6577,7 @@ a.projects-item.focus-visible:focus .projects-item__over-layer {
 .swiper-slide-shadow-bottom {
   display: none;
 }
-
+*/
 .accordion {
   width: 100%;
   border-top: 0.0625rem solid rgba(0, 0, 0, 0.4);
@@ -8646,20 +8722,20 @@ a.projects-item.focus-visible:focus .projects-item__over-layer {
 }
 .project-stages__content {
   width: 52.8125rem;
-  height: 43.375rem;
+  height: 28rem;
   -webkit-transition: height 0.3s ease;
   transition: height 0.3s ease;
 }
 @media (max-width: 1279px) {
   .project-stages__content {
     width: 35.4375rem;
-    height: 45.9375rem;
+    height: 29.625rem;
   }
 }
 @media (max-width: 959px) {
   .project-stages__content {
     width: 27.8125rem;
-    height: 41.875rem;
+    height: 26.25rem;
   }
 }
 @media (max-width: 479px) {

@@ -123,18 +123,18 @@
 
   &__content {
     width: size(845px);
-    height: size(694px);
+    height: size(448px);
 
     transition: height $trans-default;
 
     @include vp-1279 {
       width: size(567px);
-      height: size(735px);
+      height: size(474px);
     }
 
     @include vp-959 {
       width: size(445px);
-      height: size(670px);
+      height: size(420px);
     }
 
     @include vp-479 {

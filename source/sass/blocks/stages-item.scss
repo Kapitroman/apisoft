@@ -1,11 +1,13 @@
 .stages-item {
   padding: size(40px) size(30px);
   border-radius: size(24px);
-  height: 400px;
+  height: auto;
+  //min-height: 400px;
   width: 100%;
   border: none;
 
-  background-color: $color-transparent;
+  //background-color: $color-transparent;
+  background-color: $color-default-white;
   box-shadow: 0px size(20px) size(40px) 0px #3E60900D;
   color: $color-black;
 
@@ -82,10 +84,10 @@
   }
 
   &__main {
-    margin-bottom: size(40px);
+    margin-bottom: size(50px);
 
     @include vp-1279 {
-      margin-bottom: size(30px);
+      margin-bottom: size(40px);
     }
 
     @include vp-959 {
@@ -184,7 +186,7 @@
     display: none;
   }
 }
-
+/*
 .stages-item.swiper-slide-active {
   background-image: linear-gradient(to bottom,rgba(255,255,255,1), rgba(255, 255, 255, 1));
 }
@@ -204,3 +206,4 @@
 .swiper-slide-shadow-bottom {
   display: none;
 }
+*/

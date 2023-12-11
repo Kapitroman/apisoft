@@ -8,18 +8,9 @@ const initSwiper = (slider) => {
   swiper = new Swiper(slider, {
 
     direction: "vertical",
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-
-    coverflowEffect: {
-      rotate: -60,
-      stretch: sliderStagesProject.getBoundingClientRect().height / 6,
-      depth: 100,
-      modifier: 1,
-      scale: 0.9,
-    },
-    slidesPerView: 1.6,
+      slidesPerView: 1,
+      spaceBetween: 14,
+      // effect: "fade",
   });
 
   const controlsStages = Array.from(document.querySelectorAll('.project-stages__control'));
