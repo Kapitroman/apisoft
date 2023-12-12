@@ -14,7 +14,7 @@ const initAnimateCount = () => {
   const callbackAnimation = () => digitalItems.forEach((item, index) => animateCount(item, countData[index]));
 
   scrollTrigger(digitalAchievements, {
-    rootMargin: '-30%',
+    rootMargin: '-15%',
     cb: callbackAnimation,
   });
 };

@@ -13,10 +13,9 @@ block variables
 block main
   main
     .page-wrapper.page-wrapper--not-bottom
-      h1.visually-hidden Elements
       section.elements-typographic.margin-bottom-120-100-80-60
-        h2.visually-hidden Typographic
         .container
+          p Контекстная область
           each item in typographicData
             .elements-typographic__block
               p.elements-typographic__element=item.element
@@ -26,8 +25,9 @@ block main
                   p.elements-typographic__values-font=item.fontValues
                 - const addClass = `elements-typographic__font-sample ${item.addClass}`
                 p(class=addClass)=item.sample
+
+
       section.elements-text.margin-bottom-120-100-80-60
-        h2.visually-hidden Texts
         .container
           .elements-text__text-block.margin-bottom-100-80-60-40
             .elements-text__sample-text
@@ -95,7 +95,6 @@ block main
 
 
       section.elements-form-field
-        h2.visually-hidden Form
         .container
           form.elements-form-field__wrapper(action="#")
             .elements-form-field__state-cases
