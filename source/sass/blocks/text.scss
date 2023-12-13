@@ -1,0 +1,58 @@
+.text {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: size(14px);
+  line-height: size(16px);
+
+}
+
+.text-2 {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: size(24px);
+  line-height: size(38px);
+
+  @include vp-1279 {
+    font-size: size(20px);
+    line-height: size(32px);
+  }
+
+  @include vp-1279 {
+    font-size: size(16px);
+    line-height: size(24px);
+  }
+}
+
+.text-3 {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: size(28px);
+  line-height: size(31px);
+
+  @include vp-1279 {
+    font-size: size(24px);
+    line-height: size(27px);
+  }
+
+  @include vp-1279 {
+    font-size: size(20px);
+    line-height: size(22px);
+  }
+}
+
+.text-special {
+  padding: size(40px) size(30px);
+  border-radius: size(32px);
+
+  color: $color-blue;
+
+  background-color: #2D69C326;
+
+  @include vp-1279 {
+    padding: size(35px) size(20px);
+    border-radius: size(20px);
+  }
+}

@@ -168,3 +168,16 @@
     }
   }
 }
+
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+
+  width: size(44px);
+  height: size(24px);
+  padding: size(3px);
+  border-radius: size(35px);
+  border: size(1px) solid $color-default-white;
+}

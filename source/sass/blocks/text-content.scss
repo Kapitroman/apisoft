@@ -1,0 +1,162 @@
+.text-content {
+  h1 {
+    margin: 0;
+    margin-bottom: size(68px);
+
+    font-weight: 500;
+    font-size: size(72px);
+    line-height: size(79px);
+
+    @include vp-1279 {
+      margin-bottom: size(60px);
+
+      font-size: size(48px);
+      line-height: size(53px);
+    }
+
+    @include vp-479 {
+      margin-bottom: size(40px);
+
+      font-size: size(32px);
+      line-height:size(42px);
+    }
+
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: size(48px);
+
+    font-weight: 400;
+    font-size: size(54px);
+    line-height: size(65px);
+
+    @include vp-1279 {
+      margin-bottom: size(38px);
+
+      font-size: size(36px);
+      line-height: size(43px);
+    }
+
+    @include vp-479 {
+      margin-bottom: size(28px);
+
+      font-size: size(22px);
+      line-height:size(26px);
+    }
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: size(28px);
+
+    font-weight: 400;
+    font-size: size(32px);
+    line-height: size(35px);
+
+    @include vp-1279 {
+      margin-bottom: size(20px);
+
+      font-size: size(20px);
+      line-height: size(22px);
+    }
+
+    @include vp-479 {
+      margin-bottom: size(14px);
+    }
+  }
+
+  h4 {
+    margin: 0;
+    margin-bottom: size(20px);
+
+    font-weight: 400;
+    font-size: size(20px);
+    line-height: size(26px);
+
+    @include vp-1279 {
+      margin-bottom: size(16px);
+
+      font-size: size(16px);
+      line-height: size(21px);
+    }
+
+    @include vp-479 {
+      margin-bottom: size(14px);
+
+      font-size: size(14px);
+      line-height: size(18px);
+    }
+  }
+
+  h5 {
+    margin: 0;
+    margin-bottom: size(20px);
+
+    font-weight: 400;
+    font-size: size(16px);
+    line-height: size(22px);
+
+    @include vp-1279 {
+      margin-bottom: size(16px);
+
+      font-size: size(14px);
+      line-height: size(18px);
+    }
+
+    @include vp-479 {
+      margin-bottom: size(14px);
+
+      font-size: size(14px);
+      line-height: size(18px);
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: size(16px);
+
+    font-weight: 400;
+    font-size: size(16px);
+    line-height: size(26px);
+
+    @include vp-959 {
+      margin-bottom: size(12px);
+    }
+  }
+
+  a {
+    color: $color-blue;
+
+    transition: text-decoration $trans-default;
+
+    @include hover-focus {
+      text-decoration: underline;
+      text-underline-offset: size(4px);
+    }
+  }
+
+  ul, ol {
+    display: flex;
+    flex-direction: column;
+    gap: size(10px);
+
+    margin: 0;
+    margin-bottom: size(20px);
+    padding-left: size(15px);
+
+    font-size: size(16px);
+    line-height: size(24px);
+
+    @include vp-959 {
+      margin-bottom: size(16px);
+
+      font-size: size(14px);
+      line-height: size(21px);
+    }
+  };
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+}

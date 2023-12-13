@@ -1,0 +1,102 @@
+
+.table {
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead {
+    border-bottom: size(1px) solid #2D69C3CC;
+
+    font-size: size(16px);
+    line-height: size(22px);
+
+    color: $color-blue;
+  }
+
+  thead th:nth-child(1) {
+    width: 50%;
+  }
+
+  thead th:nth-child(2) {
+    width: 29%;
+  }
+
+  thead th:nth-child(3) {
+    width: 21%;
+  }
+
+  th,
+  td {
+    padding: size(20px) size(20px) size(20px) 0;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: 400;
+  }
+
+  td {
+    font-size: size(16px);
+    font-weight: 400;
+    line-height: size(26px);
+  }
+
+  tbody td:nth-child(1) {
+    font-size: size(20px);
+    font-weight: 400;
+    line-height: size(26px);
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead {
+    border-bottom: size(1px) solid #2D69C3CC;
+
+    font-size: size(16px);
+    line-height: size(22px);
+
+    color: $color-blue;
+  }
+
+  thead th:nth-child(1) {
+    width: 50%;
+  }
+
+  thead th:nth-child(2) {
+    width: 29%;
+  }
+
+  thead th:nth-child(3) {
+    width: 21%;
+  }
+
+  th,
+  td {
+    padding: size(20px) size(20px) size(20px) 0;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: 400;
+  }
+
+  td {
+    font-size: size(16px);
+    font-weight: 400;
+    line-height: size(26px);
+  }
+
+  tbody td:nth-child(1) {
+    font-size: size(20px);
+    font-weight: 400;
+    line-height: size(26px);
+  }
+}

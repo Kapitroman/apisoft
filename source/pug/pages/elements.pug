@@ -12,121 +12,104 @@ block variables
 
 block main
   main
-    .page-wrapper.page-wrapper--not-bottom
-      section.elements-typographic.margin-bottom-120-100-80-60
+    .elements.page-wrapper
+      section.margin-bottom-120-100-80-60
         .container
-          p Контекстная область
-          each item in typographicData
-            .elements-typographic__block
-              p.elements-typographic__element=item.element
-              .elements-typographic__element-description
-                .elements-typographic__font-data
-                  p.elements-typographic__name-font=item.fontName
-                  p.elements-typographic__values-font=item.fontValues
-                - const addClass = `elements-typographic__font-sample ${item.addClass}`
-                p(class=addClass)=item.sample
+          h2.elements__title Компонент кнопка
 
+          .elements__group
+            p.elements__subtitle Кнопка класс .btn
+            .elements__wrapper
+              +btn({icon: "arrow", text: "Кнопка"})
 
-      section.elements-text.margin-bottom-120-100-80-60
+          .elements__group
+            p.elements__subtitle Ссылка класс .btn
+            .elements__wrapper
+              +btn({icon: "arrow", text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка")
+
+          .elements__group
+            p.elements__subtitle Ссылка белая класс .btn .btn--white
+            .elements__wrapper.elements__wrapper--blue
+              +btn({icon: "arrow", text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--white
+
+          .elements__group
+            p.elements__subtitle Кнопка заблокированная класс .btn атрибут disable
+            .elements__wrapper
+              +btn({icon: "arrow", text: "Кнопка"})(disabled)
+
+      section.margin-bottom-120-100-80-60
         .container
-          .elements-text__text-block.margin-bottom-100-80-60-40
-            .elements-text__sample-text
-              p=elementsText1
-              p=elementsText2
-          .elements-text__text-block.margin-bottom-100-80-60-40
-            .elements-text__sample-text
-              p
-                =`${elementsTextWithLink.textBefore}`
-                =" "
-                a(href=elementsTextWithLink.href)=elementsTextWithLink.textLink
-                =" "
-                =`${elementsTextWithLink.textAfter}`
-              .elements-text__links-block
-                a(href="#")=elementsTextLink
-                a.hover(href="#")=elementsTextLink
-          .elements-text__text-block.margin-bottom-100-80-60-40
-            .accordion(data-accordion="parent", data-single)
-              each item, index in elementsAccordionData
-                if index === 0
-                  .accordion__element.is-active(data-accordion="element")
-                    button.accordion__button(type="button", data-accordion="button")
-                      span=item.title
-                      +icon("accordion-arrow", 20, 20)
-                    .accordion__content(data-accordion="content")
-                      .accordion__wrapper
-                        p=item.text
-                else
-                  .accordion__element(data-accordion="element")
-                    button.accordion__button.accordion__button(type="button", data-accordion="button")
-                      span=item.title
-                      +icon("accordion-arrow", 20, 20)
-                    .accordion__content(data-accordion="content")
-                      .accordion__wrapper
-                        p=item.text
+          h2.elements__title Компонент модальные окна
 
-          .elements-text__text-block.margin-bottom-100-80-60-40
-            .elements-text__large-text
-              p=elementsBlockText
-            .elements-text__large-text.elements-text__large-text--padding
-              p=elementsBlockText
+          .elements__group
+            p.elements__subtitle класс .modal \ .modal--message
+            .elements__wrapper
+              +btn({icon: "arrow", text: "modal-message"})(data-open-modal="message")
 
-          .elements-text__text-block.margin-bottom-100-80-60-40
-            .elements-text__lists
-              ul
-                each item in elementsList
-                  li=item
-              ol
-                each item in elementsList
-                  li=item
+          .elements__group
+            p.elements__subtitle .modal \ .modal--success
+            .elements__wrapper
+              +btn({icon: "arrow", text: "modal-success"})(data-open-modal="success")
 
-          .elements-text__text-block.margin-bottom-100-80-60-40
-            .elements-text__table
-              table
-                thead
-                  tr
-                    each title in elementsTable.titles
-                      th=title
-                tbody
-                  each string in elementsTable.data
-                    tr
-                      each value in string
-                        td=value
+          .elements__group
+            p.elements__subtitle .modal \ .modal--error
+            .elements__wrapper
+              +btn({icon: "arrow", text: "modal-error"})(data-open-modal="error")
 
-
-
-      section.elements-form-field
+      section.margin-bottom-120-100-80-60
         .container
-          form.elements-form-field__wrapper(action="#")
-            .elements-form-field__state-cases
-              ul.elements-form-field__cases-name
-                each item in elementsCasesName
-                  li=item
+          h2.elements__title Элементы формы
 
-              .elements-form-field__cases-field
-                +custom-input({
-                  inputPlaceholder: "Имя",
-                })
-                +custom-input({
-                  inputPlaceholder: "Имя",
-                }).hover
-                +custom-input({
-                  inputAutofocus: true
-                })
-                +custom-input({
-                  inputValue: "Алексей",
-                }).is-valid
-                +custom-input({
-                  inputPlaceholder: "Имя",
-                  inputErrorMessage: "Поле обязательно к заполнению"
-                }).is-invalid
+          .elements__group
+            p.elements__subtitle Кастомный input класс .custom-input
+            .elements__wrapper.elements__wrapper--blue
+              +custom-input({
+                inputPlaceholder: "Ваше имя",
+                inputName: "name",
+                inputType: "text",
+              })
 
-            .elements-form-field__toggle-group
-              .elements-form-field__checks
-                +custom-toggle({
+          .elements__group
+            p.elements__subtitle Кастомный input с ошибкой класс .custom-input .is-invalid
+            .elements__wrapper.elements__wrapper--blue
+              +custom-input({
+                inputPlaceholder: "Ваше имя",
+                inputName: "name",
+                inputType: "text",
+              }).is-invalid
+
+          .elements__group
+            p.elements__subtitle Кастомный textarea класс .custom-textarea
+            .elements__wrapper.elements__wrapper--blue
+              +custom-textarea({
+                inputPlaceholder: "Краткое описание задачи",
+                inputName: "message",
+              })
+
+          .elements__group
+            p.elements__subtitle Кастомный input-upload класс: .input-upload.input-upload--file-drop
+            .elements__wrapper.elements__wrapper--blue
+              .input-upload.input-upload--file-drop(data-upload="file-drop", tabindex=0, data-validate-type="file",  data-max-size="10485760")
+                .input-upload__drop-zone(data-drop-zone)
+                  .input-upload__drop-zone-text
+                      +icon("link", 32, 32)
+                      span "Перетащите или нажмите, чтобы загрузить техническое задание или файлы"
+                      span "Загрузите техническое задание или файлы"
+                label
+                  input(type="file", name="upload-file", tabindex=-1)
+
+          .elements__group
+            p.elements__subtitle Кастомный checkbox класс: .custom-toggle .custom-toggle--checkbox
+            .elements__wrapper.elements__wrapper--blue.elements__wrapper--toggle
+              +custom-toggle({
                   inputChecked: true,
-                }).custom-toggle--checkbox
-                +custom-toggle().custom-toggle--checkbox
-              .elements-form-field__toggle
+              }).custom-toggle--checkbox
+              +custom-toggle().custom-toggle--checkbox
+
+          .elements__group
+            p.elements__subtitle Кастомный toggle класс: .toggle-wrapper .custom-toggle .custom-toggle--radio
+            .elements__wrapper.elements__wrapper--blue.elements__wrapper--toggle
+              .toggle-wrapper
                 +custom-toggle({
                   inputType: "radio",
                   inputChecked: true,
@@ -139,7 +122,131 @@ block main
                   inputId: "radio-2",
                 }).custom-toggle--radio
 
+      section.margin-bottom-120-100-80-60
+        .container
+          h2.elements__title Аккордеон
 
+          .elements__group
+            p.elements__subtitle  класс .accordion .data-accordion
+            .elements__wrapper.elements__wrapper--max-width-500
+              .accordion(data-accordion="parent", data-single)
+                each item, index in elementsAccordionData
+                  if index === 0
+                    .accordion__element.is-active(data-accordion="element")
+                      button.accordion__button(type="button", data-accordion="button")
+                        span=item.title
+                        +icon("accordion-arrow", 20, 20)
+                      .accordion__content(data-accordion="content")
+                        .accordion__wrapper
+                          p=item.text
+                  else
+                    .accordion__element(data-accordion="element")
+                      button.accordion__button.accordion__button(type="button", data-accordion="button")
+                        span=item.title
+                        +icon("accordion-arrow", 20, 20)
+                      .accordion__content(data-accordion="content")
+                        .accordion__wrapper
+                          p=item.text
+
+      section.margin-bottom-120-100-80-60
+        .container
+          h2.elements__title Таблица
+
+          .elements__group
+            p.elements__subtitle  класс .table
+            .elements__wrapper.table
+              table
+                thead
+                  tr
+                    each title in elementsTable.titles
+                      th=title
+                tbody
+                  each string in elementsTable.data
+                    tr
+                      each value in string
+                        td=value
+
+      section.margin-bottom-120-100-80-60
+        .container
+          h2.elements__title Контентная область
+
+          .elements__group
+            p.elements__subtitle класс .text-content
+            .text-content.elements__wrapper.elements__wrapper--max-width-500
+              h1 Заголовок 1
+              h2 Заголовок 2
+              h3 Заголовок 3
+              h4 Заголовок 4
+              h5 Заголовок 5
+
+              p
+                =`${elementsTextWithLink.textBefore}`
+                =" "
+                a(href=elementsTextWithLink.href)=elementsTextWithLink.textLink
+                =" "
+                =`${elementsTextWithLink.textAfter}`
+
+              ul
+                li Разработка ПО,
+                li Внедрение CRM
+                li Поддержка
+                li Аналитика и QA
+
+              ol
+                li Разработка ПО,
+                li Внедрение CRM
+                li Поддержка
+                li Аналитика и QA
+
+              a(href="#") продукты 1С
+
+      section.margin-bottom-120-100-80-60
+        .container
+          h2.elements__title Заголовки
+
+          .elements__group
+            p.elements__subtitle класс .title-1
+            h1.title-1 Заголовок 1
+
+          .elements__group
+            p.elements__subtitle класс .title-2
+            h2.title-2 Заголовок 2
+
+          .elements__group
+            p.elements__subtitle класс .title-3
+            h3.title-3 Заголовок 3
+
+      section
+        .container
+          h2.elements__title Текст
+
+          .elements__group
+            p.elements__subtitle класс .text
+            .elements__wrapper.elements__wrapper--max-width-500
+              p.text
+                | Синхронизация данных корпоративного портала с продуктами 1С
+                | позволяет облегчить контроль продаж, внутренний документооборот и аналитику.
+
+          .elements__group
+            p.elements__subtitle класс .text-2
+            .elements__wrapper.elements__wrapper--max-width-500
+              p.text-2
+                | Синхронизация данных корпоративного портала с продуктами 1С
+                | позволяет облегчить контроль продаж, внутренний документооборот и аналитику.
+
+          .elements__group
+            p.elements__subtitle класс .text-3
+            .elements__wrapper.elements__wrapper--max-width-500
+              p.text-3
+                | Синхронизация данных корпоративного портала с продуктами 1С
+                | позволяет облегчить контроль продаж, внутренний документооборот и аналитику.
+
+          .elements__group
+            p.elements__subtitle класс .text-3 .text-special
+            .elements__wrapper.elements__wrapper--max-width-500
+              p.text-3.text-special
+                | Синхронизация данных корпоративного портала с продуктами 1С
+                | позволяет облегчить контроль продаж, внутренний документооборот и аналитику.
 
 block modals
   +modal("modal--message modal--no-scale")(data-modal="message")

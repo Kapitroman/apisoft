@@ -1,3 +1,50 @@
+.elements {
+  &__title {
+    font-size: size(32px);
+    line-height: size(35px);
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: size(30px);
+  }
+
+  &__group {
+    margin-bottom: size(40px);
+  }
+
+  &__subtitle {
+    font-size: size(22px);
+    line-height: size(24px);
+    margin: 0;
+    margin-bottom: size(25px);
+  }
+
+  &__wrapper--blue {
+    background-color: $color-blue;
+    padding: size(20px);
+    max-width: size(500px);
+  }
+
+  &__wrapper--toggle {
+    max-width: size(120px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__wrapper--max-width-500 {
+    max-width: size(500px);
+  }
+
+  .elemets__group + .elemets__group {
+    margin-top: size(30px);
+  }
+
+  .table {
+    max-width: size(800px);
+  }
+}
+
+
 .elements-typographic {
   .container {
     display: flex;
