@@ -56,12 +56,12 @@
       margin-bottom: auto;
 
       font-size: size(18px);
-      line-height: size(18px);// 31
+      line-height: size(18px);
       color: #9B9BB4;
 
       @include vp-1279 {
         font-size: size(14px);
-        line-height: size(14px);// 31
+        line-height: size(14px);
       }
 
       @include vp-479 {

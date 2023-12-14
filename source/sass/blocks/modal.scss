@@ -43,8 +43,6 @@
     padding: size(60px) size(40px);
 
     @include vp-479 {
-      // padding: size(60px) size(15px);
-      // padding: 0 size(15px);
       align-items: initial;
       padding: 0;
     }
@@ -84,7 +82,6 @@
 
     @include vp-479 {
       width: 100%;
-      //padding: size(40px) size(20px);
       padding: size(23px) size(15px);
       padding-bottom: size(52px);
       border-radius: size(18px);
@@ -138,47 +135,6 @@
     }
   }
 
-  /*
-  &__close-btn {
-    position: absolute;
-    top: size(80px);
-    right: size(50px);
-    z-index: 1;
-
-    width: size(40px);
-    height: size(40px);
-    padding: 0;
-
-    background: $color-transparent;
-    border: none;
-    cursor: pointer;
-
-    transition: opacity $trans-default;
-
-    @include vp-1279 {
-      top: size(50px);
-    }
-
-    @include vp-479 {
-      top: size(40px);
-      right: size(20px);
-    }
-
-    svg {
-      width: size(40px);
-      height: size(40px);
-
-      @include vp-479 {
-        width: size(34px);
-        height: size(34px);
-      }
-    }
-
-    @include hover-focus {
-      opacity: 0.5;
-    }
-  }
-  */
   &--responsive {
     .modal__content {
       width: 100%;

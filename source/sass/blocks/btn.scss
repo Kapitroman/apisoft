@@ -11,8 +11,6 @@
 
   cursor: pointer;
 
-  // transition: opacity $trans-default;
-
   @include hover-focus {
     .btn__text {
       color: $color-blue;
@@ -65,7 +63,6 @@
   }
 
   &--white {
-    //-.btn__icon {
     .icon {
       color: $color-blue;
 
@@ -87,7 +84,6 @@
   }
 
   &--rotation {
-    //.btn__icon {
     .icon {
       svg {
         transform: rotate(-45deg);

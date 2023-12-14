@@ -46,7 +46,6 @@
     display: flex;
     gap: size(5px);
 
-    // width: calc(size(218px) + 100% + size(168px));
     margin-bottom: size(63px);
 
     @include vp-1279 {
@@ -226,4 +225,3 @@
     transform: translateZ(0) translateX(-100%);
   }
 }
-

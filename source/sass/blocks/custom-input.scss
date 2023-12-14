@@ -48,10 +48,6 @@
 
       &:hover {
         border: 1px solid rgba($color-default-white, 0.1);
-
-        // background-color: rgba($color-default-white, 0.1);
-
-        // color: rgba($color-default-white, 0.8);
       }
 
       &:focus {
@@ -85,7 +81,6 @@
   &.is-invalid {
     input,
     textarea {
-      //border: 1px solid $color-default-white;
       border: 1px solid #ff1553;
       background-color: $color-default-white;
 
@@ -95,12 +90,7 @@
         color: $color-black;
         -webkit-text-fill-color: $color-black;
       }
-      /*
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
-      }
-      */
+
       &:focus {
         &::placeholder {
           color: rgba($color-default-white, 0.7);
@@ -113,13 +103,6 @@
   &.is-valid {
     input {
       border: 1px solid $color-default-white;
-      //color: red;
-      /*
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
-      }
-      */
     }
   }
 
@@ -129,17 +112,9 @@
     bottom: size(-26px);
 
     &.is-invalid {
-      // color: #ff0000;
-
       font-size: size(14px);
       line-height: size(21px);
       color: $color-default-white;
     }
-    /*
-    &.is-valid {
-      color: #15ab07;
-    }
-    */
   }
 }
-

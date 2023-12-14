@@ -10,7 +10,6 @@ const initSwiper = (slider) => {
     direction: "vertical",
       slidesPerView: 1,
       spaceBetween: 14,
-      // effect: "fade",
   });
 
   const controlsStages = Array.from(document.querySelectorAll('.project-stages__control'));
