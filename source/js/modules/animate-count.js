@@ -1,4 +1,4 @@
-const fps = 12;
+const fps = 6;
 const fpsInterval = 1000 / fps;
 
 const animateCount = (el, values) => {
