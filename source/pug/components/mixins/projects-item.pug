@@ -7,13 +7,3 @@ mixin projects-item(item)
     .projects-item__logo
       img(src=item.logo[0], width=item.logo[1], height=item.logo[2], alt=item.logo[3], loading="lazy")
     .projects-item__text=item.text
-
-//-mixin projects-item(item)
-  - const addClass = `projects-item projects-item--${item.class}`;
-  a(href=item.href, class = addClass)&attributes(attributes)
-    .projects-item__image
-      +picture(item.picture[0], item.picture[1], item.picture[2], 690, 450, item.picture[3], true)
-    .projects-item__over-layer
-    .projects-item__logo
-      img(src=item.logo[0], width=item.logo[1], height=item.logo[2], alt=item.logo[3], loading="lazy")
-    .projects-item__text=item.text
