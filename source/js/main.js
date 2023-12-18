@@ -32,9 +32,9 @@ window.addEventListener('DOMContentLoaded', () => {
     // const select = new CustomSelect();
     // select.init();
     initUpload();
-    const form = new Form();
-    window.form = form;
-    form.init();
+    // const form = new Form();
+    // window.form = form;
+    // form.init();
 
     const burger = new Burger();
     burger.init();
