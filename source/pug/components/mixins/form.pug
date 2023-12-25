@@ -1,6 +1,6 @@
 mixin form()
-  .form(data-form-validate, data-callback="base")&attributes(attributes)
-    form(action=form.sendMessageAction, method="post", enctype="multipart/form-data")
+  .form(data-validate, data-callback="base")&attributes(attributes)
+    form(action='', method="post", enctype="multipart/form-data")
       .form__fields
         +custom-input({
           inputPlaceholder: placeholdersForm.name,
@@ -16,7 +16,7 @@ mixin form()
           inputPlaceholder: placeholdersForm.textArea,
           inputName: "message",
         })(data-required, data-validate-type="text")
-        .input-upload.input-upload--file-drop(data-upload="file-drop", tabindex=0, data-validate-type="file",  data-max-size="10485760")
+        .input-upload.input-upload--file-drop(data-upload="file-drop", tabindex=0, data-validate-type="file", data-max-size="10485760")
           .input-upload__drop-zone(data-drop-zone)
             .input-upload__drop-zone-text
                 +icon("link", 32, 32)

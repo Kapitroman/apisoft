@@ -9,6 +9,7 @@ import {initYM} from './modules/init-map';
 import {initStagesProjectSlider} from './modules/init-stages-project-slider';
 import {initAccordions} from './modules/accordions/init-accordion';
 import {initAnimateCount} from './modules/init-animate-count';
+import {initFormValidate} from './modules/form/init-form-validate';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -18,6 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initMoveTo();
     initModals();
     initUpload();
+
+    initFormValidate();
 
     const burger = new Burger();
     burger.init();
