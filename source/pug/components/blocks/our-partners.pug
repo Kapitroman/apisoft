@@ -2,6 +2,12 @@ mixin our-partners(title, list, isClickableItems)
   section.our-partners&attributes(attributes)
     .container
       h2=title
-      .our-partners__wrapper
-        each item in list
-          +partners-item(isClickableItems, item)
+      .our-partners__container
+        .our-partners__wrapper
+          each item in list
+            +partners-item(isClickableItems, item)
+        +btn({
+          icon: "arrow",
+          href: "#",
+          text: "Все партнеры",
+        })

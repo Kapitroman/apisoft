@@ -11,6 +11,11 @@
     }
   }
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -18,17 +23,35 @@
     grid-auto-flow: row dense;
     gap: size(16px);
 
+    margin-bottom: size(50px);
+
     @include vp-1279 {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       gap: size(8px);
+
+      margin-bottom: size(30px);
     }
 
     @include vp-959 {
       gap: size(6px);
+
+      margin-bottom: size(30px);
     }
 
     @include vp-479 {
       grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .btn {
+    margin: 0 auto;
+
+    @include hover-focus {
+      transition: color $trans-default;
+
+      .btn__text {
+        color: $color-blue;
+      }
     }
   }
 }
