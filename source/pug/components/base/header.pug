@@ -19,12 +19,7 @@ mixin header(headerMods, currentUrl)
                 icon: headerButtonStart.icon,
                 text: headerButtonStart.text,
               }).btn--white.header__button-start(data-open-modal="message")
-      fieldset.toggle-language
-        legend.visually-hidden Переключатель языка
-        label(tabindex=0)
-            input.visually-hidden(type="checkbox" name="toggle-language" aria-label="default" tabindex=-1 checked)
-            span EN
-            span RU
+      a(href="#").header__link-language EN
       +btn({
         href: headerButtonStart.href,
         icon: headerButtonStart.icon,

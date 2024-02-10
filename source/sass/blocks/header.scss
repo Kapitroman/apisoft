@@ -330,7 +330,7 @@
     }
   }
 
-  .toggle-language {
+  &__link-language {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -339,63 +339,20 @@
     width: size(50px);
     height: size(30px);
     padding: 0;
-    border: none;
+    border-radius: size(100px);
+    border: size(1px) solid $color-blue;
 
     color: $color-blue;
     font-weight: 500;
     font-size: size(14px);
     line-height: size(17px);
-
+    cursor: pointer;
     background-color: $color-transparent;
+    transition: color $trans-default, background-color $trans-default;
 
-    legend {
-      display: block;
-      max-width: inherit;
-    }
-
-    label {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      width: size(50px);
-      height: size(30px);
-      border-radius: size(100px);
-      border: size(1px) solid $color-blue;
-      overflow: hidden;
-
-      cursor: pointer;
-
-      transition: color $trans-default, background-color $trans-default;
-
-      @include hover-focus {
-        background-color: $color-blue;
-        color: $color-default-white;
-      }
-
-      span {
-        position: absolute;
-
-        transition: opacity $trans-default;
-      }
-    }
-
-    input:checked ~ span:first-of-type {
-      opacity: 1;
-    }
-
-
-    input:checked ~ span:last-of-type {
-      opacity: 0;
-    }
-
-    input ~ span:first-of-type {
-      opacity: 0;
-    }
-
-    input ~ span:last-of-type {
-      opacity: 1;
+    @include hover-focus {
+      background-color: $color-blue;
+      color: $color-default-white;
     }
 
     @include vp-1279 {
