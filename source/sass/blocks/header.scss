@@ -201,6 +201,7 @@
 
     @include vp-479 {
       align-items: center;
+      text-align: center;
 
       margin-bottom: size(53px);
       margin-left: auto;
@@ -439,117 +440,6 @@
     box-shadow: size(1px) size(2px) size(4px) 0 rgba($color-default-black, 0.1), 0 0 0 size(4px) rgba($color-default-white, 0.7);
   }
 }
-
-/*
-.header--special {
-  background-color: $color-transparent;
-
-  box-shadow: none;
-
-  .container {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: size(-310px);
-      right: size(-42px);
-      z-index: -1;
-
-      width: size(428px);
-      height: size(428px);
-      border-radius: 50%;
-
-      background-color: $color-blue;
-
-      @include vp-1279 {
-        display: none;
-      }
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .header__button-start {
-        transition: opacity $trans-default;
-
-      .icon {
-        color: $color-blue;
-
-        background-color: $color-default-white;
-      }
-
-      .btn__text {
-        color: $color-default-white;
-      }
-
-      @include hover-focus {
-        opacity: 0.7;
-
-        .btn__text {
-          color: $color-default-white;
-        }
-      }
-    }
-  }
-}
-*/
-
-/*
-.header--special.header--black {
-  background-color: $color-black-2;
-
-  .container {
-    &::before {
-      display: none;
-    }
-  }
-
-
-  .logo {
-    color: $color-default-white;
-  }
-
-  @media (min-width: 1280px) {
-    .header__link {
-      color: $color-default-white;
-
-      @include hover-focus {
-        color: $color-blue;
-      }
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .header__button-start {
-      .icon {
-        color: $color-default-white;
-        background-color: $color-blue;
-      }
-      .btn__text {
-        color: $color-default-white;
-      }
-
-      @include hover-focus {
-        opacity: 1;
-
-        .btn__text {
-          color: $color-blue;
-        }
-      }
-    }
-  }
-
-  .header__burger {
-    span {
-      background-color: $color-default-white;
-    }
-  }
-
-  &.is-open {
-    background-color: $color-blue;
-  }
-}
-*/
 
 .header--special {
   background-color: $color-black-2;

@@ -26,47 +26,10 @@
     padding-bottom: size(50px);
   }
 
-  &::before {
-    content: "";
-
-    position: absolute;
-    left: 50%;
-    bottom: size(-781px);
-
-    transform: translateX(-50%);
-
-    width: size(1350px);
-    height: size(1350px);
-    border-radius: 50%;
-
-    background-color: $color-blue;
-
-    @include vp-1279 {
-      bottom: size(-435px);
-
-      width: size(880px);
-      height: size(880px);
-    }
-
-    @include vp-959 {
-      bottom: size(-571px);
-
-      width: size(930px);
-      height: size(930px);
-    }
-
-    @include vp-479 {
-      bottom: size(-193px);
-      z-index: 1;
-
-      width: size(600px);
-      height: size(600px);
-    }
-  }
 
   h2 {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     margin-bottom: size(85px);
     margin-left: auto;
     margin-right: auto;
@@ -90,6 +53,45 @@
     position: relative;
     z-index: 1;
     margin: 0 auto;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      left: 50%;
+      top: size(-298px);
+      z-index: -2;
+
+      transform: translateX(-50%);
+
+      width: size(1350px);
+      height: size(1350px);
+      border-radius: 50%;
+
+      background-color: $color-blue;
+
+      @include vp-1279 {
+        top: size(-205px);
+
+        width: size(880px);
+        height: size(880px);
+      }
+
+      @include vp-959 {
+        top: size(-175px);
+
+        width: size(930px);
+        height: size(930px);
+      }
+
+      @include vp-479 {
+        top: size(-115px);
+
+        width: size(600px);
+        height: size(600px);
+      }
+    }
+
   }
 
   &__picture {
@@ -118,6 +120,7 @@
   &__picture--0 {
     top: size(194px);
     left: size(-97px);
+    z-index: 1;
 
     width: size(471px);
     height: size(233px);
@@ -151,7 +154,7 @@
   &__picture--1 {
     top:size(74px);
     right: size(87px);
-    z-index: 0;
+    z-index: 1;
 
     width: size(430px);
     height: size(225px);
@@ -184,6 +187,7 @@
   &__picture--2 {
     bottom: size(102px);
     right: size(-40px);
+    z-index: 1;
 
     width: size(281px);
     height: size(172px);
