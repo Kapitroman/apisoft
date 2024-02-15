@@ -21,8 +21,8 @@ mixin footer(footerMods)
       .footer__info
         p.footer__info-designer
           a(href=footerInfo[0].href)
-            +icon(footerInfo[0].icon, 125, 17)
-            span.visually-hidden=footerInfo[0].text
+            span=footerInfo[0].text
+            +icon(footerInfo[0].icon, 54, 11)
         p.footer__offer
           a(href=footerInfo[1].href)=footerInfo[1].text
         p.footer__agreement

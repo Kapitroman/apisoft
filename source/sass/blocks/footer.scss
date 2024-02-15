@@ -237,11 +237,18 @@
 
     a {
       display: inline-flex;
+      align-items: center;
+    }
+
+    span {
+      margin-right: size(8px);
+      font-size: size(14px);
+      line-height: size(17px);
     }
 
     svg {
-      width: size(125px);
-      height: size(17px);
+      width: size(54px);
+      height: size(11px);
     }
   }
 
