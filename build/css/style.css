@@ -7560,12 +7560,12 @@ a.projects-item.focus-visible:focus .projects-item__over-layer {
   }
 }
 .introduction-crm__intro-info h1.title-2 {
-  margin-bottom: 3.125rem;
-  line-height: 2.375rem;
+  margin-bottom: 1.75rem;
+  line-height: 1.1;
 }
 @media (max-width: 1279px) {
   .introduction-crm__intro-info h1.title-2 {
-    margin-bottom: 1.875rem;
+    margin-bottom: 0.9375rem;
   }
 }
 .introduction-crm__intro-info P {

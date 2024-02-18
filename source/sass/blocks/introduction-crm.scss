@@ -41,11 +41,11 @@
     }
 
     h1.title-2 {
-      margin-bottom: size(50px);
-      line-height: size(38px);
+      margin-bottom: size(28px);
+      line-height: 1.1;
 
       @include vp-1279 {
-        margin-bottom: size(30px);
+        margin-bottom: size(15px);
       }
     }
 
